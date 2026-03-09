@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="DNA-Game"
-run/main_scene="uid://bp6fos3kqme4i"
+run/main_scene="uid://eecdrcl7vp7g"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[dotnet]
+
+project/assembly_name="DNA-Game"
 
 [input]
 
