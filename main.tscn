@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://eecdrcl7vp7g"]
 
-[ext_resource type="Texture2D" uid="uid://dmoxdrn13y1of" path="res://ui/hotbar.png" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://br14oksxl4d7p" path="res://ui/ui.tscn" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://xgqs7k88huo6" path="res://fighting-ground/fighting-board.tscn" id="2_1bvp3"]
+[ext_resource type="Script" uid="uid://dwn4db7bb7oiy" path="res://camera/camera_2d.gd" id="3_lquwl"]
 
-[node name="Ui" type="Node2D" unique_id=408283547]
+[node name="Node2D" type="Node2D" unique_id=785255799]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1552594054]
+[node name="FightingBoard" parent="." unique_id=2002171744 instance=ExtResource("2_1bvp3")]
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=2111201156]
-position = Vector2(572.00006, 32)
-scale = Vector2(0.66403276, 0.50914633)
-texture = ExtResource("1_ig7tw")
+[node name="Ui" parent="." unique_id=408283547 instance=ExtResource("1_h2yge")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1236897978]
+script = ExtResource("3_lquwl")
