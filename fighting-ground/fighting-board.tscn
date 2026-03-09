@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://xgqs7k88huo6"]
+
+[ext_resource type="Script" uid="uid://mmrxktsw2xmd" path="res://fighting-ground/fighting_board.gd" id="1_cnegx"]
+[ext_resource type="PackedScene" uid="uid://dhnu15x43uipv" path="res://fighting-ground/Tile/tile-prefab.tscn" id="2_r8cwp"]
+
+[node name="FightingBoard" type="Node2D" unique_id=2002171744]
+script = ExtResource("1_cnegx")
+tile_sprite_prefab = ExtResource("2_r8cwp")

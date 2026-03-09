@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dhnu15x43uipv"]
+
+[ext_resource type="Texture2D" uid="uid://kmkmyo6tddbf" path="res://fighting-ground/Tile/tile.png" id="1_1qk4j"]
+[ext_resource type="Script" uid="uid://dna5ejhg28ivk" path="res://fighting-ground/Tile/tile_prefab.gd" id="2_vapgj"]
+
+[node name="TilePrefab" type="Sprite2D" unique_id=525927606]
+texture = ExtResource("1_1qk4j")
+script = ExtResource("2_vapgj")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1703462034]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1692399920]
+polygon = PackedVector2Array(-480, -480, -480, 480, 480, 480, 480, -480)
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
