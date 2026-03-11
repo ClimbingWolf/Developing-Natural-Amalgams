@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dxj1tshdkub62"]
+
+[ext_resource type="Texture2D" uid="uid://ddr0uphlaa7nh" path="res://icon.svg" id="1_bptfo"]
+[ext_resource type="Script" uid="uid://dd7kivoc7bkdw" path="res://Amalgam/tardigrade_body.gd" id="1_r5wah"]
+
+[node name="Body" type="Node2D" unique_id=1505599932]
+script = ExtResource("1_r5wah")
+
+[node name="HeadPos" type="Marker2D" parent="." unique_id=574165725]
+position = Vector2(77, -81)
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=763406642]
+position = Vector2(2, -3)
+texture = ExtResource("1_bptfo")
+
+[node name="Head" type="Node" parent="." unique_id=1719906323]

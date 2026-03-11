@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://ckcsverf25kq2"]
+
+[ext_resource type="Script" uid="uid://bvov0gt5lwc8p" path="res://Amalgam/giraffe_head.gd" id="1_40jvg"]
+[ext_resource type="Texture2D" uid="uid://ddr0uphlaa7nh" path="res://icon.svg" id="2_nrwdm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7fhlt"]
+size = Vector2(699, 140.875)
+
+[node name="Head" type="Node2D" unique_id=154818111]
+script = ExtResource("1_40jvg")
+speed = 10.0
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=843647296]
+position = Vector2(-8, -121)
+scale = Vector2(0.734375, 3.734375)
+texture = ExtResource("2_nrwdm")
+
+[node name="ChompArea" type="Area2D" parent="." unique_id=531413265]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChompArea" unique_id=1494183769]
+position = Vector2(420.5, 8.5625)
+shape = SubResource("RectangleShape2D_7fhlt")
+
+[node name="AttackCooldown" type="Timer" parent="." unique_id=538962284]
+
+[connection signal="timeout" from="AttackCooldown" to="." method="_on_attack_cooldown_timeout"]
