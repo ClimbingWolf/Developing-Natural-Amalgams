@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dt6imu6aueg14"]
+
+[ext_resource type="Texture2D" uid="uid://l8277ylvr0kp" path="res://ui/spamton.webp" id="1_ntapu"]
+
+[node name="Amalgam" type="Node2D" unique_id=956380475]
+z_index = 1
+
+[node name="AmalgamSprite" type="Sprite2D" parent="." unique_id=939425581]
+position = Vector2(-3.9999695, 3.0000305)
+scale = Vector2(0.15600002, 0.15600002)
+texture = ExtResource("1_ntapu")

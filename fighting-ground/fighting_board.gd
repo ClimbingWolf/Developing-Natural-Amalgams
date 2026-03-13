@@ -12,24 +12,25 @@ var tiles = []
 
 func _ready() -> void:
 	
-	var tile_sprite: Sprite2D = tile_sprite_prefab.instantiate()
+	var tile_sprite_node: Node2D = tile_sprite_prefab.instantiate()
+	var tile_sprite = tile_sprite_node.get_node("Sprite2D")
 	var tile_size = tile_sprite.get_rect().size
 	print(tile_size)
-	tile_sprite.scale = Vector2(pixel_tile_width, pixel_tile_height)/tile_size
-	tile_size = tile_sprite.get_rect().size * tile_sprite.scale
+	tile_sprite_node.scale = Vector2(pixel_tile_width, pixel_tile_height)/tile_size
+	tile_size = tile_sprite.get_rect().size * tile_sprite_node.scale
 	print(tile_size)
 	var inner = [];
 	for i in range(board_width):
 		inner.append([])
 		for j in range(board_height):
-			var inst: Sprite2D = tile_sprite.duplicate();
+			var inst: Node2D = tile_sprite_node.duplicate();
 			inst.name = "BoardTile(" + str(i) + "," + str(j) + ")"
 			add_child(inst);
 			inst.position = Vector2(i * tile_size.x, j *tile_size.y)
 			inner[i].append(inst);
 			if((i+j)%2 ==0 ):
-				inst.modulate= color1
+				inst.get_node("Sprite2D").modulate= color1
 			else:
-				inst.modulate = color2
+				inst.get_node("Sprite2D").modulate = color2
 
 			

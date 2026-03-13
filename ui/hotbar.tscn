@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://edfaw1r6qkc2"]
+
+[ext_resource type="Texture2D" uid="uid://dmoxdrn13y1of" path="res://ui/hotbar.png" id="1_2m22k"]
+[ext_resource type="Script" uid="uid://ph1rv3mltyuf" path="res://ui/hotbar.gd" id="1_v0qo3"]
+[ext_resource type="PackedScene" uid="uid://c45plcsbw2b3c" path="res://ui/hotbar_spot.tscn" id="2_v0qo3"]
+[ext_resource type="PackedScene" uid="uid://dt6imu6aueg14" path="res://ui/amalgam.tscn" id="4_u3sb2"]
+
+[node name="Hotbar" type="Node2D" unique_id=645606188]
+script = ExtResource("1_v0qo3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1846679965]
+position = Vector2(572.00006, 32)
+scale = Vector2(0.66403276, 0.50914633)
+texture = ExtResource("1_2m22k")
+
+[node name="Hotbar nodes" type="Node" parent="." unique_id=737241075]
+
+[node name="HotbarSpot" parent="Hotbar nodes" unique_id=1938797358 instance=ExtResource("2_v0qo3")]
+position = Vector2(150, 65)
+
+[node name="Amalgam" parent="Hotbar nodes/HotbarSpot" unique_id=956380475 instance=ExtResource("4_u3sb2")]
+position = Vector2(456, 205)
+
+[node name="HotbarSpot2" parent="Hotbar nodes" unique_id=1233071261 instance=ExtResource("2_v0qo3")]
+position = Vector2(255, 65)
+
+[node name="HotbarSpot3" parent="Hotbar nodes" unique_id=1209568040 instance=ExtResource("2_v0qo3")]
+position = Vector2(360, 65)
+
+[node name="HotbarSpot4" parent="Hotbar nodes" unique_id=2124309915 instance=ExtResource("2_v0qo3")]
+position = Vector2(465, 65)
+
+[node name="HotbarSpot5" parent="Hotbar nodes" unique_id=1022056516 instance=ExtResource("2_v0qo3")]
+position = Vector2(570, 65)
+
+[node name="HotbarSpot6" parent="Hotbar nodes" unique_id=1835428886 instance=ExtResource("2_v0qo3")]
+position = Vector2(675, 65)
+
+[node name="HotbarSpot7" parent="Hotbar nodes" unique_id=1596283127 instance=ExtResource("2_v0qo3")]
+position = Vector2(780, 65)
+
+[node name="Amalgam" parent="Hotbar nodes/HotbarSpot7" unique_id=380582630 instance=ExtResource("4_u3sb2")]
+position = Vector2(-780, -65)
+
+[node name="HotbarSpot8" parent="Hotbar nodes" unique_id=2146065888 instance=ExtResource("2_v0qo3")]
+position = Vector2(885, 65)
+
+[node name="HotbarSpot9" parent="Hotbar nodes" unique_id=443009746 instance=ExtResource("2_v0qo3")]
+position = Vector2(990, 65)

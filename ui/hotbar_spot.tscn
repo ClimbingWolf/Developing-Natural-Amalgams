@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c45plcsbw2b3c"]
+
+[ext_resource type="Script" uid="uid://dg6sedeorgpwl" path="res://ui/hotbar_spot.gd" id="1_7lpe5"]
+[ext_resource type="Texture2D" uid="uid://kmkmyo6tddbf" path="res://fighting-ground/Tile/tile.png" id="1_vsi03"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vsi03"]
+size = Vector2(104, 96)
+
+[node name="HotbarSpot" type="Node2D" unique_id=1938797358]
+script = ExtResource("1_7lpe5")
+
+[node name="HotbarSprite" type="Sprite2D" parent="." unique_id=319623320]
+scale = Vector2(0.109, 0.1)
+texture = ExtResource("1_vsi03")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=809974507]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=358634310]
+shape = SubResource("RectangleShape2D_vsi03")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
