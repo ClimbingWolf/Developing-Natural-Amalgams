@@ -3,6 +3,8 @@ extends Node2D
 @export var speed = 5
 @export var damage = 2
 @export var attack_delay = 1 #Attack delay, in seconds
+@export var HP = 10 #I have no clue if this is a good number, 
+					#but it's a placeholder
 
 @onready var raycast: RayCast2D = $RayCast2D
 
