@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://br14oksxl4d7p" path="res://ui/ui.tscn" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://xgqs7k88huo6" path="res://fighting-ground/fighting-board.tscn" id="2_1bvp3"]
 [ext_resource type="Script" uid="uid://dwn4db7bb7oiy" path="res://camera/camera_2d.gd" id="3_lquwl"]
+[ext_resource type="PackedScene" uid="uid://dw7ewij1ngdsg" path="res://enemies/enemy_prefab.tscn" id="4_1bvp3"]
 
 [node name="Node2D" type="Node2D" unique_id=785255799]
 
@@ -12,3 +13,5 @@
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1236897978]
 script = ExtResource("3_lquwl")
+
+[node name="Enemy" parent="." unique_id=582181779 instance=ExtResource("4_1bvp3")]

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dw7ewij1ngdsg"]
+
+[ext_resource type="Texture2D" uid="uid://cydoafnu58w5t" path="res://enemies/enemy_placeholder.png" id="1_q1dnp"]
+[ext_resource type="Script" uid="uid://dxgqhd2wwedi6" path="res://enemies/enemy.gd" id="2_q1dnp"]
+
+[node name="Enemy" type="Node2D" unique_id=582181779]
+script = ExtResource("2_q1dnp")
+speed = 160
+
+[node name="enemy_img" type="Sprite2D" parent="." unique_id=744428101]
+scale = Vector2(3.125, 3.125)
+texture = ExtResource("1_q1dnp")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=832050395]
+rotation = 1.5707964
+scale = Vector2(0.7, 0.7)
