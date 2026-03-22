@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://ckcsverf25kq2"]
+
+[ext_resource type="Script" uid="uid://bvov0gt5lwc8p" path="res://Amalgam/Scripts/giraffe_head.gd" id="1_40jvg"]
+[ext_resource type="PackedScene" uid="uid://boyf1513a8s8m" path="res://Amalgam/Scenes/amalgam_head.tscn" id="1_tbpb6"]
+
+[node name="Head" unique_id=2124160809 instance=ExtResource("1_tbpb6")]
+script = ExtResource("1_40jvg")

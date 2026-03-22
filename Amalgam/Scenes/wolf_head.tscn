@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://csdmu3itfwg40"]
+
+[ext_resource type="Script" uid="uid://btjpuf6fvhux8" path="res://Amalgam/Scripts/wolf_head.gd" id="1_3fsil"]
+[ext_resource type="PackedScene" uid="uid://boyf1513a8s8m" path="res://Amalgam/Scenes/amalgam_head.tscn" id="1_a64p6"]
+
+[node name="Head" unique_id=2124160809 instance=ExtResource("1_a64p6")]
+script = ExtResource("1_3fsil")

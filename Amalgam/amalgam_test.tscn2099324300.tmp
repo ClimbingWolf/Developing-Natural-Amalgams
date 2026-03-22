@@ -1,19 +1,20 @@
-[gd_scene format=3 uid="uid://d1g3vhdw0rrg7"]
+[gd_scene format=3 uid="uid://bmegiyam1urek"]
 
-[ext_resource type="Script" path="res://Amalgam/amalgam_test.gd" id="1_klvlq"]
-[ext_resource type="PackedScene" uid="uid://dd2uqdwmgy5po" path="res://Amalgam/creature.tscn" id="2_x1rl3"]
+[ext_resource type="Script" uid="uid://be2c5rmkel5w8" path="res://Amalgam/amalgam_test.gd" id="1_klvlq"]
+[ext_resource type="Script" uid="uid://gvrwu7r4jmmr" path="res://Amalgam/creature.gd" id="2_x1rl3"]
 
 [node name="Node2D" type="Node2D" unique_id=1481787741]
 script = ExtResource("1_klvlq")
 
-[node name="Creature" parent="." unique_id=893599688 instance=ExtResource("2_x1rl3")]
+[node name="Creature" type="Node" parent="." unique_id=1050617304]
+script = ExtResource("2_x1rl3")
 
 [node name="cheetah" type="Button" parent="." unique_id=20397418]
 offset_left = 84.0
 offset_top = 32.0
 offset_right = 258.0
 offset_bottom = 129.0
-text = "test"
+text = "Cheetah Head"
 
 [node name="tardigrade" type="Button" parent="." unique_id=810002463]
 offset_left = 323.0

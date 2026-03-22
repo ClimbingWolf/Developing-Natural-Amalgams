@@ -22,8 +22,8 @@ func _process(delta: float) -> void:
 		var dupe = HotbarClass.currentHold.duplicate()
 		HotbarClass.currentHoldChecker =false
 		dupe.name = "Amalgam"
-		#dupe.scale = Vector2(1,1) * $Sprite2D.texture.get_width()/dupe.body.get_node("Icon").texture.get_width()
 		add_child(dupe)
+		dupe.scale = Vector2(1,1) * $Sprite2D.texture.get_width()/dupe.get_node("Body").get_node("Icon").texture.get_width()
 		HotbarClass.currentHold.queue_free()
 		HotbarClass.currentHold = Node2D.new();;
 	if(has_node("Amalgam") && HotbarClass.currentHoldChecker == false):

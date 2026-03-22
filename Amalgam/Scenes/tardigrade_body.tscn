@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dxj1tshdkub62"]
+
+[ext_resource type="PackedScene" uid="uid://bvu2tdefacneg" path="res://Amalgam/Scenes/amalgam_body.tscn" id="1_2aot1"]
+[ext_resource type="Script" uid="uid://dd7kivoc7bkdw" path="res://Amalgam/Scripts/tardigrade_body.gd" id="1_r5wah"]
+
+[node name="Body" unique_id=7729438 instance=ExtResource("1_2aot1")]
+script = ExtResource("1_r5wah")
+hpIncrease = 500
+defIncrease = 100

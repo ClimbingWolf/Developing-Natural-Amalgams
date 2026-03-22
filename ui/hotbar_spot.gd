@@ -29,11 +29,15 @@ func _process(delta: float) -> void:
 		var dupe = currentHold.duplicate()
 		currentHoldChecker =false
 		dupe.name = "Amalgam"
+
 		add_child(dupe)
 		currentHold.queue_free()
 		currentHold = Node2D.new();;
 	if(has_node("Amalgam") && currentHoldChecker == false):
 		$Amalgam.global_position = global_position
+		#This kinda hard coded rn because I couldn't get it to work here
+		$Amalgam.scale = Vector2(.1,.1) * $HotbarSprite.texture.get_width()/$Amalgam.get_node("Body").get_node("Icon").texture.get_width()
+		
 	
 		
 		
