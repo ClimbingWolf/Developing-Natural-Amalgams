@@ -1,5 +1,7 @@
 extends Node2D
 
+class_name enemy
+
 @export var speed = 5
 @export var damage = 2
 @export var attack_delay = 1 #Attack delay, in seconds

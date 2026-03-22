@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bdawqb80i4wdy"]
+
+[ext_resource type="PackedScene" uid="uid://bvu2tdefacneg" path="res://Amalgam/Scenes/amalgam_body.tscn" id="1_imedk"]
+[ext_resource type="Script" uid="uid://ctkbsnescmfnx" path="res://Amalgam/Scripts/cheetah_body.gd" id="2_uurb8"]
+
+[node name="Body" unique_id=7729438 instance=ExtResource("1_imedk")]
+script = ExtResource("2_uurb8")

@@ -14,7 +14,7 @@ offset_left = 84.0
 offset_top = 32.0
 offset_right = 258.0
 offset_bottom = 129.0
-text = "test"
+text = "Cheetah Head"
 
 [node name="tardigrade" type="Button" parent="." unique_id=810002463]
 offset_left = 323.0

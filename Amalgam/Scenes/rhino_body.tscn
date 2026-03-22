@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dt6id8c5sdbkx"]
+
+[ext_resource type="Script" uid="uid://dd3355rkgmbhr" path="res://Amalgam/Scripts/rhino_body.gd" id="1_1kki0"]
+[ext_resource type="PackedScene" uid="uid://bvu2tdefacneg" path="res://Amalgam/Scenes/amalgam_body.tscn" id="1_125mp"]
+
+[node name="Body" unique_id=7729438 instance=ExtResource("1_125mp")]
+script = ExtResource("1_1kki0")
