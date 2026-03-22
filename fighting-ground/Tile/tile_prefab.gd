@@ -6,7 +6,6 @@ func _ready():
 	var size = $Sprite2D.texture.get_size() * scale
 	
 func _on_area_2d_mouse_entered() -> void:
-	print("yoink")
 	$Sprite2D.modulate += Color(0.1, 0.1, 0.1)
 	hover = true
 	pass # Replace with function body.
