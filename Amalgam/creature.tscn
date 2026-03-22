@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dd2uqdwmgy5po"]
+
+[ext_resource type="Script" uid="uid://gvrwu7r4jmmr" path="res://Amalgam/creature.gd" id="1_kxvlq"]
+
+[node name="Creature" type="Node2D" unique_id=648550499]
+script = ExtResource("1_kxvlq")
