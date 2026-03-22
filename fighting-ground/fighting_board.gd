@@ -15,10 +15,8 @@ func _ready() -> void:
 	var tile_sprite_node: Node2D = tile_sprite_prefab.instantiate()
 	var tile_sprite = tile_sprite_node.get_node("Sprite2D")
 	var tile_size = tile_sprite.get_rect().size
-	print(tile_size)
 	tile_sprite_node.scale = Vector2(pixel_tile_width, pixel_tile_height)/tile_size
 	tile_size = tile_sprite.get_rect().size * tile_sprite_node.scale
-	print(tile_size)
 	var inner = [];
 	for i in range(board_width):
 		inner.append([])
