@@ -29,5 +29,11 @@ func getBody():
 func getHead():
 	return head
 
+func getAttack() -> float:
+	return head.attack * body.atk_mult
+
 func getSpeed() -> float:
 	return head.speed * body.spd_mult
+
+func getRange() -> float:
+	return head.range * body.range_mult
