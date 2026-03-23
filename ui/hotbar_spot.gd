@@ -34,6 +34,7 @@ func _process(delta: float) -> void:
 		currentHold = Node2D.new();
 		add_child(dupe);
 
+
 		
 	if(has_node("Amalgam") && currentHoldChecker == false):
 		$Amalgam.global_position = global_position

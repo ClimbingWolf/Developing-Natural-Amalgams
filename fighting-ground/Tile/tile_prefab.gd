@@ -24,9 +24,11 @@ func _process(delta: float) -> void:
 		add_child(dupe)
 		dupe.scale = Vector2(1,1) * $Sprite2D.texture.get_width()/dupe.get_node("Body").get_node("Icon").texture.get_width()
 		HotbarClass.currentHold.queue_free()
-		HotbarClass.currentHold = Node2D.new();;
+		HotbarClass.currentHold = Node2D.new()
 	if(has_node("Amalgam") && HotbarClass.currentHoldChecker == false):
 		$Amalgam.global_position = global_position
 	if(Input.is_action_just_pressed("click") && HotbarClass.currentHoldChecker && has_node("Amalgam") && HotbarClass.currentHold.name == "Deletor" && hover):
 		remove_child($Amalgam);
+		HotbarClass.currentHold = Node2D.new();
+		HotbarClass.currentHoldChecker = false;
 		
