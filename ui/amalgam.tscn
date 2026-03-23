@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dt6imu6aueg14"]
 
-[ext_resource type="Texture2D" uid="uid://l8277ylvr0kp" path="res://ui/spamton.webp" id="1_ntapu"]
+[ext_resource type="Texture2D" uid="uid://l8277ylvr0kp" path="res://sample-images/spamton.webp" id="1_ntapu"]
 
 [node name="Amalgam" type="Node2D" unique_id=956380475]
 z_index = 1

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://l8277ylvr0kp"
-path="res://.godot/imported/spamton.webp-40bceda168e6f813a17c2b1da4b737aa.ctex"
+uid="uid://c478h2jbtjjpy"
+path="res://.godot/imported/black-and-wooden-hand-shovel-png.png-37d79bcd3d0c7353c391eaac857dd35a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/spamton.webp"
-dest_files=["res://.godot/imported/spamton.webp-40bceda168e6f813a17c2b1da4b737aa.ctex"]
+source_file="res://sample-images/black-and-wooden-hand-shovel-png.png"
+dest_files=["res://.godot/imported/black-and-wooden-hand-shovel-png.png-37d79bcd3d0c7353c391eaac857dd35a.ctex"]
 
 [params]
 

@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dd2uqdwmgy5po" path="res://Amalgam/creature.tscn" id="4_hgl4l"]
 [ext_resource type="PackedScene" uid="uid://bdawqb80i4wdy" path="res://Amalgam/Scenes/cheetah_body.tscn" id="5_on312"]
 [ext_resource type="PackedScene" uid="uid://c2no4n0our3vs" path="res://Amalgam/Scenes/crocodile_head.tscn" id="6_m78bq"]
+[ext_resource type="PackedScene" uid="uid://dw0qun3li0w5f" path="res://ui/deletor.tscn" id="7_on312"]
 
 [node name="Hotbar" type="Node2D" unique_id=645606188]
 script = ExtResource("1_v0qo3")
@@ -48,3 +49,7 @@ position = Vector2(885, 65)
 
 [node name="HotbarSpot9" parent="Hotbar nodes" unique_id=443009746 instance=ExtResource("2_v0qo3")]
 position = Vector2(990, 65)
+
+[node name="Deletor" parent="Hotbar nodes" unique_id=1057259415 instance=ExtResource("7_on312")]
+position = Vector2(1135, 62)
+scale = Vector2(0.3, 0.3)
