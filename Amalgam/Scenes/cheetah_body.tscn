@@ -5,3 +5,5 @@
 
 [node name="Body" unique_id=7729438 instance=ExtResource("1_imedk")]
 script = ExtResource("2_uurb8")
+spd_mult = 2.0
+range_mult = 1.0

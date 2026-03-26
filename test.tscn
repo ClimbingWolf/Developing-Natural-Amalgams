@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://gxg6kju0u32a"]
+
+[ext_resource type="PackedScene" uid="uid://dw7ewij1ngdsg" path="res://enemies/enemy_prefab.tscn" id="1_37kl0"]
+[ext_resource type="Script" uid="uid://bdv8js6tgcjw0" path="res://test.gd" id="1_ykrsh"]
+[ext_resource type="Script" uid="uid://gvrwu7r4jmmr" path="res://Amalgam/Scripts/creature.gd" id="2_ppyta"]
+
+[node name="test" type="Node2D" unique_id=1697811311]
+script = ExtResource("1_ykrsh")
+
+[node name="Enemy" parent="." unique_id=582181779 instance=ExtResource("1_37kl0")]
+position = Vector2(824, 205)
+speed = 5
+
+[node name="Creature" type="Node2D" parent="." unique_id=1587120228]
+position = Vector2(478, 220)
+script = ExtResource("2_ppyta")
