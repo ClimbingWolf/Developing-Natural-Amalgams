@@ -29,7 +29,7 @@ func _process(delta: float) -> void:
 
 func do_attack(enemy):
 	print("hi i attacked")
-	enemy.takeDamage(attack)
+	enemy.get_parent().takeDamage(attack)
 
 
 func _on_attack_cooldown_timeout() -> void:

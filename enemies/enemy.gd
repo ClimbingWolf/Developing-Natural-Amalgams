@@ -23,3 +23,6 @@ func _process(delta: float) -> void:
 
 func attack(collider: PhysicsBody2D):
 	pass
+
+func takeDamage(damage):
+	print("Enemy: ow that hurt :(")
