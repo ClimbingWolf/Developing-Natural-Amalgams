@@ -3,5 +3,12 @@
 [ext_resource type="Script" uid="uid://8ws6sdvm7ws4" path="res://Amalgam/Scripts/crocodile_head.gd" id="1_1wcwr"]
 [ext_resource type="PackedScene" uid="uid://boyf1513a8s8m" path="res://Amalgam/Scenes/amalgam_head.tscn" id="1_e5jdd"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_52gse"]
+size = Vector2(192, 128)
+
 [node name="Head" unique_id=2124160809 instance=ExtResource("1_e5jdd")]
 script = ExtResource("1_1wcwr")
+defense = 50
+
+[node name="CollisionShape2D" parent="AttackArea" parent_id_path=PackedInt32Array(1802048398) index="0" unique_id=1855626855]
+shape = SubResource("RectangleShape2D_52gse")

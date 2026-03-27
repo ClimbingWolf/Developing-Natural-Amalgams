@@ -17,13 +17,21 @@ func _ready() -> void:
 	
 func _process(delta: float) -> void:
 	if canAttack:
-		#if detect enemies inside the collision
-		print("attack!!!!")
-		do_attack()
-		canAttack = false
-		$AttackCooldown.start()
+		var potentialEnemies = $AttackArea.get_overlapping_areas()
+		for e in potentialEnemies:
+			if e.is_in_group("Enemy"):
+				print("attack!!!!")
+				do_attack(e)
+				canAttack = false
+		if !canAttack:
+			$AttackCooldown.start()
 	pass
 
-func do_attack():
+func do_attack(enemy):
 	print("hi i attacked")
-	#basically call enemy takeDamage method and put in the amount of damage
+	enemy.get_parent().takeDamage(attack)
+
+
+func _on_attack_cooldown_timeout() -> void:
+	canAttack = true
+	pass

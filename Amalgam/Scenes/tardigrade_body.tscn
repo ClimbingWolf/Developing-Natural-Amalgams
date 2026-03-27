@@ -5,5 +5,5 @@
 
 [node name="Body" unique_id=7729438 instance=ExtResource("1_2aot1")]
 script = ExtResource("1_r5wah")
-hpIncrease = 500
-defIncrease = 100
+hp_mult = 3.0
+range_mult = 1.0
