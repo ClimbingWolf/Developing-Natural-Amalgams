@@ -8,7 +8,9 @@ size = Vector2(192, 128)
 
 [node name="Head" unique_id=2124160809 instance=ExtResource("1_e5jdd")]
 script = ExtResource("1_1wcwr")
+hp = 15
 defense = 50
+speed = 5.0
 
 [node name="CollisionShape2D" parent="AttackArea" parent_id_path=PackedInt32Array(1802048398) index="0" unique_id=1855626855]
 shape = SubResource("RectangleShape2D_52gse")
