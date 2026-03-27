@@ -5,4 +5,5 @@
 
 [node name="Head" unique_id=2124160809 instance=ExtResource("1_a64p6")]
 script = ExtResource("1_3fsil")
-speed = 1.0
+attack = 5
+speed = 5.0
