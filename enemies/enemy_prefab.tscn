@@ -4,21 +4,28 @@
 [ext_resource type="Script" uid="uid://dxgqhd2wwedi6" path="res://enemies/enemy.gd" id="2_q1dnp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q1dnp"]
-size = Vector2(23, 28)
+size = Vector2(19, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kgocs"]
 
 [node name="Enemy" type="Node2D" unique_id=582181779]
 script = ExtResource("2_q1dnp")
-speed = 160
-damage = null
-attack_delay = null
-HP = null
 
 [node name="enemy_img" type="Sprite2D" parent="." unique_id=744428101]
 scale = Vector2(3.125, 3.125)
 texture = ExtResource("1_q1dnp")
 
-[node name="CollisionArea" type="Area2D" parent="." unique_id=372638069 groups=["Enemy"]]
+[node name="AttackArea" type="Area2D" parent="." unique_id=372638069]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionArea" unique_id=844401941]
-position = Vector2(-26.5, 0)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=844401941]
+position = Vector2(-32.5, 0)
 shape = SubResource("RectangleShape2D_q1dnp")
+
+[node name="AttackCooldown" type="Timer" parent="." unique_id=1304338610]
+one_shot = true
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1574995174 groups=["Enemy"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1094834362 groups=["Enemy"]]
+scale = Vector2(2.19, 2.35)
+shape = SubResource("RectangleShape2D_kgocs")

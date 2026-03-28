@@ -22,6 +22,7 @@ project/assembly_name="DNA-Game"
 [global_group]
 
 Enemy=""
+"Amalgam Body"="The Area2D outlining an amalgam body"
 
 [input]
 
