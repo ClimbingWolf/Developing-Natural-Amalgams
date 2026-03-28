@@ -2,11 +2,6 @@
 
 [ext_resource type="Script" uid="uid://bdv8js6tgcjw0" path="res://test.gd" id="1_ykrsh"]
 [ext_resource type="Script" uid="uid://gvrwu7r4jmmr" path="res://Amalgam/Scripts/creature.gd" id="2_ppyta"]
-[ext_resource type="Script" uid="uid://dxgqhd2wwedi6" path="res://enemies/enemy.gd" id="3_ppyta"]
-[ext_resource type="Texture2D" uid="uid://cydoafnu58w5t" path="res://enemies/enemy_placeholder.png" id="4_ykrsh"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g14j6"]
-size = Vector2(207, 242)
 
 [node name="test" type="Node2D" unique_id=1697811311]
 script = ExtResource("1_ykrsh")
@@ -14,21 +9,3 @@ script = ExtResource("1_ykrsh")
 [node name="Creature" type="Node2D" parent="." unique_id=1587120228]
 position = Vector2(478, 220)
 script = ExtResource("2_ppyta")
-
-[node name="Enemy" type="Node2D" parent="." unique_id=327743850 groups=["Enemy"]]
-position = Vector2(827, 261)
-script = ExtResource("3_ppyta")
-
-[node name="Area2D" type="Area2D" parent="Enemy" unique_id=1528172129 groups=["Enemy"]]
-position = Vector2(-7, 10)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Area2D" unique_id=966509794]
-position = Vector2(-4.5, -13)
-shape = SubResource("RectangleShape2D_g14j6")
-
-[node name="EnemyPlaceholder" type="Sprite2D" parent="Enemy" unique_id=519870931]
-position = Vector2(-10.749981, -3.7499962)
-scale = Vector2(14.343753, 13.843751)
-texture = ExtResource("4_ykrsh")
-
-[node name="RayCast2D" type="RayCast2D" parent="Enemy" unique_id=1973581393]

@@ -3,14 +3,22 @@
 [ext_resource type="Texture2D" uid="uid://cydoafnu58w5t" path="res://enemies/enemy_placeholder.png" id="1_q1dnp"]
 [ext_resource type="Script" uid="uid://dxgqhd2wwedi6" path="res://enemies/enemy.gd" id="2_q1dnp"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q1dnp"]
+size = Vector2(23, 28)
+
 [node name="Enemy" type="Node2D" unique_id=582181779]
 script = ExtResource("2_q1dnp")
 speed = 160
+damage = null
+attack_delay = null
+HP = null
 
 [node name="enemy_img" type="Sprite2D" parent="." unique_id=744428101]
 scale = Vector2(3.125, 3.125)
 texture = ExtResource("1_q1dnp")
 
-[node name="RayCast2D" type="RayCast2D" parent="." unique_id=832050395]
-rotation = 1.5707964
-scale = Vector2(0.7, 0.7)
+[node name="CollisionArea" type="Area2D" parent="." unique_id=372638069 groups=["Enemy"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionArea" unique_id=844401941]
+position = Vector2(-26.5, 0)
+shape = SubResource("RectangleShape2D_q1dnp")

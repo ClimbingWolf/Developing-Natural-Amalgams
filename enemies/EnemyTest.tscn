@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c03c2il50qxgn"]
+
+[ext_resource type="PackedScene" uid="uid://dw7ewij1ngdsg" path="res://enemies/enemy_prefab.tscn" id="1_lylvt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lylvt"]
+size = Vector2(54.37802, 54.454422)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_lylvt"]
+
+[node name="EnemyTest" type="Node2D" unique_id=1434345293]
+
+[node name="Enemy" parent="." unique_id=582181779 instance=ExtResource("1_lylvt")]
+position = Vector2(532, 120)
+
+[node name="Placebo Enemy" type="Area2D" parent="." unique_id=1397840727 groups=["Enemy"]]
+position = Vector2(141.62198, 99.54558)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Placebo Enemy" unique_id=269068032]
+shape = SubResource("RectangleShape2D_lylvt")
+
+[node name="Sprite2D" type="Sprite2D" parent="Placebo Enemy/CollisionShape2D" unique_id=281376050]
+scale = Vector2(53.715, 53.715)
+texture = SubResource("PlaceholderTexture2D_lylvt")
