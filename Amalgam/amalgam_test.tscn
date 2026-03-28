@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://bmegiyam1urek"]
+[gd_scene format=3 uid="uid://d1g3vhdw0rrg7"]
 
-[ext_resource type="Script" uid="uid://be2c5rmkel5w8" path="res://Amalgam/Scripts/amalgam_test.gd" id="1_klvlq"]
-[ext_resource type="Script" uid="uid://gvrwu7r4jmmr" path="res://Amalgam/Scripts/creature.gd" id="2_x1rl3"]
+[ext_resource type="Script" path="res://Amalgam/amalgam_test.gd" id="1_klvlq"]
+[ext_resource type="PackedScene" uid="uid://dd2uqdwmgy5po" path="res://Amalgam/creature.tscn" id="2_x1rl3"]
 
-[node name="Amalgam test" type="Node2D" unique_id=1481787741]
+[node name="Node2D" type="Node2D" unique_id=1481787741]
 script = ExtResource("1_klvlq")
 
 [node name="cheetah body" type="Button" parent="." unique_id=20397418]
@@ -11,7 +11,7 @@ offset_left = 84.0
 offset_top = 32.0
 offset_right = 258.0
 offset_bottom = 129.0
-text = "Cheetah Body"
+text = "test"
 
 [node name="rhino head" type="Button" parent="." unique_id=425237149]
 offset_left = 565.0
@@ -25,7 +25,7 @@ offset_left = 106.0
 offset_top = 159.0
 offset_right = 249.0
 offset_bottom = 246.0
-text = "Giraffe Head"
+text = "Giraffe"
 
 [node name="Creature" type="Node2D" parent="." unique_id=655153446]
 position = Vector2(413, 374)

@@ -1,9 +1,17 @@
 [gd_scene format=3 uid="uid://bdawqb80i4wdy"]
 
-[ext_resource type="PackedScene" uid="uid://bvu2tdefacneg" path="res://Amalgam/Scenes/amalgam_body.tscn" id="1_imedk"]
-[ext_resource type="Script" uid="uid://ctkbsnescmfnx" path="res://Amalgam/Scripts/cheetah_body.gd" id="2_uurb8"]
+[ext_resource type="Script" uid="uid://ctkbsnescmfnx" path="res://Amalgam/Scripts/cheetah_body.gd" id="1_uurb8"]
+[ext_resource type="Texture2D" uid="uid://dwetu1awxc0nt" path="res://sample-images/pngtree-hyper-realistic-a-cheetah-full-body-png-image_13546515.png" id="2_y6pvp"]
 
-[node name="Body" unique_id=7729438 instance=ExtResource("1_imedk")]
-script = ExtResource("2_uurb8")
-spd_mult = 2.0
-range_mult = 1.0
+[node name="Body" type="Node2D" unique_id=7729438]
+script = ExtResource("1_uurb8")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=2098181349]
+position = Vector2(2, 1)
+texture = ExtResource("2_y6pvp")
+
+[node name="HeadPos" type="Marker2D" parent="." unique_id=249309754]
+position = Vector2(69, -72)
+
+[node name="Head" type="Node" parent="." unique_id=1585469975]
+
