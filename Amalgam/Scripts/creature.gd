@@ -26,7 +26,7 @@ func setHead(newHead):
 	if head:
 		head.queue_free()
 
-	head = newHead.instantiate()
+	head = newHead.duplicate();
 	add_child(head)
 	head.global_position = body.get_node("HeadPos").global_position
 	hp = head.hp
@@ -37,9 +37,10 @@ func setHead(newHead):
 
 
 func setupCreature(newbody, newhead):
+	setBody(newbody)
 	setHead(newhead)
 
-	setBody(newbody)
+	
 	head.global_position = body.get_node("HeadPos").global_position
 	body.on_attatch(head)
 
@@ -70,4 +71,5 @@ func takeDamage(damage):
 	pass
 
 func doAttack():
-	head.attack()
+	pass
+	#head.attack()
