@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://8ws6sdvm7ws4" path="res://Amalgam/Scripts/crocodile_head.gd" id="1_52gse"]
 [ext_resource type="Texture2D" uid="uid://bdpx2fi67trif" path="res://sample-images/images (9).jpg" id="2_q77rm"]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_00d32"]
 size = Vector2(161.875, 126.875)
 
