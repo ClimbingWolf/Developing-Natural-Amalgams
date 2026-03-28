@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://mkd3ege8a8gp"]
+
+[ext_resource type="PackedScene" uid="uid://dw7ewij1ngdsg" path="res://enemies/enemy_prefab.tscn" id="1_lylvt"]
+
+[node name="EnemyTest" type="Node2D" unique_id=1434345293]
+
+[node name="Enemy" parent="." unique_id=582181779 instance=ExtResource("1_lylvt")]
+position = Vector2(532, 120)
+
+[node name="Paralyzed" parent="." unique_id=1606656055 instance=ExtResource("1_lylvt")]
+position = Vector2(187, 112)
+move_speed = 0.0
