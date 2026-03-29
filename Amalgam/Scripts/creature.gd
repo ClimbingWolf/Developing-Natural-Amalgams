@@ -14,7 +14,7 @@ func _ready() -> void:
 	if(defaultBody!=null && defaultHead != null && body== null && head == null && len(get_children()) == 0):
 		setupCreature(defaultBody.instantiate(), defaultHead.instantiate());
 		add_child(body)
-		add_child(head)
+		#add_child(head)
 	
 
 func setBody(newBody):
