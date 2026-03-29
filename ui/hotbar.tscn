@@ -21,9 +21,10 @@ texture = ExtResource("1_2m22k")
 position = Vector2(150, 65)
 
 [node name="Amalgam" parent="Hotbar nodes/HotbarSpot" unique_id=893599688 instance=ExtResource("4_hgl4l")]
-position = Vector2(484, 294)
+position = Vector2(1, -5)
 defaultBody = ExtResource("5_on312")
 defaultHead = ExtResource("6_m78bq")
+hp = 10
 
 [node name="HotbarSpot2" parent="Hotbar nodes" unique_id=1233071261 instance=ExtResource("2_v0qo3")]
 position = Vector2(255, 65)

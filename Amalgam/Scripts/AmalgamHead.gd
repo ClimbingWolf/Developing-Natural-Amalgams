@@ -6,7 +6,7 @@ class_name Amalgam_head
 @export var hp:int = 10
 @export var attack:int = 10
 @export var defense:int = 10
-@export var speed:float = 10
+@export var speed:float = 2
 @export var range:float = 10
 
 var canAttack = false
@@ -33,5 +33,6 @@ func do_attack(enemy):
 
 
 func _on_attack_cooldown_timeout() -> void:
+	print("evil mode")
 	canAttack = true
 	pass

@@ -14,4 +14,3 @@ texture = ExtResource("2_y6pvp")
 position = Vector2(69, -72)
 
 [node name="Head" type="Node" parent="." unique_id=1585469975]
-

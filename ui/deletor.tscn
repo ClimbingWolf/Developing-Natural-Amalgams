@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://nmhbys1lm10v"]
+
+[ext_resource type="Script" uid="uid://d0q0mgo031rlf" path="res://ui/deletor.gd" id="1_7c3vg"]
+[ext_resource type="Texture2D" uid="uid://l8277ylvr0kp" path="res://ui/spamton.webp" id="1_noxyg"]
+[ext_resource type="Texture2D" uid="uid://c478h2jbtjjpy" path="res://sample-images/black-and-wooden-hand-shovel-png.png" id="2_7c3vg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eg0aa"]
+size = Vector2(389, 385)
+
+[node name="Deletor" type="Node2D" unique_id=1057259415]
+script = ExtResource("1_7c3vg")
+
+[node name="DeletorBG" type="Sprite2D" parent="." unique_id=1233015932]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_noxyg")
+
+[node name="Area2D" type="Area2D" parent="DeletorBG" unique_id=1398953614]
+scale = Vector2(1.2499999, 1.2499999)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeletorBG/Area2D" unique_id=151640347]
+position = Vector2(-1.5, -2.5)
+shape = SubResource("RectangleShape2D_eg0aa")
+
+[node name="Deletor" type="Sprite2D" parent="." unique_id=1714041431]
+texture = ExtResource("2_7c3vg")
+
+[connection signal="mouse_entered" from="DeletorBG/Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="DeletorBG/Area2D" to="." method="_on_area_2d_mouse_exited"]

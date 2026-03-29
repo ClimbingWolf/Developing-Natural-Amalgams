@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bkss5qcje4way"]
+
+[ext_resource type="Script" uid="uid://bdckohui8egvg" path="res://ui/amalgam_generator.gd" id="1_581n8"]
+
+[node name="AmalgamGenerator" type="Node2D" unique_id=475387824]
+script = ExtResource("1_581n8")
+
+[node name="Timer" type="Timer" parent="." unique_id=1328566877]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

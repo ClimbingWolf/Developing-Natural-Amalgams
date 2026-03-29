@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://xgqs7k88huo6" path="res://fighting-ground/fighting-board.tscn" id="2_1bvp3"]
 [ext_resource type="Script" uid="uid://dwn4db7bb7oiy" path="res://camera/camera_2d.gd" id="3_lquwl"]
 [ext_resource type="PackedScene" uid="uid://dw7ewij1ngdsg" path="res://enemies/enemy_prefab.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://dslq8yloxcpbh" path="res://enemies/enemy_generator.tscn" id="5_lquwl"]
 
 [node name="Node2D" type="Node2D" unique_id=785255799]
 
@@ -15,3 +16,32 @@
 script = ExtResource("3_lquwl")
 
 [node name="Enemy" parent="." unique_id=582181779 instance=ExtResource("4_1bvp3")]
+position = Vector2(752, 85)
+damage = 5.0
+
+[node name="EnemyGenerators" type="Node2D" parent="." unique_id=505503154]
+
+[node name="EnemyGenerator3" parent="EnemyGenerators" unique_id=658574200 instance=ExtResource("5_lquwl")]
+position = Vector2(895, 1)
+timer_time = 10
+timer_variance = 5
+
+[node name="EnemyGenerator" parent="EnemyGenerators" unique_id=846790134 instance=ExtResource("5_lquwl")]
+position = Vector2(897, 107)
+timer_time = 10
+timer_variance = 5
+
+[node name="EnemyGenerator2" parent="EnemyGenerators" unique_id=536230020 instance=ExtResource("5_lquwl")]
+position = Vector2(897, 54)
+timer_time = 10
+timer_variance = 5
+
+[node name="EnemyGenerator4" parent="EnemyGenerators" unique_id=237189832 instance=ExtResource("5_lquwl")]
+position = Vector2(901, 155)
+timer_time = 10
+timer_variance = 5
+
+[node name="EnemyGenerator5" parent="EnemyGenerators" unique_id=1542705787 instance=ExtResource("5_lquwl")]
+position = Vector2(899, 212)
+timer_time = 10
+timer_variance = 5

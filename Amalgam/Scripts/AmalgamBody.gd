@@ -6,3 +6,6 @@ class_name Amalgam_body
 @export var hp_mult: float = 1.0
 @export var spd_mult: float = 1.0
 @export var range_mult: float = 1.0
+
+func on_attatch(node):
+	pass

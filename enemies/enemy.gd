@@ -22,7 +22,7 @@ func _process(delta: float) -> void:
 	var areas = area.get_overlapping_areas()
 	var moving = true
 	for a: Area2D in areas:
-		if a.is_in_group("Creature"):
+		if a.is_in_group("Amalgam"):
 			moving = false
 			attack(a)
 			
