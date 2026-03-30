@@ -2,6 +2,7 @@ extends Node2D
 class_name HotbarClass
 var hover = false;
 var hotbar:Node;
+@export var hotbar_scale: int= 20;
 static var currentHold: Node2D = Node2D.new();
 static var currentHoldChecker = false
 
@@ -44,7 +45,7 @@ func _process(delta: float) -> void:
 func position_amalgam():
 	$Amalgam.global_position = global_position
 	#This kinda hard coded rn because I couldn't get it to work here
-	$Amalgam.scale = Vector2(.1,.1) * $HotbarSprite.texture.get_width()/$Amalgam.get_node("Body").get_node("Icon").texture.get_width()
+	$Amalgam.scale = Vector2(.1,.1) * hotbar_scale#$HotbarSprite.texture.get_width()/$Amalgam.get_node("Body").get_node("Icon").texture.get_width()
 		
 	
 		

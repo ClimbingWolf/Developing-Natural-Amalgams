@@ -2,8 +2,18 @@
 
 [ext_resource type="PackedScene" uid="uid://bvu2tdefacneg" path="res://Amalgam/Scenes/amalgam_body.tscn" id="1_2aot1"]
 [ext_resource type="Script" uid="uid://dd7kivoc7bkdw" path="res://Amalgam/Scripts/tardigrade_body.gd" id="1_r5wah"]
+[ext_resource type="Texture2D" uid="uid://5rmiu16n7pt3" path="res://Amalgam/Sprites/tardigrade.png" id="3_7a4ik"]
 
 [node name="Body" unique_id=7729438 instance=ExtResource("1_2aot1")]
 script = ExtResource("1_r5wah")
 hp_mult = 3.0
 range_mult = 1.0
+
+[node name="Icon" parent="." index="0" unique_id=2098181349]
+texture = ExtResource("3_7a4ik")
+
+[node name="HeadPos" parent="." index="1" unique_id=249309754]
+position = Vector2(2, -2)
+
+[node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(42570756) index="0" unique_id=114629965]
+position = Vector2(2, -2)

@@ -3,9 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://dmoxdrn13y1of" path="res://ui/hotbar.png" id="1_2m22k"]
 [ext_resource type="Script" uid="uid://ph1rv3mltyuf" path="res://ui/hotbar.gd" id="1_v0qo3"]
 [ext_resource type="PackedScene" uid="uid://c45plcsbw2b3c" path="res://ui/hotbar_spot.tscn" id="2_v0qo3"]
-[ext_resource type="PackedScene" uid="uid://dd2uqdwmgy5po" path="res://Amalgam/creature.tscn" id="4_hgl4l"]
-[ext_resource type="PackedScene" uid="uid://bdawqb80i4wdy" path="res://Amalgam/Scenes/cheetah_body.tscn" id="5_on312"]
-[ext_resource type="PackedScene" uid="uid://c2no4n0our3vs" path="res://Amalgam/Scenes/crocodile_head.tscn" id="6_m78bq"]
 
 [node name="Hotbar" type="Node2D" unique_id=645606188]
 script = ExtResource("1_v0qo3")
@@ -19,12 +16,6 @@ texture = ExtResource("1_2m22k")
 
 [node name="HotbarSpot" parent="Hotbar nodes" unique_id=1938797358 instance=ExtResource("2_v0qo3")]
 position = Vector2(150, 65)
-
-[node name="Amalgam" parent="Hotbar nodes/HotbarSpot" unique_id=893599688 instance=ExtResource("4_hgl4l")]
-position = Vector2(1, -5)
-defaultBody = ExtResource("5_on312")
-defaultHead = ExtResource("6_m78bq")
-hp = 10
 
 [node name="HotbarSpot2" parent="Hotbar nodes" unique_id=1233071261 instance=ExtResource("2_v0qo3")]
 position = Vector2(255, 65)

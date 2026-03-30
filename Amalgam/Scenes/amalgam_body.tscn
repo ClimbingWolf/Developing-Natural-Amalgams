@@ -16,7 +16,7 @@ func takeDamage(damage):
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_erbss"]
-size = Vector2(131, 127)
+size = Vector2(56, 48)
 
 [node name="Body" type="Node2D" unique_id=7729438]
 script = SubResource("GDScript_82goe")

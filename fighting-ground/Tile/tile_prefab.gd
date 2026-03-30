@@ -2,6 +2,8 @@ extends Node2D
 
 var hover = false
 
+@export var scale_on_tile: int = 20
+
 func _ready():
 	var size = $Sprite2D.texture.get_size() * scale
 	
@@ -23,7 +25,7 @@ func _process(delta: float) -> void:
 		dupe.name = "Amalgam"
 		add_child(dupe)
 		dupe.get_node("Area2D").process_mode = Node.PROCESS_MODE_INHERIT
-		dupe.scale = Vector2(1,1) * $Sprite2D.texture.get_width()/dupe.get_node("Body").get_node("Icon").texture.get_width()
+		dupe.scale = Vector2(1,1) * scale_on_tile
 		HotbarClass.currentHold.queue_free()
 		HotbarClass.currentHold = Node2D.new()
 	if(has_node("Amalgam") && HotbarClass.currentHoldChecker == false):

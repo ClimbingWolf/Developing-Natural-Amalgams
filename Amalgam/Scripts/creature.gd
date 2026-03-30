@@ -4,13 +4,14 @@ class_name creature
 @export var defaultHead: PackedScene;
 var body: Amalgam_body
 var head: Amalgam_head
-@export var hp:int
-var attack:int
-var defense:int
-var speed:float
-var range:float
+@export var hp:int =10
+var attack:int =10
+var defense:int=10
+var speed:float=10
+var range:float=10
 func _ready() -> void:
-	#this check sucks but it works as long as we don't add beggining children to the Creature nodes
+	
+	
 	if(!has_node("Body") && !has_node("Head")):
 		setupCreature(defaultBody.instantiate(), defaultHead.instantiate());
 		add_child(body)
@@ -78,5 +79,5 @@ func takeDamage(damage):
 	pass
 
 func doAttack():
-	pass
-	#head.attack()
+	
+	head.doAttack()
