@@ -23,7 +23,6 @@ func _on_area_2d_mouse_exited() -> void:
 	pass # Replace with function body.
 
 func _process(delta: float) -> void:
-	print(currentHold.name)
 	if(Input.is_action_just_pressed("click") && !currentHoldChecker  && has_node("Amalgam") && hover && currentHold.name == ""):
 		currentHold = $Amalgam;
 		currentHoldChecker= true

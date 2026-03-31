@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cc6bqu57dsxx3" path="res://Amalgam/Sprites/crocodile.png" id="2_52gse"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_00d32"]
-size = Vector2(161.875, 126.875)
+size = Vector2(40.4375, 10)
 
 [node name="Head" type="Node2D" unique_id=2124160809]
 z_index = 1
@@ -15,10 +15,10 @@ speed = 5.0
 texture = ExtResource("2_52gse")
 offset = Vector2(10, -5)
 
-[node name="ChompArea" type="Area2D" parent="." unique_id=1802048398]
+[node name="AttackArea" type="Area2D" parent="." unique_id=1802048398]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ChompArea" unique_id=1855626855]
-position = Vector2(151.9375, 1.5625)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=1855626855]
+position = Vector2(46.78125, -1)
 shape = SubResource("RectangleShape2D_00d32")
 
 [node name="AttackCooldown" type="Timer" parent="." unique_id=116576876]

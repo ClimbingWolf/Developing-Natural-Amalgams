@@ -10,6 +10,7 @@ var defense:int=10
 var speed:float=10
 var range:float=10
 func _ready() -> void:
+	$TextureProgressBar.value = hp
 	
 	
 	if(!has_node("Body") && !has_node("Head")):
@@ -73,6 +74,7 @@ func getRange() -> float:
 func takeDamage(damage):
 	var newDamage = damage/ (defense/10)
 	hp -= newDamage
+	$TextureProgressBar.value = hp
 	if(hp <= 0):
 		queue_free();
 	

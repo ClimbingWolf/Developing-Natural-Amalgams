@@ -20,11 +20,12 @@ func _process(delta: float) -> void:
 		var potentialEnemies = $AttackArea.get_overlapping_areas()
 		for e in potentialEnemies:
 			if e.is_in_group("Enemy"):
-				print("attack!!!!")
 				do_attack(e)
 				canAttack = false
 		if !canAttack:
+			$AttackCooldown.wait_time = speed;
 			$AttackCooldown.start()
+			
 	pass
 
 func do_attack(enemy):

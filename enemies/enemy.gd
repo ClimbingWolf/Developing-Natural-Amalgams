@@ -14,11 +14,13 @@ class_name enemy
 var canAttack = false
 
 func _ready() -> void:
+	$TextureProgressBar.value = HP
 	cooldown.wait_time = attack_delay
 	cooldown.start()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	
 	var areas = area.get_overlapping_areas()
 	var moving = true
 	for a: Area2D in areas:
@@ -26,9 +28,10 @@ func _process(delta: float) -> void:
 			moving = false
 			attack(a)
 			
-		elif a.is_in_group("Enemy"):
-			moving = false
-			attack(a)
+		#idk why we were making them attack eachother but ok ig
+		#elif a.is_in_group("Enemy"):
+			#moving = false
+			#attack(a)
 	
 	if moving:
 		position += Vector2.LEFT * move_speed * delta
@@ -42,9 +45,11 @@ func attack(area: Area2D):
 
 func takeDamage(damage):
 	HP -= damage
+	$TextureProgressBar.value = HP
 	print("Enemy HP: " + str(HP))
 	if (HP <= 0):
 		die()
 		
 func die():
+	queue_free()
 	print("Ow I died")

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://edfaw1r6qkc2"]
 
-[ext_resource type="Texture2D" uid="uid://dmoxdrn13y1of" path="res://ui/hotbar.png" id="1_2m22k"]
 [ext_resource type="Script" uid="uid://ph1rv3mltyuf" path="res://ui/hotbar.gd" id="1_v0qo3"]
+[ext_resource type="Texture2D" uid="uid://dglqqxt17o0cs" path="res://enemies/health_bar/Sprite-0001.png" id="2_u3sb2"]
 [ext_resource type="PackedScene" uid="uid://c45plcsbw2b3c" path="res://ui/hotbar_spot.tscn" id="2_v0qo3"]
 
 [node name="Hotbar" type="Node2D" unique_id=645606188]
@@ -10,7 +10,7 @@ script = ExtResource("1_v0qo3")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1846679965]
 position = Vector2(572.00006, 32)
 scale = Vector2(0.66403276, 0.50914633)
-texture = ExtResource("1_2m22k")
+texture = ExtResource("2_u3sb2")
 
 [node name="Hotbar nodes" type="Node" parent="." unique_id=737241075]
 
