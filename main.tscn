@@ -11,6 +11,7 @@
 [node name="FightingBoard" parent="." unique_id=2002171744 instance=ExtResource("2_1bvp3")]
 
 [node name="Ui" parent="." unique_id=408283547 instance=ExtResource("1_h2yge")]
+physics_interpolation_mode = 1
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1236897978]
 script = ExtResource("3_lquwl")

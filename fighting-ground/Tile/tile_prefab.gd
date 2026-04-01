@@ -30,6 +30,7 @@ func _process(delta: float) -> void:
 		dupe.scale = Vector2(1,1) * scale_on_tile
 		HotbarClass.currentHold.queue_free()
 		HotbarClass.currentHold = Node2D.new()
+		dupe.get_node("Head").placed = true;
 	if(has_node("Amalgam") && HotbarClass.currentHoldChecker == false):
 		$Amalgam.global_position = global_position
 	if(Input.is_action_just_pressed("click") && HotbarClass.currentHoldChecker && has_node("Amalgam") && HotbarClass.currentHold.name == "Deletor" && hover):

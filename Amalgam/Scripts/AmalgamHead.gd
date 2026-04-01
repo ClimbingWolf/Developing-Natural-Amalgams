@@ -8,32 +8,37 @@ class_name Amalgam_head
 @export var defense:int = 10
 @export var speed:float = 2
 @export var range:float = 10
+var placed = false;
 
 var canAttack = false
+var isWaiting: bool = false;
 
 func _ready() -> void:
-	$AttackCooldown.wait_time = speed
-	$AttackCooldown.start()
+	pass
 	
 func _process(delta: float) -> void:
-	if canAttack:
-		var potentialEnemies = $AttackArea.get_overlapping_areas()
-		for e in potentialEnemies:
-			if e.is_in_group("Enemy"):
-				do_attack(e)
-				canAttack = false
-		if !canAttack:
+	if(placed):
+		if canAttack:
+			var potentialEnemies = $AttackArea.get_overlapping_areas()
+			for e in potentialEnemies:
+				if e.is_in_group("Enemy"):
+					do_attack(e)
+					canAttack = false
+		if !canAttack && !isWaiting:
 			$AttackCooldown.wait_time = speed;
 			$AttackCooldown.start()
-			
-	pass
+			isWaiting = true;
+				
+		pass
 
 func do_attack(enemy):
 	print("Amalgam attacked")
 	enemy.get_parent().takeDamage(attack)
+	canAttack = false;
 
 
 func _on_attack_cooldown_timeout() -> void:
 	print("evil mode")
 	canAttack = true
+	isWaiting = false;
 	pass
