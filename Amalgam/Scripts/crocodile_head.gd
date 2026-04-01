@@ -2,5 +2,5 @@ extends Amalgam_head
 
 
 func _ready() -> void:
-	#set variables here
+	super._ready()
 	pass

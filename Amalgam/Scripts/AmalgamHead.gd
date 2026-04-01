@@ -29,7 +29,7 @@ func _process(delta: float) -> void:
 	pass
 
 func do_attack(enemy):
-	print("hi i attacked")
+	print("Amalgam attacked")
 	enemy.get_parent().takeDamage(attack)
 
 
