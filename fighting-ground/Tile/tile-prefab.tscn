@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dhnu15x43uipv"]
 
-[ext_resource type="Texture2D" uid="uid://kmkmyo6tddbf" path="res://fighting-ground/Tile/tile.png" id="1_1qk4j"]
+[ext_resource type="Texture2D" uid="uid://sppcmgwpyve7" path="res://fighting-ground/Tile/grass-tile-1.png" id="2_ax8bl"]
 [ext_resource type="Script" uid="uid://dna5ejhg28ivk" path="res://fighting-ground/Tile/tile_prefab.gd" id="2_vapgj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vapgj"]
-size = Vector2(920, 909)
+size = Vector2(15, 14)
 
 [node name="TilePrefab" type="Node2D" unique_id=489921619]
 script = ExtResource("2_vapgj")
@@ -12,11 +12,11 @@ script = ExtResource("2_vapgj")
 [node name="Area2D" type="Area2D" parent="." unique_id=1703462034]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1075278904]
-position = Vector2(2, -6.5)
+position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_vapgj")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=499477630]
-texture = ExtResource("1_1qk4j")
+texture = ExtResource("2_ax8bl")
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

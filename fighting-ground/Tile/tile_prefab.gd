@@ -2,10 +2,12 @@ extends Node2D
 
 var hover = false
 
-@export var scale_on_tile: int = 20
+#THIS IS 20/58, IT BREAKS IF YOU BREAK THE SPRITE TILE SIZE DONT DO THAT PLEASE
+@export var scale_on_tile: float = 0.3448;
+
 
 func _ready():
-	var size = $Sprite2D.texture.get_size() * scale
+	var size = $Sprite2D.texture.get_size() * scale * $Sprite2D.scale
 	
 func _on_area_2d_mouse_entered() -> void:
 	$Sprite2D.modulate += Color(0.1, 0.1, 0.1)
