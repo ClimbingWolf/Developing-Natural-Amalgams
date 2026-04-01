@@ -1,5 +1,5 @@
 extends Node2D
-class_name HotbarClass
+class_name InventorySlot
 var hover = false;
 var hotbar:Node;
 @export var hotbar_scale: int= 20;
@@ -9,7 +9,7 @@ static var currentHoldChecker = false
 func _ready():
 	hotbar = get_parent().get_parent();
 	hover = false
-	$HotbarSprite.modulate = Color(0.0, 0.525, 0.0, 1.0)
+	$HotbarSprite.modulate = Color(0.902, 0.852, 0.836, 1.0)
 	
 func _on_area_2d_mouse_entered() -> void:
 	modulate += Color(0.1, 0.1, 0.1)
@@ -43,7 +43,6 @@ func _process(delta: float) -> void:
 
 func position_amalgam():
 	$Amalgam.global_position = global_position
-	print("hi")
 	#This kinda hard coded rn because I couldn't get it to work here
 	$Amalgam.scale = Vector2(.1,.1) * hotbar_scale#$HotbarSprite.texture.get_width()/$Amalgam.get_node("Body").get_node("Icon").texture.get_width()
 		
