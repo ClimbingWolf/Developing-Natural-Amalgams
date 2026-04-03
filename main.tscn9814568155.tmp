@@ -50,12 +50,11 @@ timer_variance = 5
 
 [node name="Cameras" type="Node2D" parent="." unique_id=1585594062]
 
-[node name="FactoryCam" type="Camera2D" parent="Cameras" unique_id=2021575386 groups=["Main Cam"]]
+[node name="FactoryCam" type="Camera2D" parent="Cameras" unique_id=2021575386]
 script = ExtResource("6_7mycd")
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=554094401]
 disable_3d = true
-canvas_item_default_texture_filter = 0
 size = Vector2i(1920, 1080)
 
 [node name="PvzCam" type="Camera2D" parent="SubViewport" unique_id=1236897978 node_paths=PackedStringArray("fighting_board")]

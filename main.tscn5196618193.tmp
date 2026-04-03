@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://br14oksxl4d7p" path="res://ui/ui.tscn" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://xgqs7k88huo6" path="res://fighting-ground/fighting-board.tscn" id="2_1bvp3"]
-[ext_resource type="Script" uid="uid://j6lgytc8578h" path="res://camera/cam_dupe.gd" id="3_272bh"]
 [ext_resource type="Script" uid="uid://dje7wsh6xsyje" path="res://camera/pvz_cam.gd" id="3_lquwl"]
 [ext_resource type="PackedScene" uid="uid://dw7ewij1ngdsg" path="res://enemies/enemy_prefab.tscn" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://dslq8yloxcpbh" path="res://enemies/enemy_generator.tscn" id="5_lquwl"]
@@ -12,10 +11,9 @@
 
 [node name="FightingBoard" parent="." unique_id=2002171744 instance=ExtResource("2_1bvp3")]
 
-[node name="Ui" parent="." unique_id=408283547 node_paths=PackedStringArray("cameraViewport") instance=ExtResource("1_h2yge")]
+[node name="Ui" parent="." unique_id=408283547 node_paths=PackedStringArray("cameraTexture") instance=ExtResource("1_h2yge")]
 physics_interpolation_mode = 1
-cameraViewport = NodePath("../SubViewport")
-dupe_script = ExtResource("3_272bh")
+cameraTexture = NodePath("../Cameras/SubViewport")
 
 [node name="Enemy" parent="." unique_id=582181779 instance=ExtResource("4_1bvp3")]
 position = Vector2(752, 85)
@@ -50,14 +48,12 @@ timer_variance = 5
 
 [node name="Cameras" type="Node2D" parent="." unique_id=1585594062]
 
-[node name="FactoryCam" type="Camera2D" parent="Cameras" unique_id=2021575386 groups=["Main Cam"]]
-script = ExtResource("6_7mycd")
-
-[node name="SubViewport" type="SubViewport" parent="." unique_id=554094401]
+[node name="SubViewport" type="SubViewport" parent="Cameras" unique_id=554094401]
 disable_3d = true
-canvas_item_default_texture_filter = 0
-size = Vector2i(1920, 1080)
 
-[node name="PvzCam" type="Camera2D" parent="SubViewport" unique_id=1236897978 node_paths=PackedStringArray("fighting_board")]
+[node name="PvzCam" type="Camera2D" parent="Cameras/SubViewport" unique_id=1236897978 node_paths=PackedStringArray("fighting_board")]
 script = ExtResource("3_lquwl")
-fighting_board = NodePath("../../FightingBoard")
+fighting_board = NodePath("../../../FightingBoard")
+
+[node name="FactoryCam" type="Camera2D" parent="Cameras" unique_id=2021575386]
+script = ExtResource("6_7mycd")

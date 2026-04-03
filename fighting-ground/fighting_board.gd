@@ -6,12 +6,13 @@ extends Node2D
 @export var color2: Color = Color(0.238, 0.333, 0.054, 1.0);
 @export var pixel_tile_width: int = 50;
 @export var pixel_tile_height: int = 50;
+var centerx = (board_width/2-0.5)*pixel_tile_height;
+var centery = (board_height/2-0.5)*pixel_tile_width;
 
 
 var tiles = []
 
 func _ready() -> void:
-	
 	var tile_sprite_node: Node2D = tile_sprite_prefab.instantiate()
 	var tile_sprite = tile_sprite_node.get_node("Sprite2D")
 	var tile_size = tile_sprite.get_rect().size
