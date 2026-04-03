@@ -4,10 +4,11 @@ var bodies = ["res://Amalgam/Scenes/cheetah_body.tscn", "res://Amalgam/Scenes/rh
 var heads = ["res://Amalgam/Scenes/crocodile_head.tscn", "res://Amalgam/Scenes/giraffe_head.tscn", "res://Amalgam/Scenes/wolf_head.tscn"]
 var baseAmalgam = load("res://Amalgam/creature.tscn")
 var hotbar: Node2D
+var bodybar: Node2D
 var bodies_nodes = [];
 var heads_nodes = [];
 var active: bool = false
-var wait_time = 1.0;
+var wait_time = 10.0;
 func _ready() -> void:
 	hotbar = get_parent().get_node("CanvasLayer").get_node("HeadSlots");
 	bodybar = get_parent().get_node("CanvasLayer").get_node("BodySlots");
@@ -17,6 +18,8 @@ func _ready() -> void:
 	for i in heads:
 		heads_nodes.append(load(i))
 	activate()
+	add_creature()
+	add_creature()
 	
 
 func activate():
@@ -26,19 +29,25 @@ func activate():
 	print("Activate")
 	
 func add_creature():
-	var body = bodies_nodes.pick_random().instantiate()
-	body.name = "Amalgam"
-	var slots = hotbar.get_node("Slots").get_children()
+	var part
+	var slots
+	var number = randi() % 2 +1
+	if number == 1:
+		part = bodies_nodes.pick_random().instantiate()
+		slots = bodybar.get_node("Slots").get_children()
+	else:
+		part = heads_nodes.pick_random().instantiate()
+		slots = hotbar.get_node("Slots").get_children()
+	part.name = "Amalgam"
 	for slot in slots:
 		if(!slot.has_node("Amalgam")):
-			slot.add_child(body);
+			slot.add_child(part);
 			slot.position_amalgam()
 			break
 	
 
 
 func _on_timer_timeout() -> void:
-	print("ASDLJSAJKD")
 	add_creature()
 	$Timer.wait_time = wait_time
 	$Timer.start();

@@ -13,10 +13,10 @@ func _ready() -> void:
 	$TextureProgressBar.value = hp
 	
 	
-	if(!has_node("Body") && !has_node("Head")):
-		setupCreature(defaultBody.instantiate(), defaultHead.instantiate());
-		add_child(body)
-		#add_child(head)
+	#if(!has_node("Body") && !has_node("Head")):
+		#setupCreature(defaultBody.instantiate(), defaultHead.instantiate());
+		#add_child(body)
+		##add_child(head)
 	
 
 func setBody(newBody):

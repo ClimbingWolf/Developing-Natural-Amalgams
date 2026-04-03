@@ -43,7 +43,6 @@ func _process(delta: float) -> void:
 
 func position_amalgam():
 	$Amalgam.global_position = global_position
-	print("hi")
 	#This kinda hard coded rn because I couldn't get it to work here
 	$Amalgam.scale = Vector2(.1,.1) * hotbar_scale#$HotbarSprite.texture.get_width()/$Amalgam.get_node("Body").get_node("Icon").texture.get_width()
 		
