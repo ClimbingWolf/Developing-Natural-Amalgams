@@ -9,7 +9,6 @@ size = Vector2(40.4375, 10)
 [node name="Head" type="Node2D" unique_id=2124160809]
 z_index = 1
 script = ExtResource("1_52gse")
-speed = 5.0
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=1965967158]
 texture = ExtResource("2_52gse")

@@ -21,7 +21,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	
-	var areas = area.get_overlapping_areas()
+	var areas = $AttackArea.get_overlapping_areas()
 	var moving = true
 	for a: Area2D in areas:
 		if a.is_in_group("Amalgam"):
@@ -37,10 +37,15 @@ func _process(delta: float) -> void:
 		position += Vector2.LEFT * move_speed * delta
 	
 func attack(area: Area2D):
+	#print(cooldown.time_left)
 	if (cooldown.time_left == 0):
 		print("ENEMY ATTACK")
 		var body: Node2D = area.get_parent()
+		print(body.name)
+		
 		body.takeDamage(damage)
+		print(body.hp)
+		cooldown.wait_time = attack_delay
 		cooldown.start()
 
 func takeDamage(damage):

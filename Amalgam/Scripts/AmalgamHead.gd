@@ -3,15 +3,22 @@ extends Node
 class_name Amalgam_head
 
 #All 10s for default, most likely will need to be changed
-@export var hp:int = 10
-@export var attack:int = 10
-@export var defense:int = 10
-@export var speed:float = 2
-@export var range:float = 10
+var hp:float = 10
+var attack:float = 10
+var defense:int = 10
+var speed:float = 2
+var range:float = 10
 var placed = false;
 
 var canAttack = false
 var isWaiting: bool = false;
+
+func setStates(hp, attack, defense, speed, range) -> void:
+	self.hp = hp;
+	self.attack = attack;
+	self.defense = defense
+	self.speed = speed;
+	self.range = range
 
 func _ready() -> void:
 	pass

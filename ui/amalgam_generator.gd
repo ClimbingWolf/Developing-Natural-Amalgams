@@ -7,7 +7,7 @@ var hotbar: Node2D
 var bodies_nodes = [];
 var heads_nodes = [];
 var active: bool = false
-var wait_time = 3;
+var wait_time = 0.1;
 func _ready() -> void:
 	hotbar = get_parent().get_node("CanvasLayer").get_node("Hotbar");
 	for i in bodies:
