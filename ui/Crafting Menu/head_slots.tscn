@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dxgm5g6swffhn"]
+
+[ext_resource type="Script" uid="uid://ph1rv3mltyuf" path="res://ui/hotbar.gd" id="1_k5qso"]
+[ext_resource type="PackedScene" uid="uid://c45plcsbw2b3c" path="res://ui/hotbar_spot.tscn" id="1_rhe7x"]
+
+[node name="HeadSlots" type="Node2D" unique_id=380394891]
+script = ExtResource("1_k5qso")
+
+[node name="Slots" type="Node" parent="." unique_id=204109996]
+
+[node name="HotbarSpot" parent="Slots" unique_id=1938797358 instance=ExtResource("1_rhe7x")]
+z_index = -29
+position = Vector2(262, 81)
+
+[node name="HotbarSpot2" parent="Slots" unique_id=491951025 instance=ExtResource("1_rhe7x")]
+position = Vector2(381, 122)
+
+[node name="HotbarSpot3" parent="Slots" unique_id=327611280 instance=ExtResource("1_rhe7x")]
+position = Vector2(516, 82)
+
+[node name="HotbarSpot4" parent="Slots" unique_id=816278597 instance=ExtResource("1_rhe7x")]
+position = Vector2(661, 115)
+
+[node name="HotbarSpot5" parent="Slots" unique_id=1808041217 instance=ExtResource("1_rhe7x")]
+z_index = -18
+position = Vector2(795, 77)

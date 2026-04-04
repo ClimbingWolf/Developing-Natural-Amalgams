@@ -1,5 +1,5 @@
 extends Node2D
-class_name HotbarClass
+class_name InventorySlot
 var hover = false;
 var hotbar:Node;
 @export var hotbar_scale: int= 20;
@@ -9,7 +9,7 @@ static var currentHoldChecker = false
 func _ready():
 	hotbar = get_parent().get_parent();
 	hover = false
-	$HotbarSprite.modulate = Color(0.0, 0.525, 0.0, 1.0)
+	$HotbarSprite.modulate = Color(0.902, 0.852, 0.836, 1.0)
 	
 func _on_area_2d_mouse_entered() -> void:
 	modulate += Color(0.1, 0.1, 0.1)

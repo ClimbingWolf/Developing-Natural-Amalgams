@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://dfvvmn17junvx"]
+
+[ext_resource type="PackedScene" uid="uid://dxgm5g6swffhn" path="res://ui/Crafting Menu/head_slots.tscn" id="1_kxjit"]
+[ext_resource type="Script" uid="uid://cwk628jcittp8" path="res://ui/Crafting Menu/body_generator.gd" id="2_3uw26"]
+[ext_resource type="PackedScene" uid="uid://cih0frfnh4wsj" path="res://ui/Crafting Menu/body_slots.tscn" id="2_n53y1"]
+[ext_resource type="Script" path="res://ui/hotbar.gd" id="3_fc1ef"]
+[ext_resource type="PackedScene" uid="uid://c0duln4gkleej" path="res://craftingSlots.tscn" id="4_fc1ef"]
+
+[node name="Crafting Menu" type="Node2D" unique_id=1888016711]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1932710556]
+
+[node name="HeadSlots" parent="CanvasLayer" unique_id=380394891 instance=ExtResource("1_kxjit")]
+z_index = -28
+
+[node name="BodySlots" parent="CanvasLayer" unique_id=1874698683 instance=ExtResource("2_n53y1")]
+z_index = -25
+position = Vector2(-60, 44)
+script = ExtResource("3_fc1ef")
+
+[node name="CraftingSlots" parent="CanvasLayer" unique_id=1857105460 instance=ExtResource("4_fc1ef")]
+
+[node name="generator" type="Node2D" parent="." unique_id=489385790]
+position = Vector2(0, 72)
+script = ExtResource("2_3uw26")
+
+[node name="Timer" type="Timer" parent="generator" unique_id=1913222603]
+
+[node name="+" type="Label" parent="." unique_id=314466724]
+offset_left = 342.0
+offset_top = 250.0
+offset_right = 444.0
+offset_bottom = 360.0
+theme_override_font_sizes/font_size = 77
+text = "+"
+
+[node name="=" type="Label" parent="." unique_id=1653402663]
+offset_left = 623.0
+offset_top = 244.0
+offset_right = 725.0
+offset_bottom = 354.0
+theme_override_font_sizes/font_size = 77
+text = "="
+
+[connection signal="timeout" from="generator/Timer" to="generator" method="_on_timer_timeout"]
