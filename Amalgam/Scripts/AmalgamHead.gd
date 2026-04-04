@@ -34,6 +34,5 @@ func do_attack(enemy):
 
 
 func _on_attack_cooldown_timeout() -> void:
-	print("evil mode")
 	canAttack = true
 	pass

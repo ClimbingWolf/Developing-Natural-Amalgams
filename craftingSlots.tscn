@@ -1,8 +1,9 @@
-[gd_scene format=3 uid="uid://bxqt01d4aoc4t"]
+[gd_scene format=3 uid="uid://c0duln4gkleej"]
 
-[ext_resource type="Script" uid="uid://ph1rv3mltyuf" path="res://ui/hotbar.gd" id="1_jkmta"]
-[ext_resource type="Script" uid="uid://bhccq5y6venb1" path="res://headCraftingSlot.gd" id="1_xct7n"]
-[ext_resource type="Script" uid="uid://bh23e8lllupxf" path="res://ui/resultCraftingSlot.gd" id="4_k6mcs"]
+[ext_resource type="Script" path="res://ui/hotbar.gd" id="1_jkmta"]
+[ext_resource type="Script" uid="uid://bhccq5y6venb1" path="res://ui/HotbarClass Scripts/headCraftingSlot.gd" id="1_xct7n"]
+[ext_resource type="Script" uid="uid://bh23e8lllupxf" path="res://ui/HotbarClass Scripts/resultCraftingSlot.gd" id="4_k6mcs"]
+[ext_resource type="Script" uid="uid://1c0wip663jm1" path="res://ui/bodyCraftingSlot.gd" id="4_sr46n"]
 [ext_resource type="PackedScene" uid="uid://c45plcsbw2b3c" path="res://ui/hotbar_spot.tscn" id="5_sr46n"]
 
 [node name="CraftingSlots" type="Node2D" unique_id=1857105460]
@@ -14,6 +15,7 @@ script = ExtResource("1_xct7n")
 
 [node name="BodyCrafting" parent="." unique_id=702355072 instance=ExtResource("5_sr46n")]
 position = Vector2(519, 298)
+script = ExtResource("4_sr46n")
 
 [node name="ResultSlot" parent="." unique_id=1864034624 instance=ExtResource("5_sr46n")]
 position = Vector2(796, 303)

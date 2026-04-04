@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c45plcsbw2b3c"]
 
-[ext_resource type="Script" uid="uid://dg6sedeorgpwl" path="res://ui/hotbar_spot.gd" id="1_7lpe5"]
+[ext_resource type="Script" uid="uid://dg6sedeorgpwl" path="res://ui/HotbarClass Scripts/hotbar_spot.gd" id="1_7lpe5"]
 [ext_resource type="Texture2D" uid="uid://kmkmyo6tddbf" path="res://fighting-ground/Tile/tile.png" id="1_vsi03"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vsi03"]

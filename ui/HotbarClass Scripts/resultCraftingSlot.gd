@@ -20,6 +20,7 @@ func _process(delta: float) -> void:
 		#add_child(dupe);
 	if headCraftingSlot.has_node("Amalgam") and headCraftingSlot.get_node("Amalgam") is Amalgam_head and bodyCraftingSlot.has_node("Amalgam") && bodyCraftingSlot.get_node("Amalgam") is Amalgam_body:
 		var headDupe = headCraftingSlot.get_node("Amalgam").duplicate()
+		print("head dupe: " + str(headDupe))
 		var bodyDupe = bodyCraftingSlot.get_node("Amalgam").duplicate()
 		var creature_copy = baseAmalgam.instantiate();
 		creature_copy.setupCreature(bodyDupe, headDupe)

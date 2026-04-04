@@ -8,7 +8,9 @@ var bodybar: Node2D
 var bodies_nodes = [];
 var heads_nodes = [];
 var active: bool = false
-var wait_time = 10.0;
+
+@export var wait_time = 5.0; #Wait time for generating a head or body
+
 func _ready() -> void:
 	hotbar = get_parent().get_node("CanvasLayer").get_node("HeadSlots");
 	bodybar = get_parent().get_node("CanvasLayer").get_node("BodySlots");
@@ -33,9 +35,11 @@ func add_creature():
 	var slots
 	var number = randi() % 2 +1
 	if number == 1:
+		print("body generated")
 		part = bodies_nodes.pick_random().instantiate()
 		slots = bodybar.get_node("Slots").get_children()
 	else:
+		print("head generated")
 		part = heads_nodes.pick_random().instantiate()
 		slots = hotbar.get_node("Slots").get_children()
 	part.name = "Amalgam"
@@ -45,8 +49,6 @@ func add_creature():
 			slot.position_amalgam()
 			break
 	
-
-
 func _on_timer_timeout() -> void:
 	add_creature()
 	$Timer.wait_time = wait_time
