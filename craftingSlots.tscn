@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c0duln4gkleej"]
 
-[ext_resource type="Script" path="res://ui/hotbar.gd" id="1_jkmta"]
+[ext_resource type="Script" uid="uid://ph1rv3mltyuf" path="res://ui/hotbar.gd" id="1_jkmta"]
 [ext_resource type="Script" uid="uid://bhccq5y6venb1" path="res://ui/HotbarClass Scripts/headCraftingSlot.gd" id="1_xct7n"]
 [ext_resource type="Script" uid="uid://bh23e8lllupxf" path="res://ui/HotbarClass Scripts/resultCraftingSlot.gd" id="4_k6mcs"]
 [ext_resource type="Script" uid="uid://1c0wip663jm1" path="res://ui/bodyCraftingSlot.gd" id="4_sr46n"]
@@ -10,11 +10,11 @@
 script = ExtResource("1_jkmta")
 
 [node name="HeadCrafting" parent="." unique_id=1938797358 instance=ExtResource("5_sr46n")]
-position = Vector2(238, 300)
+position = Vector2(522, 311)
 script = ExtResource("1_xct7n")
 
 [node name="BodyCrafting" parent="." unique_id=702355072 instance=ExtResource("5_sr46n")]
-position = Vector2(519, 298)
+position = Vector2(248, 309)
 script = ExtResource("4_sr46n")
 
 [node name="ResultSlot" parent="." unique_id=1864034624 instance=ExtResource("5_sr46n")]

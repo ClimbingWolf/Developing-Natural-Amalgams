@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cler4undc8drm"]
+
+[ext_resource type="PackedScene" uid="uid://cy8wk6gf8q6r3" path="res://crafter.tscn" id="1_ceubm"]
+
+[node name="Node2D" type="Node2D" unique_id=833993457]
+
+[node name="Crafter" parent="." unique_id=1000733126 instance=ExtResource("1_ceubm")]
+position = Vector2(126, 100)
+
+[node name="Crafter2" parent="." unique_id=2134895771 instance=ExtResource("1_ceubm")]
+position = Vector2(288, 270)

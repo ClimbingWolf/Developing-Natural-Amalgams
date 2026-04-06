@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://cy8wk6gf8q6r3"]
+
+[ext_resource type="Script" uid="uid://dxiy526k6qqys" path="res://crafter.gd" id="1_dsfm1"]
+[ext_resource type="Texture2D" uid="uid://ddr0uphlaa7nh" path="res://icon.svg" id="2_2q6md"]
+[ext_resource type="Script" uid="uid://clgn8pidko78j" path="res://CrafterObjectMenu.gd" id="3_d4axi"]
+[ext_resource type="Texture2D" uid="uid://dpav6ubmgoush" path="res://Amalgam/Sprites/giraffe.png" id="4_p33cw"]
+[ext_resource type="Texture2D" uid="uid://byyf2d2ru3ndi" path="res://Amalgam/Sprites/wolf.png" id="5_y08et"]
+[ext_resource type="Texture2D" uid="uid://5rmiu16n7pt3" path="res://Amalgam/Sprites/tardigrade.png" id="6_14eck"]
+[ext_resource type="Texture2D" uid="uid://b3xlukkua14ur" path="res://Amalgam/Sprites/rhino.png" id="7_kn1vg"]
+[ext_resource type="Texture2D" uid="uid://c0dtnsjpw7vbf" path="res://Amalgam/Sprites/cheetah.png" id="8_alt1e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i86ai"]
+size = Vector2(119, 119)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8dvf5"]
+load_path = "res://.godot/imported/crocodile.png-dfe80b9f1564c2b37c222b02d56d3079.ctex"
+
+[node name="Crafter" type="Node2D" unique_id=1000733126]
+script = ExtResource("1_dsfm1")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=652636819]
+position = Vector2(2, -2)
+texture = ExtResource("2_2q6md")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=399259848]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1326302977]
+position = Vector2(1.5, -3.5)
+shape = SubResource("RectangleShape2D_i86ai")
+
+[node name="Timer" type="Timer" parent="." unique_id=1118177971]
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=722633437]
+script = ExtResource("3_d4axi")
+
+[node name="Panel" type="Panel" parent="UI" unique_id=1206982925]
+offset_left = 907.0
+offset_top = 1.0
+offset_right = 1153.0
+offset_bottom = 647.0
+
+[node name="Label" type="Label" parent="UI" unique_id=1228304493]
+offset_left = 943.0
+offset_top = 12.0
+offset_right = 1123.0
+offset_bottom = 61.0
+theme_override_font_sizes/font_size = 32
+text = "Set crafting"
+
+[node name="Label2" type="Label" parent="UI" unique_id=1795937116]
+offset_left = 923.0
+offset_top = 68.0
+offset_right = 1091.0
+offset_bottom = 106.0
+theme_override_font_sizes/font_size = 25
+text = "Head"
+
+[node name="Crocodile" type="Button" parent="UI" unique_id=2108800835]
+offset_left = 920.0
+offset_top = 123.0
+offset_right = 990.0
+offset_bottom = 197.0
+toggle_mode = true
+icon = SubResource("CompressedTexture2D_8dvf5")
+
+[node name="Giraffe" type="Button" parent="UI" unique_id=1066045050]
+offset_left = 1001.0
+offset_top = 122.0
+offset_right = 1068.0
+offset_bottom = 194.0
+toggle_mode = true
+icon = ExtResource("4_p33cw")
+
+[node name="Wolf" type="Button" parent="UI" unique_id=1424772521]
+offset_left = 1077.0
+offset_top = 121.0
+offset_right = 1148.0
+offset_bottom = 194.0
+toggle_mode = true
+icon = ExtResource("5_y08et")
+
+[node name="Label3" type="Label" parent="UI" unique_id=1476339403]
+offset_left = 922.0
+offset_top = 211.0
+offset_right = 1090.0
+offset_bottom = 249.0
+theme_override_font_sizes/font_size = 25
+text = "Body"
+
+[node name="Tardigrade" type="Button" parent="UI" unique_id=1850326115]
+offset_left = 1080.0
+offset_top = 258.0
+offset_right = 1150.0
+offset_bottom = 332.0
+toggle_mode = true
+icon = ExtResource("6_14eck")
+
+[node name="Elephant" type="Button" parent="UI" unique_id=446441608]
+offset_left = 1004.0
+offset_top = 257.0
+offset_right = 1074.0
+offset_bottom = 331.0
+toggle_mode = true
+icon = ExtResource("7_kn1vg")
+
+[node name="Cheetah" type="Button" parent="UI" unique_id=115477643]
+offset_left = 921.0
+offset_top = 258.0
+offset_right = 991.0
+offset_bottom = 332.0
+toggle_mode = true
+icon = ExtResource("8_alt1e")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="UI/Crocodile" to="UI" method="_on_crocodile_pressed"]
+[connection signal="pressed" from="UI/Giraffe" to="UI" method="_on_giraffe_pressed"]
+[connection signal="pressed" from="UI/Wolf" to="UI" method="_on_wolf_pressed"]
+[connection signal="pressed" from="UI/Tardigrade" to="UI" method="_on_tardigrade_pressed"]
+[connection signal="pressed" from="UI/Elephant" to="UI" method="_on_elephant_pressed"]
+[connection signal="pressed" from="UI/Cheetah" to="UI" method="_on_cheetah_pressed"]

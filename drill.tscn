@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cgcxyjhhs4iyj"]
+
+[ext_resource type="Script" uid="uid://b7k5k8u3653ba" path="res://drill.gd" id="1_0n8n4"]
+[ext_resource type="Texture2D" uid="uid://ddr0uphlaa7nh" path="res://icon.svg" id="2_xj5j7"]
+
+[node name="Drill" type="Node2D" unique_id=870389849]
+script = ExtResource("1_0n8n4")
+
+[node name="Timer" type="Timer" parent="." unique_id=577581393]
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1366456848]
+position = Vector2(-2, 0)
+texture = ExtResource("2_xj5j7")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
