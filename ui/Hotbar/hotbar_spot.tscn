@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://c45plcsbw2b3c"]
+
+[ext_resource type="Script" uid="uid://dg6sedeorgpwl" path="res://ui/Hotbar/hotbar_spot.gd" id="1_7lpe5"]
+[ext_resource type="Texture2D" uid="uid://u8k2ho1pyy20" path="res://tilemap/Desert_Tilemap.png" id="2_40r3w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_40r3w"]
+size = Vector2(96, 96)
+
+[node name="HotbarSpot" type="Node2D" unique_id=1938797358]
+script = ExtResource("1_7lpe5")
+
+[node name="HotbarSprite" type="Sprite2D" parent="." unique_id=319623320]
+scale = Vector2(6, 6)
+texture = ExtResource("2_40r3w")
+hframes = 4
+vframes = 4
+frame = 14
+
+[node name="Area2D" type="Area2D" parent="." unique_id=809974507]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1791100517]
+shape = SubResource("RectangleShape2D_40r3w")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
