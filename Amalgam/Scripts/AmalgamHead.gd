@@ -11,9 +11,11 @@ class_name Amalgam_head
 
 var canAttack = false
 
+@onready var AttackCooldown = get_node("AttackCooldown")
+
 func _ready() -> void:
-	$AttackCooldown.wait_time = speed
-	$AttackCooldown.start()
+	AttackCooldown.wait_time = speed
+	AttackCooldown.start()
 	
 func _process(delta: float) -> void:
 	if canAttack:

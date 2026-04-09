@@ -1,26 +1,13 @@
-[gd_scene format=3 uid="uid://c2no4n0our3vs"]
+[gd_scene format=3 uid="uid://c3r0q8bb6vux6"]
 
-[ext_resource type="Script" uid="uid://8ws6sdvm7ws4" path="res://Amalgam/Scripts/crocodile_head.gd" id="1_52gse"]
+[ext_resource type="PackedScene" uid="uid://boyf1513a8s8m" path="res://Amalgam/Scenes/amalgam_head.tscn" id="1_e5jdd"]
 [ext_resource type="Texture2D" uid="uid://cc6bqu57dsxx3" path="res://Amalgam/Sprites/crocodile.png" id="2_52gse"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_00d32"]
-size = Vector2(40.4375, 10)
+[node name="Head" unique_id=2124160809 instance=ExtResource("1_e5jdd")]
 
-[node name="Head" type="Node2D" unique_id=2124160809]
-z_index = 1
-script = ExtResource("1_52gse")
-speed = 5.0
-
-[node name="Icon" type="Sprite2D" parent="." unique_id=1965967158]
+[node name="Icon" parent="." index="0" unique_id=1965967158]
+scale = Vector2(3, 3)
 texture = ExtResource("2_52gse")
-offset = Vector2(10, -5)
 
-[node name="AttackArea" type="Area2D" parent="." unique_id=1802048398]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=1855626855]
-position = Vector2(46.78125, -1)
-shape = SubResource("RectangleShape2D_00d32")
-
-[node name="AttackCooldown" type="Timer" parent="." unique_id=116576876]
-
-[connection signal="timeout" from="AttackCooldown" to="." method="_on_attack_cooldown_timeout"]
+[node name="BodyPos" parent="." index="1" unique_id=68164394]
+position = Vector2(-39, 8)

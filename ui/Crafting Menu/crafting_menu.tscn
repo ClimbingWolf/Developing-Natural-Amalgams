@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cwk628jcittp8" path="res://ui/Crafting Menu/body_generator.gd" id="2_3uw26"]
 [ext_resource type="PackedScene" uid="uid://cih0frfnh4wsj" path="res://ui/Crafting Menu/body_slots.tscn" id="2_n53y1"]
 [ext_resource type="Script" uid="uid://ph1rv3mltyuf" path="res://ui/Hotbar/hotbar.gd" id="3_fc1ef"]
-[ext_resource type="PackedScene" uid="uid://c0duln4gkleej" path="res://craftingSlots.tscn" id="4_fc1ef"]
+[ext_resource type="PackedScene" uid="uid://c0duln4gkleej" path="res://ui/Crafting Menu/craftingSlots.tscn" id="4_fc1ef"]
 [ext_resource type="PackedScene" uid="uid://ksp3bvdyvl7r" path="res://tilemap/Tilemap.tscn" id="6_pejeo"]
 
 [node name="Crafting Menu" type="Node2D" unique_id=1888016711]
@@ -24,6 +24,7 @@ script = ExtResource("3_fc1ef")
 [node name="generator" type="Node2D" parent="." unique_id=489385790]
 position = Vector2(0, 72)
 script = ExtResource("2_3uw26")
+wait_time = 2.0
 
 [node name="Timer" type="Timer" parent="generator" unique_id=1913222603]
 

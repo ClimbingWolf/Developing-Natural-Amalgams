@@ -4,18 +4,22 @@
 [ext_resource type="Texture2D" uid="uid://ddr0uphlaa7nh" path="res://icon.svg" id="2_abl8o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_00d32"]
-size = Vector2(64.5, 7)
+size = Vector2(64, 16)
 
 [node name="Head" type="Node2D" unique_id=2124160809]
 script = ExtResource("1_uqs6y")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=1965967158]
+scale = Vector2(0.75, 0.75)
 texture = ExtResource("2_abl8o")
+
+[node name="BodyPos" type="Marker2D" parent="." unique_id=68164394]
+position = Vector2(-48, 48)
 
 [node name="AttackArea" type="Area2D" parent="." unique_id=1802048398]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=1855626855]
-position = Vector2(160, 0)
+position = Vector2(80, 0)
 shape = SubResource("RectangleShape2D_00d32")
 
 [node name="AttackCooldown" type="Timer" parent="." unique_id=116576876]
