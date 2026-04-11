@@ -4,7 +4,6 @@
 [ext_resource type="Script" uid="uid://dbnvqvpieumcc" path="res://ui/ui.gd" id="1_vkava"]
 [ext_resource type="PackedScene" uid="uid://nmhbys1lm10v" path="res://ui/deletor.tscn" id="2_ks8t7"]
 [ext_resource type="PackedScene" uid="uid://bkss5qcje4way" path="res://ui/amalgam_generator.tscn" id="3_wl5ax"]
-[ext_resource type="PackedScene" uid="uid://b6frtd2xtx7bu" path="res://ui/factory_hotbar.tscn" id="4_tf0e0"]
 
 [sub_resource type="Gradient" id="Gradient_vkava"]
 
@@ -31,7 +30,5 @@ offset_bottom = 641.0
 texture = SubResource("GradientTexture2D_tf0e0")
 expand_mode = 1
 stretch_mode = 5
-
-[node name="FactoryHotbar" parent="CanvasLayer" unique_id=170180041 instance=ExtResource("4_tf0e0")]
 
 [node name="AmalgamGenerator" parent="." unique_id=475387824 instance=ExtResource("3_wl5ax")]

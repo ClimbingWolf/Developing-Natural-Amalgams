@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dw7ewij1ngdsg" path="res://enemies/enemy_prefab.tscn" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://dslq8yloxcpbh" path="res://enemies/enemy_generator.tscn" id="5_lquwl"]
 [ext_resource type="Script" uid="uid://c1vypjmejhyuy" path="res://camera/factory_cam.gd" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://ch3vb3hv75og2" path="res://map/map.tscn" id="8_5vw27"]
 
 [node name="Node2D" type="Node2D" unique_id=785255799]
 
@@ -61,3 +62,7 @@ size = Vector2i(1920, 1080)
 [node name="PvzCam" type="Camera2D" parent="SubViewport" unique_id=1236897978 node_paths=PackedStringArray("fighting_board")]
 script = ExtResource("3_lquwl")
 fighting_board = NodePath("../../FightingBoard")
+
+[node name="Map" parent="." unique_id=1106882579 instance=ExtResource("8_5vw27")]
+z_index = -50
+position = Vector2(10, 10)

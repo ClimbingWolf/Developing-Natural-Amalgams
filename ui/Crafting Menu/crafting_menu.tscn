@@ -3,8 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://dxgm5g6swffhn" path="res://ui/Crafting Menu/head_slots.tscn" id="1_kxjit"]
 [ext_resource type="Script" uid="uid://cwk628jcittp8" path="res://ui/Crafting Menu/body_generator.gd" id="2_3uw26"]
 [ext_resource type="PackedScene" uid="uid://cih0frfnh4wsj" path="res://ui/Crafting Menu/body_slots.tscn" id="2_n53y1"]
-[ext_resource type="Script" path="res://ui/hotbar.gd" id="3_fc1ef"]
-[ext_resource type="PackedScene" uid="uid://c0duln4gkleej" path="res://craftingSlots.tscn" id="4_fc1ef"]
+[ext_resource type="Script" uid="uid://ph1rv3mltyuf" path="res://ui/hotbar.gd" id="3_fc1ef"]
+[ext_resource type="PackedScene" uid="uid://c0duln4gkleej" path="res://map/craftingSlots.tscn" id="4_fc1ef"]
 
 [node name="Crafting Menu" type="Node2D" unique_id=1888016711]
 

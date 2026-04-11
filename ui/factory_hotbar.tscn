@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://b6frtd2xtx7bu"]
+
+[ext_resource type="Texture2D" uid="uid://dglqqxt17o0cs" path="res://enemies/health_bar/Sprite-0001.png" id="1_4j18x"]
+[ext_resource type="PackedScene" uid="uid://c45plcsbw2b3c" path="res://ui/hotbar_spot.tscn" id="2_jhm6m"]
+
+[node name="FactoryHotbar" type="Node2D" unique_id=170180041]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=389175356]
+position = Vector2(572.00006, 32)
+scale = Vector2(0.66403276, 0.50914633)
+texture = ExtResource("1_4j18x")
+
+[node name="Hotbar nodes" type="Node2D" parent="." unique_id=1192457084]
+
+[node name="HotbarSpot" parent="Hotbar nodes" unique_id=1938797358 instance=ExtResource("2_jhm6m")]
+z_index = 1
+position = Vector2(150, 65)
+
+[node name="HotbarSpot2" parent="Hotbar nodes" unique_id=2100584521 instance=ExtResource("2_jhm6m")]
+z_index = 1
+position = Vector2(255, 65)
+
+[node name="HotbarSpot3" parent="Hotbar nodes" unique_id=2094699428 instance=ExtResource("2_jhm6m")]
+z_index = 1
+position = Vector2(360, 65)
+
+[node name="HotbarSpot4" parent="Hotbar nodes" unique_id=1804310190 instance=ExtResource("2_jhm6m")]
+z_index = 1
+position = Vector2(465, 65)
+
+[node name="HotbarSpot5" parent="Hotbar nodes" unique_id=1476940406 instance=ExtResource("2_jhm6m")]
+z_index = 1
+position = Vector2(570, 65)
+
+[node name="HotbarSpot6" parent="Hotbar nodes" unique_id=1476499878 instance=ExtResource("2_jhm6m")]
+z_index = 1
+position = Vector2(675, 65)
+
+[node name="HotbarSpot7" parent="Hotbar nodes" unique_id=690694245 instance=ExtResource("2_jhm6m")]
+z_index = 1
+position = Vector2(780, 65)
+
+[node name="HotbarSpot8" parent="Hotbar nodes" unique_id=919102573 instance=ExtResource("2_jhm6m")]
+z_index = 1
+position = Vector2(885, 65)
+
+[node name="HotbarSpot9" parent="Hotbar nodes" unique_id=1245339393 instance=ExtResource("2_jhm6m")]
+z_index = 1
+position = Vector2(990, 65)

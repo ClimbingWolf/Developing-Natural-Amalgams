@@ -12,7 +12,7 @@ position = Vector2(572.00006, 32)
 scale = Vector2(0.66403276, 0.50914633)
 texture = ExtResource("2_u3sb2")
 
-[node name="Hotbar nodes" type="Node" parent="." unique_id=737241075]
+[node name="Hotbar nodes" type="Node2D" parent="." unique_id=275188424]
 
 [node name="HotbarSpot" parent="Hotbar nodes" unique_id=1938797358 instance=ExtResource("2_v0qo3")]
 z_index = 1

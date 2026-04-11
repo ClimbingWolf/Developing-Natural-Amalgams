@@ -11,6 +11,12 @@ var rect: TextureRect;
 var mainCam: Camera2D
 var dupe_cam: Camera2D;
 var margin_of_err: Vector2 = Vector2(0.1,0.1);
+var ui_state = "pvz";
+var hotbar_end_y = -300;
+var hotbar_start_y =0;
+var deletor_start_y = 64;
+var deletor_end_y = -300;
+@export var speed = 1;
 func _ready() -> void:
 	mainCam = get_viewport().get_camera_2d();
 	pass
@@ -21,9 +27,26 @@ func _ready() -> void:
 	endPos = get_window().size/2;
 	startScale =  rect.size;
 func _process(delta: float) -> void:
-	endScale = get_viewport_rect().size
 	if(Input.is_action_just_pressed("space")):
 		minimap_moving = !minimap_moving
+		if(get_viewport().get_camera_2d().is_in_group("Main Cam")):
+			visible = false;
+			ui_state = "factory"
+		else:
+			visible = true
+			ui_state = "pvz";
+	minimap_control(delta)
+	update_hotbar_pos(delta)
+	if(ui_state == "pvz"):
+		pvz_loop(delta);
+	
+	
+func pvz_loop(delta : float) -> void:
+	pass
+
+func minimap_control(delta: float) -> void:
+	endScale = get_viewport_rect().size
+
 	if(minimap_moving):
 		rect.size = lerp(rect.size, endScale, minimap_speed*delta);
 		rect.global_position = lerp(rect.global_position, endPos - rect.size/2, minimap_speed*delta)
@@ -43,5 +66,14 @@ func _process(delta: float) -> void:
 			
 		rect.size = lerp(rect.size, startScale, minimap_speed*delta);
 		rect.global_position = lerp(rect.global_position, startPos, minimap_speed*delta)
+		
+func update_hotbar_pos(delta):
+	
+	if(ui_state == "pvz"):
+		$CanvasLayer/Hotbar.position = lerp($CanvasLayer/Hotbar.position, Vector2(0, hotbar_end_y), delta * speed);
+		$CanvasLayer/Deletor.position = lerp($CanvasLayer/Deletor.position, Vector2($CanvasLayer/Deletor.position.x, deletor_end_y), delta * speed);
 
+	else:
+		$CanvasLayer/Hotbar.position = lerp(Vector2(0, hotbar_start_y), $CanvasLayer/Hotbar.position, delta * speed);
+		$CanvasLayer/Deletor.position = lerp(Vector2($CanvasLayer/Deletor.position.x, deletor_start_y), $CanvasLayer/Deletor.position, delta * speed);
 		
