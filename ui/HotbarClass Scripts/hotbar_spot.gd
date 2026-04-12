@@ -24,9 +24,15 @@ func _on_area_2d_mouse_exited() -> void:
 
 func _process(delta: float) -> void:
 	#If the mouse currently isn't holding anything and the slot is full
-	if(Input.is_action_just_pressed("click") && !currentHoldChecker  && has_node("Amalgam") && hover && currentHold.name == ""):
+	if(has_node("Amalgam") && currentHold == $Amalgam && ((Input.is_action_just_pressed("esc")) || (hover && Input.is_action_just_pressed("click")))):
+		currentHold = Node2D.new();
+		currentHoldChecker = false;
+		position_amalgam();
+	elif(Input.is_action_just_pressed("click") && !currentHoldChecker  && has_node("Amalgam") && hover && currentHold.name == ""):
 		currentHold = $Amalgam;
 		currentHoldChecker = true
+
+	
 		
 	#If the mouse is holding something and the slot is empty
 	if(Input.is_action_just_pressed("click") && currentHoldChecker && !has_node("Amalgam") && hover && currentHold.name == "Amalgam"):
