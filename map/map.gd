@@ -30,6 +30,14 @@ func checkClickBone() -> Vector2:
 	var world = to_global(loc);
 	return loc;
 	
+func checkClickSkull() -> Vector2:
 	
+	var local_mouse_pos = get_local_mouse_position();
+	var cell = boneLayer.local_to_map(local_mouse_pos);
+	var loc = boneLayer.map_to_local(cell) + Vector2(tileSize, tileSize);
+	if($SkullLayer.get_cell_source_id(cell) == -1):
+		return Vector2.INF;
+	var world = to_global(loc);
+	return loc;
 	
 	

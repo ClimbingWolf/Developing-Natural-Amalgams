@@ -3,6 +3,7 @@ var active = false;
 var speed = 5;
 var bone;
 var timer: Timer;
+var layer = "bone";
 func _ready() -> void:
 	timer = $Timer
 	bone = $Bone
@@ -29,7 +30,11 @@ func _on_timer_timeout() -> void:
 	timer.wait_time = speed;
 	timer.start()
 	if (conveyor != null):
-		var newBone: Node2D = bone.duplicate();
+		var newBone: Node2D
+		if(layer == "bone"):
+			newBone = bone.duplicate();
+		else:
+			newBone = $Skull.duplicate();
 		newBone.visible = true
 		newBone.add_to_group("ItemAreas");
 		conveyor.get_parent().add_child(newBone);

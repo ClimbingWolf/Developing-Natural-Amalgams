@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b6frtd2xtx7bu"]
 
 [ext_resource type="Script" uid="uid://cb008frcgu8md" path="res://ui/factory bar/factory_hotbar.gd" id="1_uyueh"]
-[ext_resource type="PackedScene" uid="uid://c45plcsbw2b3c" path="res://ui/hotbar_spot.tscn" id="2_uyueh"]
+[ext_resource type="PackedScene" uid="uid://c45plcsbw2b3c" path="res://ui/Hotbar/hotbar_spot.tscn" id="2_uyueh"]
 [ext_resource type="PackedScene" uid="uid://yfysnmdcpdfr" path="res://factory parts/Conveyor.tscn" id="4_kvsjq"]
 [ext_resource type="PackedScene" uid="uid://inpy7h2tyba0" path="res://factory parts/Drill.tscn" id="4_wtp1k"]
 [ext_resource type="PackedScene" uid="uid://c7pwrsk30yuu1" path="res://factory parts/Item.tscn" id="5_wtp1k"]

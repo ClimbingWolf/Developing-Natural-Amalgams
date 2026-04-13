@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://br14oksxl4d7p"]
 
-[ext_resource type="PackedScene" uid="uid://edfaw1r6qkc2" path="res://ui/hotbar.tscn" id="1_nb4k0"]
+[ext_resource type="PackedScene" uid="uid://edfaw1r6qkc2" path="res://ui/Hotbar/hotbar.tscn" id="1_nb4k0"]
 [ext_resource type="Script" uid="uid://dbnvqvpieumcc" path="res://ui/ui.gd" id="1_vkava"]
 [ext_resource type="PackedScene" uid="uid://nmhbys1lm10v" path="res://ui/deletor.tscn" id="2_ks8t7"]
 [ext_resource type="PackedScene" uid="uid://bkss5qcje4way" path="res://ui/amalgam_generator.tscn" id="3_wl5ax"]
 [ext_resource type="PackedScene" uid="uid://b6frtd2xtx7bu" path="res://ui/factory bar/factory_hotbar.tscn" id="4_tf0e0"]
+[ext_resource type="PackedScene" uid="uid://djtc2hmd7r4pc" path="res://ui/Scores/Scores.tscn" id="5_obcwv"]
 
 [sub_resource type="Gradient" id="Gradient_vkava"]
 
@@ -34,5 +35,8 @@ stretch_mode = 5
 
 [node name="FactoryHotbar" parent="CanvasLayer" unique_id=170180041 instance=ExtResource("4_tf0e0")]
 position = Vector2(8, 346)
+
+[node name="Scores" parent="CanvasLayer" unique_id=1548845369 instance=ExtResource("5_obcwv")]
+position = Vector2(1700, 13)
 
 [node name="AmalgamGenerator" parent="." unique_id=475387824 instance=ExtResource("3_wl5ax")]

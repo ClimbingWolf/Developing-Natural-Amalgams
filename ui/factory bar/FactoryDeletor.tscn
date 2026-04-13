@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://d317bhoe67nl6"]
+
+[ext_resource type="Script" uid="uid://bllalmvja2jeb" path="res://ui/factory bar/factory_deletor.gd" id="1_wfy48"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_306un"]
+size = Vector2(8, 8)
+
+[node name="FactoryDeletor" type="Sprite2D" unique_id=1830341835 groups=["Delete"]]
+texture = SubResource("PlaceholderTexture2D_306un")
+script = ExtResource("1_wfy48")

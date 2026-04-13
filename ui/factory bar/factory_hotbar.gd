@@ -8,7 +8,7 @@ var epic_slot = null;
 var last_slot: Node2D = null;
 var currentHold: Node2D;
 var map: Node2D;
-var placements = []
+var placements = {}
 static var mapScale = 3.125;
 
 
@@ -46,18 +46,28 @@ func _process(delta: float) -> void:
 		var coords
 		if(currentHold.is_in_group("building")):
 			coords = map.checkClickBone();
+			currentHold.layer = "bone";
+			if(coords == Vector2.INF):
+				coords =  map.checkClickSkull();
+				currentHold.layer = "skull";
+			
 		else:
 			coords = map.checkClickDesert();
+			
+
+				
+			
 		if(coords != Vector2.INF && ui.ui_state == "pvz"):
 			currentHold.global_position = coords;
 			if(Input.is_action_just_pressed("click") && placements.find(coords) == -1):
-				placements.append(coords);
+				
 				#map.add_child(currentHold);
 				currentHold.global_position = coords;
 				currentHold.modulate += Color(0,0,0, 0.5);
 				currentHold.active = true
 				#selection = -1
 				currentHold = currentHold.duplicate();
+				placements[coords] = currentHold
 				map.add_child(currentHold);
 				currentHold.modulate -= Color(0,0,0, 0.5);
 				#currentSlot = null;

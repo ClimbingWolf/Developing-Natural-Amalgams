@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cbww11jjl6cuv" path="res://factory parts/drill.gd" id="1_glr4d"]
 [ext_resource type="PackedScene" uid="uid://c7pwrsk30yuu1" path="res://factory parts/Item.tscn" id="2_24te3"]
 [ext_resource type="Texture2D" uid="uid://bafjbaky74c3k" path="res://map/bone-tile.png" id="3_oy7i1"]
+[ext_resource type="Texture2D" uid="uid://bnwd7fmjrpei0" path="res://map/skull-tile (1).png" id="4_u88kj"]
 
 [sub_resource type="Gradient" id="Gradient_glr4d"]
 offsets = PackedFloat32Array(0, 0.96385545, 1)
@@ -27,8 +28,12 @@ polygon = PackedVector2Array(-11, -4, -11, 3, -3, 3, -3, 12, 6, 12, 6, 3, 14, 3,
 
 [node name="Bone" parent="." unique_id=1307725075 instance=ExtResource("2_24te3")]
 visible = false
-modulate = Color(1, 1, 1, 0.44313726)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_oy7i1")
+
+[node name="Skull" parent="." unique_id=372987787 instance=ExtResource("2_24te3")]
+visible = false
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_u88kj")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

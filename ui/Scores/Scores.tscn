@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://djtc2hmd7r4pc"]
+
+[ext_resource type="Script" uid="uid://cjrvncpw5onwf" path="res://ui/Scores/scores.gd" id="1_23jlm"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_23jlm"]
+font_size = 40
+font_color = Color(0.45581734, 0.45581734, 0.45581734, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ajpw8"]
+font_size = 40
+font_color = Color(0.45490196, 0.45490196, 0.45490196, 1)
+
+[node name="Scores" type="Node2D" unique_id=1548845369]
+script = ExtResource("1_23jlm")
+
+[node name="Skulls" type="Label" parent="." unique_id=1245875509]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "SKULLS
+"
+label_settings = SubResource("LabelSettings_23jlm")
+
+[node name="Bones" type="Label" parent="." unique_id=287413298]
+offset_top = 49.0
+offset_right = 119.0
+offset_bottom = 162.0
+text = "Bones
+"
+label_settings = SubResource("LabelSettings_ajpw8")

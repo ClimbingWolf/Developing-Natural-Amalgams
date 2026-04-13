@@ -34,6 +34,7 @@ Enemy=""
 ItemAreas=""
 ItemDetector=""
 building=""
+Delete=""
 
 [input]
 
