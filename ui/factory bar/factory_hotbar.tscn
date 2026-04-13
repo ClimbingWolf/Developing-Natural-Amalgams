@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c45plcsbw2b3c" path="res://ui/Hotbar/hotbar_spot.tscn" id="2_uyueh"]
 [ext_resource type="PackedScene" uid="uid://yfysnmdcpdfr" path="res://factory parts/Conveyor.tscn" id="4_kvsjq"]
 [ext_resource type="PackedScene" uid="uid://inpy7h2tyba0" path="res://factory parts/Drill.tscn" id="4_wtp1k"]
-[ext_resource type="PackedScene" uid="uid://c7pwrsk30yuu1" path="res://factory parts/Item.tscn" id="5_wtp1k"]
+[ext_resource type="PackedScene" uid="uid://ntoi8esdlcgl" path="res://outputter.tscn" id="5_wtp1k"]
 
 [node name="FactoryHotbar" type="Node2D" unique_id=170180041]
 script = ExtResource("1_uyueh")
@@ -35,7 +35,7 @@ z_index = 1
 position = Vector2(360, 65)
 script = null
 
-[node name="Piece" parent="Hotbar nodes/HotbarSpot3" unique_id=1307725075 instance=ExtResource("5_wtp1k")]
+[node name="Piece" parent="Hotbar nodes/HotbarSpot3" unique_id=657657892 instance=ExtResource("5_wtp1k")]
 
 [node name="HotbarSpot4" parent="Hotbar nodes" unique_id=1804310190 instance=ExtResource("2_uyueh")]
 z_index = 1
