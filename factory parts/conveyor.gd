@@ -27,14 +27,13 @@ func _process(delta: float) -> void:
 		if(canMove && item!=null && !item.isMoving):
 			canMove = false;
 			item.isMoving = true;
-			print("Moving")
 			var tween = create_tween();
 			tween.tween_property(item, "position", item.position + targetOffset.rotated(rotation), conveyorSpeed);
 			await(tween).finished;
 			tween.kill()
-			print("done")
-			item.isMoving = false;
-			canMove = true;
-			item = null;
+			if(item!=null):
+				item.isMoving = false;
+				canMove = true;
+				item = null;
 			
 		

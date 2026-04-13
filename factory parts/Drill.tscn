@@ -1,3 +1,34 @@
 [gd_scene format=3 uid="uid://inpy7h2tyba0"]
 
-[node name="Drill" type="Node2D" unique_id=1722057891]
+[ext_resource type="Script" uid="uid://cbww11jjl6cuv" path="res://factory parts/drill.gd" id="1_glr4d"]
+[ext_resource type="PackedScene" uid="uid://c7pwrsk30yuu1" path="res://factory parts/Item.tscn" id="2_24te3"]
+[ext_resource type="Texture2D" uid="uid://bafjbaky74c3k" path="res://map/bone-tile.png" id="3_oy7i1"]
+
+[sub_resource type="Gradient" id="Gradient_glr4d"]
+offsets = PackedFloat32Array(0, 0.96385545, 1)
+colors = PackedColorArray(0.76, 0.21279998, 0.21279998, 1, 0.82530123, 0.82530123, 0.82530123, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_24te3"]
+gradient = SubResource("Gradient_glr4d")
+width = 16
+height = 16
+fill_from = Vector2(0.35652173, 0.6695652)
+
+[node name="Drill" type="Sprite2D" unique_id=25317042 groups=["building"]]
+texture = SubResource("GradientTexture2D_24te3")
+script = ExtResource("1_glr4d")
+
+[node name="Timer" type="Timer" parent="." unique_id=666111127]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1559870764]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=414663573]
+polygon = PackedVector2Array(-11, -4, -11, 3, -3, 3, -3, 12, 6, 12, 6, 3, 14, 3, 14, -4, 6, -4, 6, -11, -3, -11, -3, -4)
+
+[node name="Bone" parent="." unique_id=1307725075 instance=ExtResource("2_24te3")]
+visible = false
+modulate = Color(1, 1, 1, 0.44313726)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_oy7i1")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

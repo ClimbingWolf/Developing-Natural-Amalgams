@@ -24,14 +24,15 @@ position = Vector2(1162, 64)
 scale = Vector2(0.5, 0.5)
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1763138888]
-offset_left = 784.0
-offset_top = 441.0
-offset_right = 1144.0
-offset_bottom = 641.0
+offset_left = 1560.0
+offset_top = 881.0
+offset_right = 1920.0
+offset_bottom = 1081.0
 texture = SubResource("GradientTexture2D_tf0e0")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="FactoryHotbar" parent="CanvasLayer" unique_id=170180041 instance=ExtResource("4_tf0e0")]
+position = Vector2(8, 346)
 
 [node name="AmalgamGenerator" parent="." unique_id=475387824 instance=ExtResource("3_wl5ax")]

@@ -13,6 +13,7 @@ texture = SubResource("PlaceholderTexture2D_nq4wk")
 script = ExtResource("1_cajuh")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=597959173 groups=["ItemAreas"]]
+monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1950561602]
 shape = SubResource("RectangleShape2D_nq4wk")

@@ -1,4 +1,5 @@
 extends Node2D
+class_name ui;
 @export var cameraViewport: SubViewport
 @export var dupe_script: Script
 var minimap_moving = false;
@@ -11,12 +12,15 @@ var rect: TextureRect;
 var mainCam: Camera2D
 var dupe_cam: Camera2D;
 var margin_of_err: Vector2 = Vector2(0.1,0.1);
-var ui_state = "pvz";
-var hotbar_end_y = -300;
-var hotbar_start_y =0;
+static var ui_state = "pvz";
+var hotbar_end_y = -200;
+var hotbar_start_y =50;
 var deletor_start_y = 64;
 var deletor_end_y = -300;
-@export var speed = 1;
+var factory_hotbar_end = 700;
+var factory_hotbar_start = 350;
+
+@export var speed = 3;
 func _ready() -> void:
 	mainCam = get_viewport().get_camera_2d();
 	pass
@@ -29,7 +33,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if(Input.is_action_just_pressed("space")):
 		minimap_moving = !minimap_moving
-		if(get_viewport().get_camera_2d().is_in_group("Main Cam")):
+		if(ui_state == "pvz"):
 			visible = false;
 			ui_state = "factory"
 		else:
@@ -68,12 +72,15 @@ func minimap_control(delta: float) -> void:
 		rect.global_position = lerp(rect.global_position, startPos, minimap_speed*delta)
 		
 func update_hotbar_pos(delta):
-	
-	if(ui_state == "pvz"):
-		$CanvasLayer/Hotbar.position = lerp($CanvasLayer/Hotbar.position, Vector2(0, hotbar_end_y), delta * speed);
-		$CanvasLayer/Deletor.position = lerp($CanvasLayer/Deletor.position, Vector2($CanvasLayer/Deletor.position.x, deletor_end_y), delta * speed);
+
+	if(ui_state == "factory"):
+		$CanvasLayer/Hotbar.position = lerp($CanvasLayer/Hotbar.position, Vector2(0, hotbar_start_y), delta * speed);
+		$CanvasLayer/Deletor.position = lerp(Vector2($CanvasLayer/Deletor.position.x, deletor_start_y), $CanvasLayer/Deletor.position, delta * speed);
+		$CanvasLayer/FactoryHotbar.position = lerp($CanvasLayer/FactoryHotbar.position, Vector2(0, factory_hotbar_end), delta * speed);
 
 	else:
-		$CanvasLayer/Hotbar.position = lerp(Vector2(0, hotbar_start_y), $CanvasLayer/Hotbar.position, delta * speed);
-		$CanvasLayer/Deletor.position = lerp(Vector2($CanvasLayer/Deletor.position.x, deletor_start_y), $CanvasLayer/Deletor.position, delta * speed);
+		$CanvasLayer/Hotbar.position = lerp($CanvasLayer/Hotbar.position, Vector2(0, hotbar_end_y), delta * speed);
+		$CanvasLayer/Deletor.position = lerp($CanvasLayer/Deletor.position, Vector2($CanvasLayer/Deletor.position.x, deletor_end_y), delta * speed);
+		$CanvasLayer/FactoryHotbar.position = lerp($CanvasLayer/FactoryHotbar.position, Vector2(0, factory_hotbar_start), delta * speed);
+		
 		

@@ -17,8 +17,10 @@ config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=1280
-window/size/viewport_height=720
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=2
+window/size/initial_position=Vector2i(0, 500)
 window/stretch/mode="viewport"
 
 [dotnet]
@@ -30,6 +32,8 @@ project/assembly_name="DNA-Game"
 Enemy=""
 "Amalgam Body"="The Area2D outlining an amalgam body"
 ItemAreas=""
+ItemDetector=""
+building=""
 
 [input]
 

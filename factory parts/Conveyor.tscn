@@ -21,7 +21,7 @@ script = ExtResource("1_4xcue")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=649973365]
 texture = SubResource("GradientTexture2D_4xcue")
 
-[node name="ItemDetector" type="Area2D" parent="." unique_id=408031291]
+[node name="ItemDetector" type="Area2D" parent="." unique_id=408031291 groups=["ItemDetector"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ItemDetector" unique_id=1352372635]
 shape = SubResource("RectangleShape2D_2cb3u")
