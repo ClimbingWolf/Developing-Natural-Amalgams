@@ -45,9 +45,15 @@ func _process(delta: float) -> void:
 			if(Input.is_action_just_pressed("click")):
 				#map.add_child(currentHold);
 				currentHold.global_position = coords;
+				currentHold.modulate += Color(0,0,0, 0.5);
+				currentHold.active = true
 				selection = -1
 				currentHold = null;
 				currentSlot = null;
+			if(Input.is_action_just_pressed("q")):
+				currentHold.rotate(PI/2);
+			elif(Input.is_action_just_pressed("e")):
+				currentHold.rotate(-PI/2);
 			
 			
 		

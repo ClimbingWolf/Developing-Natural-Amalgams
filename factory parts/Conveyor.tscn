@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://yfysnmdcpdfr"]
+
+[ext_resource type="Script" uid="uid://cvvcsavbaquyi" path="res://factory parts/conveyor.gd" id="1_4xcue"]
+
+[sub_resource type="Gradient" id="Gradient_jcrsi"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4xcue"]
+gradient = SubResource("Gradient_jcrsi")
+width = 16
+height = 16
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2cb3u"]
+size = Vector2(12, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c47q1"]
+size = Vector2(12, 12)
+
+[node name="Conveyor" type="Node2D" unique_id=759370617]
+script = ExtResource("1_4xcue")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=649973365]
+texture = SubResource("GradientTexture2D_4xcue")
+
+[node name="ItemDetector" type="Area2D" parent="." unique_id=408031291]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemDetector" unique_id=1352372635]
+shape = SubResource("RectangleShape2D_2cb3u")
+
+[node name="NextDetector" type="Area2D" parent="." unique_id=2126658102]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextDetector" unique_id=774492499]
+position = Vector2(17, 0)
+shape = SubResource("RectangleShape2D_c47q1")

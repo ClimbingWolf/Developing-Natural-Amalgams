@@ -3,7 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://dglqqxt17o0cs" path="res://enemies/health_bar/Sprite-0001.png" id="1_8h70u"]
 [ext_resource type="Script" uid="uid://cb008frcgu8md" path="res://ui/factory bar/factory_hotbar.gd" id="1_uyueh"]
 [ext_resource type="PackedScene" uid="uid://c45plcsbw2b3c" path="res://ui/hotbar_spot.tscn" id="2_uyueh"]
-[ext_resource type="Texture2D" uid="uid://c478h2jbtjjpy" path="res://sample-images/black-and-wooden-hand-shovel-png.png" id="4_kvsjq"]
+[ext_resource type="PackedScene" uid="uid://yfysnmdcpdfr" path="res://factory parts/Conveyor.tscn" id="4_kvsjq"]
+[ext_resource type="PackedScene" uid="uid://c7pwrsk30yuu1" path="res://factory parts/Item.tscn" id="5_wtp1k"]
 
 [node name="FactoryHotbar" type="Node2D" unique_id=170180041]
 script = ExtResource("1_uyueh")
@@ -21,13 +22,14 @@ z_index = 1
 position = Vector2(150, 65)
 script = null
 
-[node name="Piece" type="Sprite2D" parent="Hotbar nodes/HotbarSpot" unique_id=1635552280]
-texture = ExtResource("4_kvsjq")
+[node name="Piece" parent="Hotbar nodes/HotbarSpot" unique_id=759370617 instance=ExtResource("4_kvsjq")]
 
 [node name="HotbarSpot2" parent="Hotbar nodes" unique_id=2100584521 instance=ExtResource("2_uyueh")]
 z_index = 1
 position = Vector2(255, 65)
 script = null
+
+[node name="Piece" parent="Hotbar nodes/HotbarSpot2" unique_id=1307725075 instance=ExtResource("5_wtp1k")]
 
 [node name="HotbarSpot3" parent="Hotbar nodes" unique_id=2094699428 instance=ExtResource("2_uyueh")]
 z_index = 1

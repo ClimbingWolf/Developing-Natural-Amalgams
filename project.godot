@@ -29,6 +29,7 @@ project/assembly_name="DNA-Game"
 
 Enemy=""
 "Amalgam Body"="The Area2D outlining an amalgam body"
+ItemAreas=""
 
 [input]
 
