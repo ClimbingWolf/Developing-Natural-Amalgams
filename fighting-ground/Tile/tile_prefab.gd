@@ -3,7 +3,7 @@ extends Node2D
 var hover = false
 
 #THIS IS 20/58, IT BREAKS IF YOU BREAK THE SPRITE TILE SIZE DONT DO THAT PLEASE
-@export var scale_on_tile: float = 0.3448;
+@export var scale_on_tile: float = 0.08448;
 
 
 func _ready():

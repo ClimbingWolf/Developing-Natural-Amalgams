@@ -9,6 +9,7 @@ var defense:int = 10
 var speed:float = 2
 var range:float = 10
 var placed = false;
+var isWaiting = false;
 
 var canAttack = false
 
