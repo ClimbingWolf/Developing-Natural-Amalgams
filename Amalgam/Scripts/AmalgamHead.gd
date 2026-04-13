@@ -11,17 +11,12 @@ var range:float = 10
 var placed = false;
 
 var canAttack = false
-var isWaiting: bool = false;
 
-func setStates(hp, attack, defense, speed, range) -> void:
-	self.hp = hp;
-	self.attack = attack;
-	self.defense = defense
-	self.speed = speed;
-	self.range = range
+@onready var AttackCooldown = get_node("AttackCooldown")
 
 func _ready() -> void:
-	pass
+	AttackCooldown.wait_time = speed
+	AttackCooldown.start()
 	
 func _process(delta: float) -> void:
 	if(placed):

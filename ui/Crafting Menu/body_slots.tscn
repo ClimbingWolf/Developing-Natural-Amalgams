@@ -1,22 +1,22 @@
 [gd_scene format=3 uid="uid://cih0frfnh4wsj"]
 
-[ext_resource type="PackedScene" uid="uid://c45plcsbw2b3c" path="res://ui/hotbar_spot.tscn" id="1_o5foh"]
+[ext_resource type="PackedScene" uid="uid://c45plcsbw2b3c" path="res://ui/Hotbar/hotbar_spot.tscn" id="1_o5foh"]
 
 [node name="BodySlots" type="Node2D" unique_id=1874698683]
 
 [node name="Slots" type="Node" parent="." unique_id=477659018]
 
 [node name="HotbarSpot" parent="Slots" unique_id=1938797358 instance=ExtResource("1_o5foh")]
-position = Vector2(287, 577)
+position = Vector2(240, 528)
 
 [node name="HotbarSpot2" parent="Slots" unique_id=21513715 instance=ExtResource("1_o5foh")]
-position = Vector2(416, 575)
+position = Vector2(385, 528)
 
 [node name="HotbarSpot3" parent="Slots" unique_id=1467477984 instance=ExtResource("1_o5foh")]
-position = Vector2(541, 577)
+position = Vector2(528, 528)
 
 [node name="HotbarSpot4" parent="Slots" unique_id=573553464 instance=ExtResource("1_o5foh")]
-position = Vector2(672, 579)
+position = Vector2(672, 528)
 
 [node name="HotbarSpot5" parent="Slots" unique_id=1466265292 instance=ExtResource("1_o5foh")]
-position = Vector2(813, 579)
+position = Vector2(816, 528)

@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://c0duln4gkleej"]
+
+[ext_resource type="Script" uid="uid://ph1rv3mltyuf" path="res://ui/Hotbar/hotbar.gd" id="1_jkmta"]
+[ext_resource type="Script" uid="uid://bhccq5y6venb1" path="res://ui/Hotbar/headCraftingSlot.gd" id="1_xct7n"]
+[ext_resource type="Texture2D" uid="uid://u8k2ho1pyy20" path="res://tilemap/Desert_Tilemap.png" id="4_6qmn6"]
+[ext_resource type="Script" uid="uid://bh23e8lllupxf" path="res://ui/Hotbar/resultCraftingSlot.gd" id="4_k6mcs"]
+[ext_resource type="Script" uid="uid://1c0wip663jm1" path="res://ui/Hotbar/bodyCraftingSlot.gd" id="4_sr46n"]
+[ext_resource type="PackedScene" uid="uid://c45plcsbw2b3c" path="res://ui/Hotbar/hotbar_spot.tscn" id="5_sr46n"]
+
+[node name="CraftingSlots" type="Node2D" unique_id=1857105460]
+script = ExtResource("1_jkmta")
+
+[node name="HeadCrafting" parent="." unique_id=1938797358 instance=ExtResource("5_sr46n")]
+position = Vector2(240, 336)
+script = ExtResource("1_xct7n")
+
+[node name="HeadSlot" type="Sprite2D" parent="HeadCrafting" unique_id=167251028]
+scale = Vector2(6, 6)
+texture = ExtResource("4_6qmn6")
+hframes = 4
+vframes = 4
+frame = 12
+
+[node name="BodyCrafting" parent="." unique_id=702355072 instance=ExtResource("5_sr46n")]
+position = Vector2(528, 336)
+script = ExtResource("4_sr46n")
+
+[node name="BodySlot" type="Sprite2D" parent="BodyCrafting" unique_id=1510887285]
+scale = Vector2(6, 6)
+texture = ExtResource("4_6qmn6")
+hframes = 4
+vframes = 4
+frame = 13
+
+[node name="ResultSlot" parent="." unique_id=1864034624 instance=ExtResource("5_sr46n")]
+position = Vector2(816, 336)
+script = ExtResource("4_k6mcs")

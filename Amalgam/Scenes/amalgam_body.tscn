@@ -16,19 +16,19 @@ func takeDamage(damage):
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_erbss"]
-size = Vector2(37, 12)
+size = Vector2(96, 64)
 
 [node name="Body" type="Node2D" unique_id=7729438]
 script = SubResource("GDScript_82goe")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=2098181349]
+scale = Vector2(0.75, 0.75)
 texture = ExtResource("1_erbss")
 
 [node name="HeadPos" type="Marker2D" parent="." unique_id=249309754]
-position = Vector2(64, -64)
+position = Vector2(48, -48)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=42570756]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=114629965]
-position = Vector2(-0.5, -2.5)
 shape = SubResource("RectangleShape2D_erbss")

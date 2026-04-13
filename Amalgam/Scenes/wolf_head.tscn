@@ -10,7 +10,11 @@ attack = 5
 speed = 5.0
 
 [node name="Icon" parent="." index="0" unique_id=1965967158]
+scale = Vector2(3, 3)
 texture = ExtResource("3_iiihe")
 
+[node name="BodyPos" parent="." index="1" unique_id=68164394]
+position = Vector2(-16, 18)
+
 [node name="CollisionShape2D" parent="AttackArea" parent_id_path=PackedInt32Array(1802048398) index="0" unique_id=1855626855]
-position = Vector2(41.75, 7.5)
+position = Vector2(60, 0)

@@ -42,14 +42,12 @@ func setHead(newHead):
 	speed = head.speed
 	range = head.range
 	
-
-
 func setupCreature(newbody, newhead):
 	setBody(newbody)
 	setHead(newhead)
-	head.position = body.get_node("HeadPos").global_position
-
-	
+	var head_offset = head.get_node("BodyPos").global_position
+	var body_offset = body.get_node("HeadPos").global_position
+	head.position = body_offset-head_offset 
 	
 	body.on_attatch(head)
 
