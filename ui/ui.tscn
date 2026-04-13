@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://br14oksxl4d7p"]
 
-[ext_resource type="PackedScene" uid="uid://edfaw1r6qkc2" path="res://ui/hotbar.tscn" id="1_nb4k0"]
+[ext_resource type="PackedScene" uid="uid://edfaw1r6qkc2" path="res://ui/Hotbar/hotbar.tscn" id="1_nb4k0"]
 [ext_resource type="PackedScene" uid="uid://nmhbys1lm10v" path="res://ui/deletor.tscn" id="2_ks8t7"]
 [ext_resource type="PackedScene" uid="uid://bkss5qcje4way" path="res://ui/amalgam_generator.tscn" id="3_wl5ax"]
 
