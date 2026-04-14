@@ -35,5 +35,6 @@ texture = ExtResource("3_oy7i1")
 visible = false
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_u88kj")
+itemName = "skull"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

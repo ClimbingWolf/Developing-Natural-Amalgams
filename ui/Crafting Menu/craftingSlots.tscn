@@ -6,6 +6,8 @@
 [ext_resource type="Script" uid="uid://bh23e8lllupxf" path="res://ui/Hotbar/resultCraftingSlot.gd" id="4_k6mcs"]
 [ext_resource type="Script" uid="uid://1c0wip663jm1" path="res://ui/Hotbar/bodyCraftingSlot.gd" id="4_sr46n"]
 [ext_resource type="PackedScene" uid="uid://c45plcsbw2b3c" path="res://ui/Hotbar/hotbar_spot.tscn" id="5_sr46n"]
+[ext_resource type="Texture2D" uid="uid://cwnebwsgmeu10" path="res://skull-tile.png" id="7_8pcof"]
+[ext_resource type="Texture2D" uid="uid://bafjbaky74c3k" path="res://map/bone-tile.png" id="8_da20k"]
 
 [node name="CraftingSlots" type="Node2D" unique_id=1857105460]
 script = ExtResource("1_jkmta")
@@ -22,7 +24,7 @@ vframes = 4
 frame = 12
 
 [node name="BodyCrafting" parent="." unique_id=702355072 instance=ExtResource("5_sr46n")]
-position = Vector2(528, 336)
+position = Vector2(396, 336)
 script = ExtResource("4_sr46n")
 
 [node name="BodySlot" type="Sprite2D" parent="BodyCrafting" unique_id=1510887285]
@@ -33,5 +35,35 @@ vframes = 4
 frame = 13
 
 [node name="ResultSlot" parent="." unique_id=1864034624 instance=ExtResource("5_sr46n")]
-position = Vector2(816, 336)
+position = Vector2(572.13, 336)
 script = ExtResource("4_k6mcs")
+
+[node name="CostHead" type="Label" parent="ResultSlot" unique_id=1145223078]
+visible = false
+offset_left = -39.0
+offset_top = 43.0
+offset_right = 1.0
+offset_bottom = 104.0
+theme_override_font_sizes/font_size = 44
+text = "1"
+
+[node name="CostBody" type="Label" parent="ResultSlot" unique_id=695109177]
+visible = false
+offset_left = -39.130005
+offset_top = 96.0
+offset_right = 0.8699951
+offset_bottom = 157.0
+theme_override_font_sizes/font_size = 44
+text = "1"
+
+[node name="SkullTile" type="Sprite2D" parent="ResultSlot" unique_id=234389700]
+visible = false
+position = Vector2(13.869995, 79)
+scale = Vector2(3.26, 3.26)
+texture = ExtResource("7_8pcof")
+
+[node name="BoneTile" type="Sprite2D" parent="ResultSlot" unique_id=1688352923]
+visible = false
+position = Vector2(13.73999, 131.00003)
+scale = Vector2(3.26, 3.26)
+texture = ExtResource("8_da20k")

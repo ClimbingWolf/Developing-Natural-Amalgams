@@ -9,7 +9,11 @@ func _process(delta: float) -> void:
 			for i:Area2D in areaDetect:
 				if(i.is_in_group("ItemAreas") && i.get_parent().active):
 					item = i.get_parent();
+		
+		if item:
 			if item.itemName == "bone":
 				Scores.bones += 1
-			elif item.itemName == "skull":
+				item.queue_free()
+			if item.itemName == "skull":
 				Scores.skulls += 1
+				item.queue_free()

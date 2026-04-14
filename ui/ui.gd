@@ -43,7 +43,8 @@ func _process(delta: float) -> void:
 	update_hotbar_pos(delta)
 	if(ui_state == "pvz"):
 		pvz_loop(delta);
-	
+	if (Input.is_action_just_pressed("Tab")):
+		$"CanvasLayer/Crafting Menu".visible = !$"CanvasLayer/Crafting Menu".visible
 	
 func pvz_loop(delta : float) -> void:
 	pass

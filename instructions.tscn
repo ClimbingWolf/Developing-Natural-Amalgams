@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://c7vg2o76ecnb1"]
+
+[ext_resource type="Script" uid="uid://bx8pai8ln8agk" path="res://instructions.gd" id="1_7ls63"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1828574654]
+script = ExtResource("1_7ls63")
+
+[node name="Panel" type="Panel" parent="." unique_id=1524435436]
+offset_right = 1911.0
+offset_bottom = 1084.0
+
+[node name="Label" type="Label" parent="." unique_id=880138679]
+offset_left = 481.0
+offset_top = 25.0
+offset_right = 1491.0
+offset_bottom = 975.0
+theme_override_font_sizes/font_size = 56
+text = "Controls:
+1 - Select conveyor
+   Q & E - rotate
+2 - Select Drill
+3 - Select Output Node
+Tab - Open Crafting
+Space - Switch Views
+WASD - Move Camera
+Scroll - Zoom
+
+Press H to bring this menu up"
+
+[node name="Button" type="Button" parent="." unique_id=1394428274]
+offset_left = 606.0
+offset_top = 919.0
+offset_right = 1151.0
+offset_bottom = 1061.0
+theme_override_font_sizes/font_size = 98
+text = "Close"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

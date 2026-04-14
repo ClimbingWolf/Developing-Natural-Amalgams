@@ -2,25 +2,74 @@
 
 [ext_resource type="Script" uid="uid://ph1rv3mltyuf" path="res://ui/Hotbar/hotbar.gd" id="1_k5qso"]
 [ext_resource type="PackedScene" uid="uid://c45plcsbw2b3c" path="res://ui/Hotbar/hotbar_spot.tscn" id="1_rhe7x"]
+[ext_resource type="Script" uid="uid://dxaapna5q20uh" path="res://ui/Hotbar/BuySlot.gd" id="3_eum6l"]
+[ext_resource type="PackedScene" uid="uid://csdmu3itfwg40" path="res://Amalgam/Scenes/wolf_head.tscn" id="4_ylqmy"]
+[ext_resource type="PackedScene" uid="uid://ckcsverf25kq2" path="res://Amalgam/Scenes/giraffe_head.tscn" id="5_3gbur"]
+[ext_resource type="Texture2D" uid="uid://cwnebwsgmeu10" path="res://skull-tile.png" id="5_5un4p"]
+[ext_resource type="PackedScene" uid="uid://c3r0q8bb6vux6" path="res://Amalgam/Scenes/crocodile_head.tscn" id="6_5un4p"]
 
 [node name="HeadSlots" type="Node2D" unique_id=380394891]
 script = ExtResource("1_k5qso")
 
-[node name="Slots" type="Node" parent="." unique_id=204109996]
-
-[node name="HotbarSpot" parent="Slots" unique_id=1938797358 instance=ExtResource("1_rhe7x")]
+[node name="HotbarSpot" parent="." unique_id=1938797358 instance=ExtResource("1_rhe7x")]
 z_index = -29
 position = Vector2(240, 144)
+script = ExtResource("3_eum6l")
+productScene = ExtResource("4_ylqmy")
+cost = 4
+mode = 0
 
-[node name="HotbarSpot2" parent="Slots" unique_id=491951025 instance=ExtResource("1_rhe7x")]
-position = Vector2(384, 144)
+[node name="Cost" type="Label" parent="HotbarSpot" unique_id=1694296879]
+offset_left = -39.0
+offset_top = 43.0
+offset_right = 1.0
+offset_bottom = 104.0
+theme_override_font_sizes/font_size = 44
+text = "1"
 
-[node name="HotbarSpot3" parent="Slots" unique_id=327611280 instance=ExtResource("1_rhe7x")]
-position = Vector2(528, 144)
+[node name="HotbarSpot2" parent="." unique_id=491951025 instance=ExtResource("1_rhe7x")]
+position = Vector2(336.07996, 144)
+script = ExtResource("3_eum6l")
+productScene = ExtResource("5_3gbur")
+cost = 3
+mode = 0
 
-[node name="HotbarSpot4" parent="Slots" unique_id=816278597 instance=ExtResource("1_rhe7x")]
-position = Vector2(672, 144)
+[node name="Cost" type="Label" parent="HotbarSpot2" unique_id=1401509122]
+offset_left = -39.0
+offset_top = 43.0
+offset_right = 1.0
+offset_bottom = 104.0
+theme_override_font_sizes/font_size = 44
+text = "1"
+metadata/_edit_use_anchors_ = true
 
-[node name="HotbarSpot5" parent="Slots" unique_id=1808041217 instance=ExtResource("1_rhe7x")]
-z_index = -18
-position = Vector2(816, 144)
+[node name="HotbarSpot3" parent="." unique_id=327611280 instance=ExtResource("1_rhe7x")]
+position = Vector2(432.00003, 144)
+script = ExtResource("3_eum6l")
+productScene = ExtResource("6_5un4p")
+cost = 1
+mode = 0
+
+[node name="Cost" type="Label" parent="HotbarSpot3" unique_id=1711149002]
+offset_left = -39.0
+offset_top = 43.0
+offset_right = 1.0
+offset_bottom = 104.0
+theme_override_font_sizes/font_size = 44
+text = "1"
+metadata/_edit_use_anchors_ = true
+
+[node name="SkullTile" type="Sprite2D" parent="." unique_id=1358903296]
+position = Vector2(449.00003, 222)
+scale = Vector2(3.26, 3.26)
+texture = ExtResource("5_5un4p")
+
+[node name="SkullTile2" type="Sprite2D" parent="." unique_id=537751139]
+position = Vector2(353.07996, 222)
+scale = Vector2(3.26, 3.26)
+texture = ExtResource("5_5un4p")
+
+[node name="SkullTile3" type="Sprite2D" parent="." unique_id=2124510119]
+position = Vector2(257, 222.00002)
+scale = Vector2(3.26, 3.26)
+texture = ExtResource("5_5un4p")

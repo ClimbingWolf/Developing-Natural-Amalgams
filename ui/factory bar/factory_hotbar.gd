@@ -59,7 +59,7 @@ func _process(delta: float) -> void:
 			
 		if(coords != Vector2.INF && ui.ui_state == "pvz"):
 			currentHold.global_position = coords;
-			if(Input.is_action_just_pressed("click") && placements.find(coords) == -1):
+			if(Input.is_action_just_pressed("click")):
 				
 				#map.add_child(currentHold);
 				currentHold.global_position = coords;

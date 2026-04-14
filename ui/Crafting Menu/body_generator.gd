@@ -12,8 +12,8 @@ var active: bool = false
 @export var wait_time = 5.0; #Wait time for generating a head or body
 
 func _ready() -> void:
-	hotbar = get_parent().get_node("CanvasLayer").get_node("HeadSlots");
-	bodybar = get_parent().get_node("CanvasLayer").get_node("BodySlots");
+	hotbar = get_parent().get_node("HeadSlots");
+	bodybar = get_parent().get_node("BodySlots");
 	for i in bodies:
 		bodies_nodes.append(load(i))
 	print(bodies_nodes)
