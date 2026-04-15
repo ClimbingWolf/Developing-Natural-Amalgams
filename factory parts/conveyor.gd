@@ -7,6 +7,7 @@ var item: Node2D = null;
 var active = false;
 
 func _ready() -> void:
+	$AnimatedSprite2D.play("default")
 	if(has_node("Item")):
 		full = true;
 	

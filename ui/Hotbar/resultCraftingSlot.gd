@@ -3,6 +3,8 @@ extends HotbarClass
 @onready var headCraftingSlot = get_parent().get_node("HeadCrafting")
 @onready var bodyCraftingSlot = get_parent().get_node("BodyCrafting")
 @onready var baseAmalgam = load("res://Amalgam/creature.tscn")
+@onready var CostHead = get_node("CostHead")
+@onready var CostBody = get_node("CostBody")
 
 var headCost = 0
 var bodyCost = 0
@@ -31,8 +33,8 @@ func _process(delta: float) -> void:
 					bodyCraftingSlot.get_node("Amalgam").queue_free()
 				if has_node("Amalgam"):
 					get_node("Amalgam").queue_free()
-	$CostHead.text = str(headCost)
-	$CostBody.text = str(bodyCost)
+	CostHead.text = str(headCost)
+	CostBody.text = str(bodyCost)
 
 	if(has_node("Amalgam") && currentHoldChecker == false):
 		#print($Amalgam)
@@ -54,8 +56,8 @@ func setupCraft():
 		creature_copy.name = "Amalgam"
 		add_child(creature_copy)
 		currentHoldChecker =false
-		$CostHead.visible = true
-		$CostBody.visible = true
+		CostHead.visible = true
+		CostBody.visible = true
 		
 		$SkullTile.visible = true
 		$BoneTile.visible = true
