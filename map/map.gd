@@ -1,43 +1,23 @@
 extends Node2D
 
-var boneLayer: TileMapLayer;
-var desertLayer: TileMapLayer
 var tileSize = 9;
 
-func _ready() -> void:
-	boneLayer =  $BoneLayer
-	desertLayer = $DesertLayer
-func checkClickDesert() -> Vector2:
-	
+## Gets the coordinates of the selected cell of the map
+func getMapCoords(layer: TileMapLayer) -> Vector2i:
 	var local_mouse_pos = get_local_mouse_position();
-	var cell = desertLayer.local_to_map(local_mouse_pos);
-	if($DesertLayer.get_cell_source_id(cell) == -1):
-		return Vector2.INF;
-	var loc = desertLayer.map_to_local(cell) + Vector2(tileSize, tileSize);
+	var cell = layer.local_to_map(local_mouse_pos);
+	return cell
+
+## Checks if the cell exists on a layer. Returns true if it exists, false otherwise
+func checkExists(layer: TileMapLayer, cell: Vector2i):
+	if (layer.get_cell_source_id(cell) == -1):
+		return false;
+	return true;
 	
-	var world = to_global(loc);
+func checkClick(layer: TileMapLayer) -> Vector2:
+	var cell = getMapCoords(layer)
 	
-	return loc;
+	if (!checkExists(layer, cell)): return Vector2.INF
 	
-		
-func checkClickBone() -> Vector2:
-	
-	var local_mouse_pos = get_local_mouse_position();
-	var cell = boneLayer.local_to_map(local_mouse_pos);
-	var loc = boneLayer.map_to_local(cell) + Vector2(tileSize, tileSize);
-	if($BoneLayer.get_cell_source_id(cell) == -1):
-		return Vector2.INF;
-	var world = to_global(loc);
-	return loc;
-	
-func checkClickSkull() -> Vector2:
-	
-	var local_mouse_pos = get_local_mouse_position();
-	var cell = boneLayer.local_to_map(local_mouse_pos);
-	var loc = boneLayer.map_to_local(cell) + Vector2(tileSize, tileSize);
-	if($SkullLayer.get_cell_source_id(cell) == -1):
-		return Vector2.INF;
-	var world = to_global(loc);
-	return loc;
-	
-	
+	var loc = layer.map_to_local(cell) + Vector2(tileSize, tileSize);
+	return loc

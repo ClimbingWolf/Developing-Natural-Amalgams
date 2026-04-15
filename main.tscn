@@ -2,13 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://br14oksxl4d7p" path="res://ui/ui.tscn" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://xgqs7k88huo6" path="res://fighting-ground/fighting-board.tscn" id="2_1bvp3"]
-[ext_resource type="Script" uid="uid://j6lgytc8578h" path="res://camera/cam_dupe.gd" id="3_272bh"]
-[ext_resource type="Script" uid="uid://dje7wsh6xsyje" path="res://camera/pvz_cam.gd" id="3_lquwl"]
+[ext_resource type="Script" path="res://camera/cam_dupe.gd" id="3_272bh"]
+[ext_resource type="Script" path="res://camera/pvz_cam.gd" id="3_lquwl"]
 [ext_resource type="PackedScene" uid="uid://dw7ewij1ngdsg" path="res://enemies/enemy_prefab.tscn" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://dslq8yloxcpbh" path="res://enemies/enemy_generator.tscn" id="5_lquwl"]
-[ext_resource type="Script" uid="uid://c1vypjmejhyuy" path="res://camera/factory_cam.gd" id="6_7mycd"]
+[ext_resource type="Script" path="res://camera/factory_cam.gd" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://ch3vb3hv75og2" path="res://map/map.tscn" id="8_5vw27"]
-[ext_resource type="PackedScene" uid="uid://c7vg2o76ecnb1" path="res://instructions.tscn" id="9_kek77"]
+[ext_resource type="PackedScene" path="res://instructions.tscn" id="9_kek77"]
 
 [node name="Node2D" type="Node2D" unique_id=785255799]
 
