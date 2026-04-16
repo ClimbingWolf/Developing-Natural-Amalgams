@@ -1,13 +1,43 @@
 [gd_scene format=3 uid="uid://yfysnmdcpdfr"]
 
 [ext_resource type="Script" uid="uid://cvvcsavbaquyi" path="res://factory parts/conveyor.gd" id="1_4xcue"]
+[ext_resource type="Texture2D" uid="uid://b6o6a2odkf1sy" path="res://factory parts/sprites/Conveyors.png" id="2_2cb3u"]
 
-[sub_resource type="Gradient" id="Gradient_jcrsi"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_c47q1"]
+atlas = ExtResource("2_2cb3u")
+region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_4xcue"]
-gradient = SubResource("Gradient_jcrsi")
-width = 16
-height = 16
+[sub_resource type="AtlasTexture" id="AtlasTexture_6s5ax"]
+atlas = ExtResource("2_2cb3u")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iskry"]
+atlas = ExtResource("2_2cb3u")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_edlp1"]
+atlas = ExtResource("2_2cb3u")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hn670"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c47q1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6s5ax")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iskry")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_edlp1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2cb3u"]
 size = Vector2(12, 12)
@@ -18,8 +48,9 @@ size = Vector2(12, 12)
 [node name="Conveyor" type="Node2D" unique_id=759370617]
 script = ExtResource("1_4xcue")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=649973365]
-texture = SubResource("GradientTexture2D_4xcue")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=112481904]
+sprite_frames = SubResource("SpriteFrames_hn670")
+frame = 1
 
 [node name="ItemDetector" type="Area2D" parent="." unique_id=408031291 groups=["ItemDetector"]]
 
@@ -29,5 +60,5 @@ shape = SubResource("RectangleShape2D_2cb3u")
 [node name="NextDetector" type="Area2D" parent="." unique_id=2126658102]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NextDetector" unique_id=774492499]
-position = Vector2(17, 0)
+position = Vector2(0, -17)
 shape = SubResource("RectangleShape2D_c47q1")

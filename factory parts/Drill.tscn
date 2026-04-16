@@ -1,29 +1,73 @@
 [gd_scene format=3 uid="uid://inpy7h2tyba0"]
 
 [ext_resource type="Script" uid="uid://cbww11jjl6cuv" path="res://factory parts/drill.gd" id="1_glr4d"]
+[ext_resource type="Texture2D" uid="uid://c03qv4vn0adgl" path="res://factory parts/sprites/Drills.png" id="1_u88kj"]
 [ext_resource type="PackedScene" uid="uid://c7pwrsk30yuu1" path="res://factory parts/Item.tscn" id="2_24te3"]
 [ext_resource type="Texture2D" uid="uid://bafjbaky74c3k" path="res://map/bone-tile.png" id="3_oy7i1"]
 [ext_resource type="Texture2D" uid="uid://bnwd7fmjrpei0" path="res://map/skull-tile (1).png" id="4_u88kj"]
 
-[sub_resource type="Gradient" id="Gradient_glr4d"]
-offsets = PackedFloat32Array(0, 0.96385545, 1)
-colors = PackedColorArray(0.76, 0.21279998, 0.21279998, 1, 0.82530123, 0.82530123, 0.82530123, 1, 1, 1, 1, 1)
+[sub_resource type="AtlasTexture" id="AtlasTexture_6lnaf"]
+atlas = ExtResource("1_u88kj")
+region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_24te3"]
-gradient = SubResource("Gradient_glr4d")
-width = 16
-height = 16
-fill_from = Vector2(0.35652173, 0.6695652)
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2pry"]
+atlas = ExtResource("1_u88kj")
+region = Rect2(16, 0, 16, 16)
 
-[node name="Drill" type="Sprite2D" unique_id=25317042 groups=["building"]]
-texture = SubResource("GradientTexture2D_24te3")
+[sub_resource type="AtlasTexture" id="AtlasTexture_r17ru"]
+atlas = ExtResource("1_u88kj")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqlqf"]
+atlas = ExtResource("1_u88kj")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0jio7"]
+atlas = ExtResource("1_u88kj")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o451b"]
+atlas = ExtResource("1_u88kj")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kq640"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6lnaf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2pry")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r17ru")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wqlqf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0jio7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o451b")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="Drill" type="Node2D" unique_id=1251410269 groups=["building"]]
 script = ExtResource("1_glr4d")
 
-[node name="Timer" type="Timer" parent="." unique_id=666111127]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=159527760]
+sprite_frames = SubResource("SpriteFrames_kq640")
+frame_progress = 0.72544605
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1559870764]
+[node name="Timer" type="Timer" parent="." unique_id=2040470967]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=414663573]
+[node name="Area2D" type="Area2D" parent="." unique_id=614808844]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=306610343]
 polygon = PackedVector2Array(-11, -4, -11, 3, -3, 3, -3, 12, 6, 12, 6, 3, 14, 3, 14, -4, 6, -4, 6, -11, -3, -11, -3, -4)
 
 [node name="Bone" parent="." unique_id=1307725075 instance=ExtResource("2_24te3")]
@@ -31,7 +75,7 @@ visible = false
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_oy7i1")
 
-[node name="Skull" parent="." unique_id=372987787 instance=ExtResource("2_24te3")]
+[node name="Skull" parent="." unique_id=1441123914 instance=ExtResource("2_24te3")]
 visible = false
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_u88kj")

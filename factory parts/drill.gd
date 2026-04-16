@@ -1,21 +1,21 @@
-extends Sprite2D
+extends Node2D
+
 var active = false;
 var speed = 5;
-var bone;
-var timer: Timer;
 var layer = "bone";
+
+@onready var timer: Timer = $Timer
+@onready var bone: Sprite2D = $Bone
+@onready var skull: Sprite2D = $Skull
+
 func _ready() -> void:
-	timer = $Timer
-	bone = $Bone
+	$AnimatedSprite2D.play("default")
 	timer.wait_time = speed;
+	
 func _process(delta: float) -> void:
 	if(active):
 		if(timer.is_stopped()):
 			timer.start()
-		
-		
-		
-
 
 func _on_timer_timeout() -> void:
 	var areas = $Area2D.get_overlapping_areas();
@@ -34,7 +34,7 @@ func _on_timer_timeout() -> void:
 		if(layer == "bone"):
 			newBone = bone.duplicate();
 		else:
-			newBone = $Skull.duplicate();
+			newBone = skull.duplicate();
 		newBone.visible = true
 		newBone.add_to_group("ItemAreas");
 		conveyor.get_parent().add_child(newBone);
