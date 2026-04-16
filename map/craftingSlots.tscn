@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c0duln4gkleej"]
+[gd_scene format=3 uid="uid://clrnvwtvj07m5"]
 
 [ext_resource type="Script" path="res://ui/hotbar.gd" id="1_jkmta"]
 [ext_resource type="Script" uid="uid://bhccq5y6venb1" path="res://ui/HotbarClass Scripts/headCraftingSlot.gd" id="1_xct7n"]

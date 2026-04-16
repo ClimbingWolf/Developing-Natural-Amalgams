@@ -2,7 +2,7 @@ extends Node2D
 var full = false;
 var canMove = true;
 var conveyorSpeed = 1;
-var targetOffset = Vector2(16,0);
+var targetOffset = Vector2(0, -16);
 var item: Node2D = null;
 var active = false;
 
