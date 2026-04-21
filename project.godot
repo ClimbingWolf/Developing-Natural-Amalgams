@@ -35,6 +35,7 @@ ItemAreas=""
 ItemDetector=""
 building=""
 Delete=""
+NextDetector=""
 
 [input]
 

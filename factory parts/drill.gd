@@ -27,9 +27,10 @@ func _on_timer_timeout() -> void:
 		if(i.is_in_group("ItemAreas")):
 			conveyor = null;
 			break;
-	timer.wait_time = speed;
-	timer.start()
-	if (conveyor != null):
+	timer.wait_time = 0.1;
+	
+	if (conveyor != null && conveyor.active && conveyor.currentItem ==null):
+		timer.wait_time = speed;
 		var newBone: Node2D
 		if(layer == "bone"):
 			newBone = bone.duplicate();
@@ -38,11 +39,12 @@ func _on_timer_timeout() -> void:
 		newBone.visible = true
 		newBone.add_to_group("ItemAreas");
 		conveyor.get_parent().add_child(newBone);
+		conveyor.currentItem = newBone
 		newBone.z_index = conveyor.z_index + 1
 		newBone.position = conveyor.position
 		newBone.active = true
 		var boneArea:Area2D = newBone.get_node("Area2D")
 		boneArea.monitorable = true;
-		
+	timer.start()
 		
 	

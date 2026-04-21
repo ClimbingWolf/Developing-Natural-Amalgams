@@ -43,7 +43,7 @@ animations = [{
 size = Vector2(16, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c47q1"]
-size = Vector2(16, 16)
+size = Vector2(14, 14)
 
 [node name="Conveyor" type="Node2D" unique_id=759370617]
 script = ExtResource("1_4xcue")
@@ -57,7 +57,7 @@ frame = 1
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ItemDetector" unique_id=1352372635]
 shape = SubResource("RectangleShape2D_2cb3u")
 
-[node name="NextDetector" type="Area2D" parent="." unique_id=2126658102]
+[node name="NextDetector" type="Area2D" parent="." unique_id=2126658102 groups=["NextDetector"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NextDetector" unique_id=774492499]
 position = Vector2(0, -16)

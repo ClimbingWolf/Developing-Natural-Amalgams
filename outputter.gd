@@ -2,8 +2,10 @@ extends Node2D
 
 var active = false
 var item = null
+var currentItem: Node2D = null;
 func _process(delta: float) -> void:
 	if(active):
+		currentItem = null;
 		var areaDetect = $Area2D.get_overlapping_areas();
 		if (len(areaDetect) != 0):
 			for i:Area2D in areaDetect:
@@ -17,3 +19,4 @@ func _process(delta: float) -> void:
 			if item.itemName == "skull":
 				Scores.skulls += 1
 				item.queue_free()
+			
