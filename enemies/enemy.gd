@@ -57,4 +57,5 @@ func takeDamage(damage):
 		
 func die():
 	queue_free()
+	Scores.gears += 5
 	print("Ow I died")

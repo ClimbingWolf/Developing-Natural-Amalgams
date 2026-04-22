@@ -27,3 +27,21 @@ offset_bottom = 162.0
 text = "Bones
 "
 label_settings = SubResource("LabelSettings_ajpw8")
+
+[node name="Gears" type="Label" parent="." unique_id=801392034]
+offset_left = 1.0
+offset_top = 107.0
+offset_right = 120.0
+offset_bottom = 220.0
+text = "Gears
+"
+label_settings = SubResource("LabelSettings_ajpw8")
+
+[node name="Wave" type="Label" parent="." unique_id=246706181]
+offset_left = 1.0
+offset_top = 164.0
+offset_right = 120.0
+offset_bottom = 277.0
+text = "Wave
+"
+label_settings = SubResource("LabelSettings_ajpw8")

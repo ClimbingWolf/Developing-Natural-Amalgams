@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b6frtd2xtx7bu" path="res://ui/factory bar/factory_hotbar.tscn" id="4_tf0e0"]
 [ext_resource type="PackedScene" uid="uid://djtc2hmd7r4pc" path="res://ui/Scores/Scores.tscn" id="5_obcwv"]
 [ext_resource type="PackedScene" uid="uid://dfvvmn17junvx" path="res://ui/Crafting Menu/crafting_menu.tscn" id="6_bo1jx"]
+[ext_resource type="Script" uid="uid://c1w7ygeniv15" path="res://ui/start_button.gd" id="7_gycre"]
 
 [sub_resource type="Gradient" id="Gradient_vkava"]
 
@@ -44,4 +45,15 @@ position = Vector2(1700, 13)
 visible = false
 position = Vector2(1153, -63)
 
+[node name="StartButton" type="Button" parent="CanvasLayer" unique_id=738807867]
+offset_left = 1624.0
+offset_top = 263.0
+offset_right = 1754.0
+offset_bottom = 294.0
+scale = Vector2(2.1600013, 2.1600013)
+text = "Start Onslaught"
+script = ExtResource("7_gycre")
+
 [node name="AmalgamGenerator" parent="." unique_id=475387824 instance=ExtResource("3_wl5ax")]
+
+[connection signal="button_down" from="CanvasLayer/StartButton" to="CanvasLayer/StartButton" method="_on_button_down"]

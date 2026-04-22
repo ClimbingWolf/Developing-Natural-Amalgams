@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bjp4xxangm48e"]
+
+[ext_resource type="Script" uid="uid://cqn37u3hqi2jo" path="res://spawn_controller.gd" id="1_wxdhw"]
+[ext_resource type="PackedScene" uid="uid://dslq8yloxcpbh" path="res://enemies/enemy_generator.tscn" id="2_te3ox"]
+
+[node name="SpawnController" type="Node2D" unique_id=1081332037]
+script = ExtResource("1_wxdhw")
+
+[node name="EnemyGenerator3" parent="." unique_id=658574200 instance=ExtResource("2_te3ox")]
+position = Vector2(895, 1)
+
+[node name="EnemyGenerator" parent="." unique_id=887449310 instance=ExtResource("2_te3ox")]
+position = Vector2(897, 107)
+
+[node name="EnemyGenerator2" parent="." unique_id=684793593 instance=ExtResource("2_te3ox")]
+position = Vector2(897, 54)
+
+[node name="EnemyGenerator4" parent="." unique_id=1131745601 instance=ExtResource("2_te3ox")]
+position = Vector2(901, 155)
+
+[node name="EnemyGenerator5" parent="." unique_id=1538385349 instance=ExtResource("2_te3ox")]
+position = Vector2(899, 212)
+
+[node name="Timer" type="Timer" parent="." unique_id=1785932467]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
