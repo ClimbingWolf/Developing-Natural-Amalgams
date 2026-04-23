@@ -59,7 +59,7 @@ func _process(delta: float) -> void:
 			
 		if(coords != Vector2.INF && ui.ui_state == "pvz"):
 			currentHold.global_position = coords;
-			if(Input.is_action_just_pressed("click") && placements.keys().find(coords) == -1):
+			if(Input.is_action_just_pressed("click") && placements.keys().find(coords) == -1 and Scores.gears >= currentHold.cost):
 				
 				#map.add_child(currentHold);
 				currentHold.global_position = coords;
@@ -70,7 +70,7 @@ func _process(delta: float) -> void:
 				placements[coords] = currentHold
 				map.add_child(currentHold);
 				currentHold.modulate -= Color(0,0,0, 0.5);
-				#currentSpot = null;
+				Scores.gears -= currentHold.cost
 			if(Input.is_action_just_pressed("q")):
 				currentHold.rotate(PI/2);
 			elif(Input.is_action_just_pressed("e")):

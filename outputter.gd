@@ -2,6 +2,7 @@ extends Node2D
 
 var active = false
 var item = null
+var cost = 15
 var currentItem: Node2D = null;
 func _process(delta: float) -> void:
 	if(active):

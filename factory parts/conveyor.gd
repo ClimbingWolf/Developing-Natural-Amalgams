@@ -7,7 +7,7 @@ var item: Node2D = null;
 var active = false;
 var currentItem: Node2D = null;
 var nextConveyor: Node2D = null;
-
+var cost = 1
 func _ready() -> void:
 	$AnimatedSprite2D.play("default")
 	if(has_node("Item")):

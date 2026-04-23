@@ -3,6 +3,7 @@ extends Node2D
 var active = false;
 var speed = 5;
 var layer = "bone";
+var cost = 5
 
 @onready var timer: Timer = $Timer
 @onready var bone: Sprite2D = $Bone

@@ -9,6 +9,8 @@ size = Vector2(384, 16)
 
 [node name="Head" unique_id=2124160809 instance=ExtResource("1_tbpb6")]
 script = ExtResource("1_40jvg")
+hp = 20.0
+attack = 15.0
 speed = 5.0
 
 [node name="Icon" parent="." index="0" unique_id=1965967158]

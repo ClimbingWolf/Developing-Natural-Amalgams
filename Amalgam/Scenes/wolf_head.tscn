@@ -6,6 +6,8 @@
 
 [node name="Head" unique_id=2124160809 instance=ExtResource("1_a64p6")]
 script = ExtResource("1_3fsil")
+hp = 20.0
+speed = 7.0
 
 [node name="Icon" parent="." index="0" unique_id=1965967158]
 scale = Vector2(3, 3)

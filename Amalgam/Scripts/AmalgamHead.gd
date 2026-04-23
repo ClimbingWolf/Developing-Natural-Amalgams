@@ -3,11 +3,11 @@ extends Node
 class_name Amalgam_head
 
 #All 10s for default, most likely will need to be changed
-var hp:float = 10
-var attack:float = 10
-var defense:int = 10
-var speed:float = 2
-var range:float = 10
+@export var hp:float = 10
+@export var attack:float = 10
+@export var defense:int = 10
+@export var speed:float = 2
+@export var range:float = 10
 var placed = false;
 var isWaiting = false;
 
