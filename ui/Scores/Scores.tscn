@@ -39,10 +39,10 @@ text = "Gears
 label_settings = SubResource("LabelSettings_ajpw8")
 
 [node name="Wave" type="Label" parent="." unique_id=246706181]
-offset_left = 3.0
-offset_top = 354.0
-offset_right = 122.0
-offset_bottom = 467.0
+offset_left = 6.0
+offset_top = 435.0
+offset_right = 125.0
+offset_bottom = 548.0
 text = "Wave
 "
 label_settings = SubResource("LabelSettings_ajpw8")
