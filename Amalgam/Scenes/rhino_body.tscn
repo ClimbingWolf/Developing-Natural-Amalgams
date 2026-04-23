@@ -9,8 +9,8 @@ size = Vector2(192, 96)
 
 [node name="Body" unique_id=7729438 instance=ExtResource("1_125mp")]
 script = ExtResource("1_1kki0")
-atk_mult = 1.5
-spd_mult = 1.5
+atk_mult = 2.0
+hp_mult = 3.0
 range_mult = 1.0
 
 [node name="Icon" parent="." index="0" unique_id=2098181349]

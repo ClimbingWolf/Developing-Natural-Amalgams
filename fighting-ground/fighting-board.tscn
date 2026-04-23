@@ -2,7 +2,28 @@
 
 [ext_resource type="Script" uid="uid://mmrxktsw2xmd" path="res://fighting-ground/fighting_board.gd" id="1_cnegx"]
 [ext_resource type="PackedScene" uid="uid://dhnu15x43uipv" path="res://fighting-ground/Tile/tile-prefab.tscn" id="2_r8cwp"]
+[ext_resource type="Texture2D" uid="uid://ddr0uphlaa7nh" path="res://icon.svg" id="3_8lehm"]
+[ext_resource type="Script" uid="uid://iymux0bqvx4y" path="res://fighting-ground/house.gd" id="3_m0o7i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r8cwp"]
+size = Vector2(73, 286)
 
 [node name="FightingBoard" type="Node2D" unique_id=2002171744]
 script = ExtResource("1_cnegx")
 tile_sprite_prefab = ExtResource("2_r8cwp")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1080807209]
+position = Vector2(-45, 0)
+script = ExtResource("3_m0o7i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=814807579]
+position = Vector2(-35.5, 95)
+shape = SubResource("RectangleShape2D_r8cwp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1518762083]
+visible = false
+position = Vector2(-35.000008, 95.00001)
+scale = Vector2(0.546875, 2.2187502)
+texture = ExtResource("3_8lehm")
+
+[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]

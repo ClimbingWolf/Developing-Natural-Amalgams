@@ -7,19 +7,19 @@
 script = ExtResource("1_wxdhw")
 
 [node name="EnemyGenerator3" parent="." unique_id=658574200 instance=ExtResource("2_te3ox")]
-position = Vector2(895, 1)
+position = Vector2(452, -1)
 
 [node name="EnemyGenerator" parent="." unique_id=887449310 instance=ExtResource("2_te3ox")]
-position = Vector2(897, 107)
+position = Vector2(454, 105)
 
 [node name="EnemyGenerator2" parent="." unique_id=684793593 instance=ExtResource("2_te3ox")]
-position = Vector2(897, 54)
+position = Vector2(454, 52)
 
 [node name="EnemyGenerator4" parent="." unique_id=1131745601 instance=ExtResource("2_te3ox")]
-position = Vector2(901, 155)
+position = Vector2(458, 153)
 
 [node name="EnemyGenerator5" parent="." unique_id=1538385349 instance=ExtResource("2_te3ox")]
-position = Vector2(899, 212)
+position = Vector2(456, 210)
 
 [node name="Timer" type="Timer" parent="." unique_id=1785932467]
 

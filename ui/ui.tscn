@@ -8,11 +8,16 @@
 [ext_resource type="PackedScene" uid="uid://djtc2hmd7r4pc" path="res://ui/Scores/Scores.tscn" id="5_obcwv"]
 [ext_resource type="PackedScene" uid="uid://dfvvmn17junvx" path="res://ui/Crafting Menu/crafting_menu.tscn" id="6_bo1jx"]
 [ext_resource type="Script" uid="uid://c1w7ygeniv15" path="res://ui/start_button.gd" id="7_gycre"]
+[ext_resource type="Script" uid="uid://c8vtv7iw88bos" path="res://ui/next_wave_indicator.gd" id="8_pa1oa"]
 
 [sub_resource type="Gradient" id="Gradient_vkava"]
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_tf0e0"]
 gradient = SubResource("Gradient_vkava")
+
+[sub_resource type="LabelSettings" id="LabelSettings_ay4pc"]
+font_size = 40
+font_color = Color(0.45490196, 0.45490196, 0.45490196, 1)
 
 [node name="Ui" type="Node2D" unique_id=408283547]
 script = ExtResource("1_vkava")
@@ -46,13 +51,22 @@ visible = false
 position = Vector2(1153, -63)
 
 [node name="StartButton" type="Button" parent="CanvasLayer" unique_id=738807867]
-offset_left = 1624.0
-offset_top = 263.0
-offset_right = 1754.0
-offset_bottom = 294.0
+offset_left = 1621.0
+offset_top = 495.0
+offset_right = 1751.0
+offset_bottom = 526.0
 scale = Vector2(2.1600013, 2.1600013)
-text = "Start Onslaught"
+text = "Skip"
 script = ExtResource("7_gycre")
+
+[node name="Time Until next wave" type="Label" parent="CanvasLayer" unique_id=756105018]
+offset_left = 1592.0
+offset_top = 425.0
+offset_right = 1974.0
+offset_bottom = 496.0
+text = "next wave: "
+label_settings = SubResource("LabelSettings_ay4pc")
+script = ExtResource("8_pa1oa")
 
 [node name="AmalgamGenerator" parent="." unique_id=475387824 instance=ExtResource("3_wl5ax")]
 

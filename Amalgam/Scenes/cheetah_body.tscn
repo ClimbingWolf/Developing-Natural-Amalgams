@@ -8,6 +8,9 @@ size = Vector2(33, 8)
 
 [node name="Body" type="Node2D" unique_id=7729438]
 script = ExtResource("1_uurb8")
+speedIncrease = 0.0
+atk_mult = 1.5
+spd_mult = 0.5
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=110292569]
 scale = Vector2(3, 3)
