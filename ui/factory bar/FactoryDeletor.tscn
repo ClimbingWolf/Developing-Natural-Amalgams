@@ -3,8 +3,17 @@
 [ext_resource type="Script" uid="uid://bllalmvja2jeb" path="res://ui/factory bar/factory_deletor.gd" id="1_wfy48"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_306un"]
-size = Vector2(8, 8)
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wfy48"]
+size = Vector2(5, 4)
 
 [node name="FactoryDeletor" type="Sprite2D" unique_id=1830341835 groups=["Delete"]]
 texture = SubResource("PlaceholderTexture2D_306un")
 script = ExtResource("1_wfy48")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1808906373]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=330289102]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_wfy48")

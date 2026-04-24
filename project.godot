@@ -36,6 +36,7 @@ ItemDetector=""
 building=""
 Delete=""
 NextDetector=""
+Conveyor=""
 
 [input]
 

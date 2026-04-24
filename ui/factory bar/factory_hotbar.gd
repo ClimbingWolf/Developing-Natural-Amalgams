@@ -10,12 +10,22 @@ var currentHold: Node2D = null;
 var selectionColor: Color = Color(0.59, 0.0, 0.0, 1.0);
 var defaultColor: Color = Color(1.0, 1.0, 1.0, 1.0);
 var placements = {}
+var startPoint: Vector2 = Vector2.ZERO;
+var endPoint: Vector2 = Vector2.ZERO;
+var startCoords: Vector2 = Vector2.ZERO;
+
 #static var mapScale = 3.125;
 
 @onready var map = get_node("../../../Map")
-@onready var desertLayer = map.get_node("DesertLayer")
+@onready var desertLayer: TileMapLayer = map.get_node("DesertLayer")
 @onready var boneLayer = map.get_node("BoneLayer")
 @onready var skullLayer = map.get_node("SkullLayer")
+
+func _ready() -> void:
+	for i in range(9):
+		var spot: Node2D = $"Hotbar nodes".get_child(i);
+		if(spot.has_node("Piece")):
+			spot.tile_cost = spot.get_node("Piece").cost;
 	
 func _process(delta: float) -> void:
 	
@@ -59,8 +69,8 @@ func _process(delta: float) -> void:
 			
 		if(coords != Vector2.INF && ui.ui_state == "pvz"):
 			currentHold.global_position = coords;
-			if(Input.is_action_just_pressed("click") && placements.keys().find(coords) == -1 and Scores.gears >= currentHold.cost):
-				
+			#We need a better draggin implementation, but this works.
+			if(Input.is_action_pressed("click") && placements.keys().find(coords) == -1 and Scores.gears >= currentHold.cost && !currentHold.is_in_group("Delete")):
 				#map.add_child(currentHold);
 				currentHold.global_position = coords;
 				currentHold.modulate += Color(0,0,0, 0.5);
@@ -71,6 +81,33 @@ func _process(delta: float) -> void:
 				map.add_child(currentHold);
 				currentHold.modulate -= Color(0,0,0, 0.5);
 				Scores.gears -= currentHold.cost
+			elif (Input.is_action_pressed("click") && placements.keys().find(coords) != -1 && currentHold.is_in_group("Delete")):
+				var area2d: Area2D = currentHold.get_node("Area2D");
+				var areas = area2d.get_overlapping_areas();
+				for i in areas:
+					if(i.get_parent() in map.get_children()):
+						Scores.gears += i.get_parent().cost;
+						i.get_parent().queue_free();
+				placements.erase(coords);
+			#Working on dragging conveyors, doesn't work yet
+			#if(Input.is_action_just_pressed("click") && placements.keys().find(coords) == -1 && currentHold.is_in_group("Conveyor")):
+				#startPoint = get_global_mouse_position();
+				#startCoords = map.checkClick(desertLayer, get_global_mouse_position());
+			#if(Input.is_action_pressed("click") && placements.keys().find(coords) == -1 && currentHold.is_in_group("Conveyor")):
+				#print(startPoint-endPoint)
+				#endPoint = get_global_mouse_position();
+				#var endCoords = map.checkClick(desertLayer, get_global_mouse_position())
+				#if(rotation_degrees == 0 || rotation_degrees == 180):
+					#var child_x_offset = 0;
+					#while(abs(child_x_offset) < abs(startCoords.x - endCoords.x)):
+						#if(startCoords.x < endCoords.x):
+							#child_x_offset += desertLayer.map_to_local(desertLayer.local_to_map(endCoords) + Vector2i(1,0)).x;
+						#else:
+							#child_x_offset -= desertLayer.map_to_local(desertLayer.local_to_map(endCoords) + Vector2i(1,0)).x;
+						#var child = currentHold.duplicate();
+						#child.position.x += child_x_offset;
+						#currentHold.add_child(child);
+					
 			if(Input.is_action_just_pressed("q")):
 				currentHold.rotate(PI/2);
 			elif(Input.is_action_just_pressed("e")):

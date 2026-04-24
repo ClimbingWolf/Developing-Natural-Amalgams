@@ -45,7 +45,7 @@ size = Vector2(16, 16)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c47q1"]
 size = Vector2(14, 14)
 
-[node name="Conveyor" type="Node2D" unique_id=759370617]
+[node name="Conveyor" type="Node2D" unique_id=759370617 groups=["Conveyor"]]
 script = ExtResource("1_4xcue")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=112481904]

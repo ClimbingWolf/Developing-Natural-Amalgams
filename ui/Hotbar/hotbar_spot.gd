@@ -2,6 +2,7 @@ extends Node2D
 class_name HotbarClass
 var hover = false;
 var hotbar:Node;
+@export var tile_cost = "";
 @export var hotbar_scale: int = 20;
 static var currentHold: Node2D = Node2D.new(); #The object currently held by the mouse
 static var currentHoldChecker = false #False if nothing is held, true otherwise
@@ -32,6 +33,7 @@ func _process(delta: float) -> void:
 	elif(Input.is_action_just_pressed("click") && !currentHoldChecker  && has_node("Amalgam") && hover && currentHold.name == ""):
 		currentHold = $Amalgam;
 		currentHoldChecker = true
+	$Label.text = str(tile_cost)
 
 	
 		
