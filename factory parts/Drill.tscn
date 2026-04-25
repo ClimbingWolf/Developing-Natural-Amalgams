@@ -3,8 +3,7 @@
 [ext_resource type="Script" uid="uid://cbww11jjl6cuv" path="res://factory parts/drill.gd" id="1_glr4d"]
 [ext_resource type="Texture2D" uid="uid://c03qv4vn0adgl" path="res://factory parts/sprites/Drills.png" id="1_u88kj"]
 [ext_resource type="PackedScene" uid="uid://c7pwrsk30yuu1" path="res://factory parts/Item.tscn" id="2_24te3"]
-[ext_resource type="Texture2D" uid="uid://bafjbaky74c3k" path="res://map/bone-tile.png" id="3_oy7i1"]
-[ext_resource type="Texture2D" uid="uid://bnwd7fmjrpei0" path="res://map/skull-tile (1).png" id="4_u88kj"]
+[ext_resource type="Texture2D" uid="uid://u8k2ho1pyy20" path="res://map/Desert_Tilemap.png" id="4_u88kj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6lnaf"]
 atlas = ExtResource("1_u88kj")
@@ -73,12 +72,18 @@ polygon = PackedVector2Array(-11, -4, -11, 3, -3, 3, -3, 12, 6, 12, 6, 3, 14, 3,
 [node name="Bone" parent="." unique_id=1307725075 instance=ExtResource("2_24te3")]
 visible = false
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_oy7i1")
+texture = ExtResource("4_u88kj")
+hframes = 4
+vframes = 4
+frame = 7
 
 [node name="Skull" parent="." unique_id=1441123914 instance=ExtResource("2_24te3")]
 visible = false
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_u88kj")
+hframes = 4
+vframes = 4
+frame = 3
 itemName = "skull"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

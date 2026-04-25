@@ -9,7 +9,7 @@ var currentSpot: Node2D = null;
 var currentHold: Node2D = null;
 var selectionColor: Color = Color(0.59, 0.0, 0.0, 1.0);
 var defaultColor: Color = Color(1.0, 1.0, 1.0, 1.0);
-var placements = {}
+#var placements = {}
 #static var mapScale = 3.125;
 
 @onready var map = get_node("../../../Map")
@@ -67,13 +67,13 @@ func _process(delta: float) -> void:
 				currentHold.active = true
 				#selection = -1
 				currentHold = currentHold.duplicate();
-				placements[coords] = currentHold
+				#placements[coords] = currentHold
 				map.add_child(currentHold);
 				currentHold.modulate -= Color(0,0,0, 0.5);
 				#currentSpot = null;
 			if(Input.is_action_just_pressed("q")):
-				currentHold.rotate(PI/2);
-			elif(Input.is_action_just_pressed("e")):
 				currentHold.rotate(-PI/2);
+			elif(Input.is_action_just_pressed("e")):
+				currentHold.rotate(PI/2);
 	
 	

@@ -4,17 +4,18 @@
 [ext_resource type="Script" uid="uid://dxaapna5q20uh" path="res://ui/Hotbar/BuySlot.gd" id="2_3bsys"]
 [ext_resource type="PackedScene" uid="uid://dt6id8c5sdbkx" path="res://Amalgam/Scenes/rhino_body.tscn" id="3_pogee"]
 [ext_resource type="PackedScene" uid="uid://bdawqb80i4wdy" path="res://Amalgam/Scenes/cheetah_body.tscn" id="4_ii7cn"]
-[ext_resource type="Texture2D" uid="uid://bafjbaky74c3k" path="res://map/bone-tile.png" id="4_pogee"]
 [ext_resource type="PackedScene" uid="uid://dxj1tshdkub62" path="res://Amalgam/Scenes/tardigrade_body.tscn" id="5_y11g8"]
+[ext_resource type="Texture2D" uid="uid://u8k2ho1pyy20" path="res://map/Desert_Tilemap.png" id="6_pogee"]
 
 [node name="BodySlots" type="Node2D" unique_id=1874698683]
 
-[node name="HotbarSpot" parent="." unique_id=1938797358 instance=ExtResource("1_o5foh")]
+[node name="HotbarSpot" parent="." unique_id=1938797358 node_paths=PackedStringArray("hotbar") instance=ExtResource("1_o5foh")]
 position = Vector2(240, 528)
 script = ExtResource("2_3bsys")
 productScene = ExtResource("3_pogee")
 cost = 3
 mode = 1
+hotbar = NodePath("..")
 
 [node name="Cost" type="Label" parent="HotbarSpot" unique_id=884452240]
 offset_left = -39.0
@@ -24,12 +25,13 @@ offset_bottom = 104.0
 theme_override_font_sizes/font_size = 44
 text = "1"
 
-[node name="HotbarSpot2" parent="." unique_id=21513715 instance=ExtResource("1_o5foh")]
+[node name="HotbarSpot2" parent="." unique_id=21513715 node_paths=PackedStringArray("hotbar") instance=ExtResource("1_o5foh")]
 position = Vector2(336, 528)
 script = ExtResource("2_3bsys")
 productScene = ExtResource("4_ii7cn")
 cost = 2
 mode = 1
+hotbar = NodePath("..")
 
 [node name="Cost" type="Label" parent="HotbarSpot2" unique_id=28531773]
 offset_left = -39.0
@@ -40,12 +42,13 @@ theme_override_font_sizes/font_size = 44
 text = "1"
 metadata/_edit_use_anchors_ = true
 
-[node name="HotbarSpot3" parent="." unique_id=1467477984 instance=ExtResource("1_o5foh")]
+[node name="HotbarSpot3" parent="." unique_id=1467477984 node_paths=PackedStringArray("hotbar") instance=ExtResource("1_o5foh")]
 position = Vector2(432, 528)
 script = ExtResource("2_3bsys")
 productScene = ExtResource("5_y11g8")
 cost = 1
 mode = 1
+hotbar = NodePath("..")
 
 [node name="Cost" type="Label" parent="HotbarSpot3" unique_id=1945598824]
 offset_left = -39.0
@@ -59,14 +62,23 @@ metadata/_edit_use_anchors_ = true
 [node name="SkullTile" type="Sprite2D" parent="." unique_id=1388033448]
 position = Vector2(449, 606)
 scale = Vector2(3.26, 3.26)
-texture = ExtResource("4_pogee")
+texture = ExtResource("6_pogee")
+hframes = 4
+vframes = 4
+frame = 7
 
 [node name="SkullTile2" type="Sprite2D" parent="." unique_id=1486255092]
 position = Vector2(257, 606)
 scale = Vector2(3.26, 3.26)
-texture = ExtResource("4_pogee")
+texture = ExtResource("6_pogee")
+hframes = 4
+vframes = 4
+frame = 7
 
 [node name="SkullTile3" type="Sprite2D" parent="." unique_id=290444096]
 position = Vector2(353, 606)
 scale = Vector2(3.26, 3.26)
-texture = ExtResource("4_pogee")
+texture = ExtResource("6_pogee")
+hframes = 4
+vframes = 4
+frame = 7

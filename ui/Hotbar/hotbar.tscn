@@ -12,38 +12,47 @@ scale = Vector2(0.66403276, 0.50914633)
 
 [node name="Hotbar nodes" type="Node2D" parent="." unique_id=275188424]
 
-[node name="HotbarSpot" parent="Hotbar nodes" unique_id=1938797358 instance=ExtResource("2_v0qo3")]
+[node name="HotbarSpot" parent="Hotbar nodes" unique_id=1938797358 node_paths=PackedStringArray("hotbar") instance=ExtResource("2_v0qo3")]
 z_index = 1
 position = Vector2(150, 65)
+hotbar = NodePath("../..")
 
-[node name="HotbarSpot2" parent="Hotbar nodes" unique_id=1233071261 instance=ExtResource("2_v0qo3")]
+[node name="HotbarSpot2" parent="Hotbar nodes" unique_id=1233071261 node_paths=PackedStringArray("hotbar") instance=ExtResource("2_v0qo3")]
 z_index = 1
 position = Vector2(255, 65)
+hotbar = NodePath("../..")
 
-[node name="HotbarSpot3" parent="Hotbar nodes" unique_id=1209568040 instance=ExtResource("2_v0qo3")]
+[node name="HotbarSpot3" parent="Hotbar nodes" unique_id=1209568040 node_paths=PackedStringArray("hotbar") instance=ExtResource("2_v0qo3")]
 z_index = 1
 position = Vector2(360, 65)
+hotbar = NodePath("../..")
 
-[node name="HotbarSpot4" parent="Hotbar nodes" unique_id=2124309915 instance=ExtResource("2_v0qo3")]
+[node name="HotbarSpot4" parent="Hotbar nodes" unique_id=2124309915 node_paths=PackedStringArray("hotbar") instance=ExtResource("2_v0qo3")]
 z_index = 1
 position = Vector2(465, 65)
+hotbar = NodePath("../..")
 
-[node name="HotbarSpot5" parent="Hotbar nodes" unique_id=1022056516 instance=ExtResource("2_v0qo3")]
+[node name="HotbarSpot5" parent="Hotbar nodes" unique_id=1022056516 node_paths=PackedStringArray("hotbar") instance=ExtResource("2_v0qo3")]
 z_index = 1
 position = Vector2(570, 65)
+hotbar = NodePath("../..")
 
-[node name="HotbarSpot6" parent="Hotbar nodes" unique_id=1835428886 instance=ExtResource("2_v0qo3")]
+[node name="HotbarSpot6" parent="Hotbar nodes" unique_id=1835428886 node_paths=PackedStringArray("hotbar") instance=ExtResource("2_v0qo3")]
 z_index = 1
 position = Vector2(675, 65)
+hotbar = NodePath("../..")
 
-[node name="HotbarSpot7" parent="Hotbar nodes" unique_id=1596283127 instance=ExtResource("2_v0qo3")]
+[node name="HotbarSpot7" parent="Hotbar nodes" unique_id=1596283127 node_paths=PackedStringArray("hotbar") instance=ExtResource("2_v0qo3")]
 z_index = 1
 position = Vector2(780, 65)
+hotbar = NodePath("../..")
 
-[node name="HotbarSpot8" parent="Hotbar nodes" unique_id=2146065888 instance=ExtResource("2_v0qo3")]
+[node name="HotbarSpot8" parent="Hotbar nodes" unique_id=2146065888 node_paths=PackedStringArray("hotbar") instance=ExtResource("2_v0qo3")]
 z_index = 1
 position = Vector2(885, 65)
+hotbar = NodePath("../..")
 
-[node name="HotbarSpot9" parent="Hotbar nodes" unique_id=443009746 instance=ExtResource("2_v0qo3")]
+[node name="HotbarSpot9" parent="Hotbar nodes" unique_id=443009746 node_paths=PackedStringArray("hotbar") instance=ExtResource("2_v0qo3")]
 z_index = 1
 position = Vector2(990, 65)
+hotbar = NodePath("../..")

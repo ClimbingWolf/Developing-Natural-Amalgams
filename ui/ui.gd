@@ -21,6 +21,13 @@ var factory_hotbar_end = 700;
 var factory_hotbar_start = 350;
 
 @export var speed = 3;
+
+@export var map: Node2D
+@onready var fighting_board: TileMapLayer = map.getFightingLayer()
+
+func getMap() -> Node2D:
+	return map
+
 func _ready() -> void:
 	mainCam = get_viewport().get_camera_2d();
 	pass
@@ -30,6 +37,7 @@ func _ready() -> void:
 	startPos = rect.global_position;
 	endPos = get_window().size/2;
 	startScale =  rect.size;
+	
 func _process(delta: float) -> void:
 	if(Input.is_action_just_pressed("space")):
 		minimap_moving = !minimap_moving
@@ -58,7 +66,7 @@ func minimap_control(delta: float) -> void:
 		if(rect.size <= endScale + margin_of_err and rect.size >= endScale - margin_of_err):
 			dupe_cam = cameraViewport.get_camera_2d().duplicate();
 			dupe_cam.set_script(dupe_script)
-			dupe_cam.fighting_board = get_parent().get_node("FightingBoard")
+			dupe_cam.fighting_board = fighting_board
 			add_child(dupe_cam)
 			dupe_cam.make_current()
 			rect.visible = false

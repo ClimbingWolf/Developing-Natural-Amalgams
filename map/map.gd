@@ -14,6 +14,10 @@ func checkExists(layer: TileMapLayer, cell: Vector2i):
 		return false;
 	return true;
 	
+## Returns the Fighting Ground layer
+func getFightingLayer() -> TileMapLayer:
+	return get_node("FightingLayer")
+	
 func checkClick(layer: TileMapLayer) -> Vector2:
 	var cell = getMapCoords(layer)
 	

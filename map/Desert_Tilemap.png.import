@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnwd7fmjrpei0"
-path="res://.godot/imported/skull-tile (1).png-88b3f331e49a6bc5b885b1829b3e96a3.ctex"
+uid="uid://u8k2ho1pyy20"
+path="res://.godot/imported/Desert_Tilemap.png-4ce7043f7b996750215da781532df194.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://map/skull-tile (1).png"
-dest_files=["res://.godot/imported/skull-tile (1).png-88b3f331e49a6bc5b885b1829b3e96a3.ctex"]
+source_file="res://map/Desert_Tilemap.png"
+dest_files=["res://.godot/imported/Desert_Tilemap.png-4ce7043f7b996750215da781532df194.ctex"]
 
 [params]
 

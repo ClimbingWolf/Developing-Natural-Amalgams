@@ -3,6 +3,7 @@ class_name InventorySlot
 var hover = false;
 var hotbar:Node;
 @export var hotbar_scale: int= 20;
+#The current held item
 static var currentHold: Node2D = Node2D.new();
 static var currentHoldChecker = false
 
@@ -35,8 +36,6 @@ func _process(delta: float) -> void:
 		currentHold = Node2D.new();
 		add_child(dupe);
 		
-
-
 	if(has_node("Amalgam") && currentHoldChecker == false):
 		#print($Amalgam)
 		position_amalgam()
