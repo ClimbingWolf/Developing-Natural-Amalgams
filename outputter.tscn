@@ -1,11 +1,10 @@
 [gd_scene format=3 uid="uid://ntoi8esdlcgl"]
 
 [ext_resource type="Script" uid="uid://rxkhv5mm2oon" path="res://outputter.gd" id="1_y43y5"]
+[ext_resource type="Texture2D" uid="uid://bmon8rhmroatn" path="res://hole.png" id="2_h4dtu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y43y5"]
-size = Vector2(18, 18)
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_h4dtu"]
+size = Vector2(16, 16)
 
 [node name="Outputter" type="Node2D" unique_id=657657892]
 script = ExtResource("1_y43y5")
@@ -17,5 +16,4 @@ shape = SubResource("RectangleShape2D_y43y5")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=408549854]
 position = Vector2(-2.3841858e-07, 0)
-scale = Vector2(18, 18)
-texture = SubResource("PlaceholderTexture2D_h4dtu")
+texture = ExtResource("2_h4dtu")

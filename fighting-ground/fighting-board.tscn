@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://iymux0bqvx4y" path="res://fighting-ground/house.gd" id="3_m0o7i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r8cwp"]
-size = Vector2(73, 286)
+size = Vector2(73, 1447)
 
 [node name="FightingBoard" type="Node2D" unique_id=2002171744]
 script = ExtResource("1_cnegx")
@@ -17,7 +17,7 @@ position = Vector2(-45, 0)
 script = ExtResource("3_m0o7i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=814807579]
-position = Vector2(-35.5, 95)
+position = Vector2(-164, 136.5)
 shape = SubResource("RectangleShape2D_r8cwp")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1518762083]

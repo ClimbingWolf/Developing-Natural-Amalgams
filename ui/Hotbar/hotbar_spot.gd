@@ -10,7 +10,7 @@ static var currentHoldChecker = false #False if nothing is held, true otherwise
 func _ready():
 	hotbar = get_parent().get_parent();
 	hover = false
-	$HotbarSprite.modulate = Color(0.0, 0.525, 0.0, 1.0)
+	#$HotbarSprite.modulate = Color(0.0, 0.525, 0.0, 1.0)
 	
 func _on_area_2d_mouse_entered() -> void:
 	modulate += Color(0.1, 0.1, 0.1)

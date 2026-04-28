@@ -4,7 +4,7 @@ class_name SpawnController;
 
 static var hasStarted = false;
 static var skip = false
-static var time_left = 0
+static var time_left = 60
 var isPlaying = false;
 var file: FileAccess;
 var waves_data = {};
@@ -23,6 +23,7 @@ func _ready() -> void:
 	var counter = 0;
 	for i in file.get_as_text().split("\n"):
 		if(i != ""):
+			print(i)
 			waves_data[counter] = i.split(";")[1].split(",");
 			waves_time[counter] = i.split(";")[0]
 		counter+=1

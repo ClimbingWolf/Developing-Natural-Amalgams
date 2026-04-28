@@ -12,6 +12,7 @@
 [node name="Node2D" type="Node2D" unique_id=785255799]
 
 [node name="FightingBoard" parent="." unique_id=2002171744 instance=ExtResource("2_1bvp3")]
+position = Vector2(-86, -2)
 
 [node name="Ui" parent="." unique_id=408283547 node_paths=PackedStringArray("cameraViewport") instance=ExtResource("1_h2yge")]
 physics_interpolation_mode = 1
@@ -23,6 +24,12 @@ dupe_script = ExtResource("3_272bh")
 [node name="Cameras" type="Node2D" parent="." unique_id=1585594062]
 
 [node name="FactoryCam" type="Camera2D" parent="Cameras" unique_id=2021575386 groups=["Main Cam"]]
+position = Vector2(-883, 47)
+zoom = Vector2(3, 3)
+limit_left = -1700
+limit_top = -1150
+limit_right = 0
+limit_bottom = 1000
 script = ExtResource("6_7mycd")
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=554094401]

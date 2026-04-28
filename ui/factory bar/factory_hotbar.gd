@@ -22,6 +22,7 @@ var startCoords: Vector2 = Vector2.ZERO;
 @onready var skullLayer = map.get_node("SkullLayer")
 
 func _ready() -> void:
+	
 	for i in range(9):
 		var spot: Node2D = $"Hotbar nodes".get_child(i);
 		if(spot.has_node("Piece")):
@@ -69,9 +70,10 @@ func _process(delta: float) -> void:
 			
 		if(coords != Vector2.INF && ui.ui_state == "pvz"):
 			currentHold.global_position = coords;
-			#We need a better draggin implementation, but this works.
-			if(Input.is_action_pressed("click") && placements.keys().find(coords) == -1 and Scores.gears >= currentHold.cost && !currentHold.is_in_group("Delete")):
+			#We need a better dragging implementation, but this works.
+			if(Input.is_action_pressed("click") && placements.keys().find(coords) == -1 && Scores.gears >= currentHold.cost && !currentHold.is_in_group("Delete")):
 				#map.add_child(currentHold);
+				
 				currentHold.global_position = coords;
 				currentHold.modulate += Color(0,0,0, 0.5);
 				currentHold.active = true
@@ -82,10 +84,11 @@ func _process(delta: float) -> void:
 				currentHold.modulate -= Color(0,0,0, 0.5);
 				Scores.gears -= currentHold.cost
 			elif (Input.is_action_pressed("click") && placements.keys().find(coords) != -1 && currentHold.is_in_group("Delete")):
+				print("evil")
 				var area2d: Area2D = currentHold.get_node("Area2D");
 				var areas = area2d.get_overlapping_areas();
 				for i in areas:
-					if(i.get_parent() in map.get_children()):
+					if(i.get_parent() in map.get_children() && !i.is_in_group("NextDetector")):
 						Scores.gears += i.get_parent().cost;
 						i.get_parent().queue_free();
 				placements.erase(coords);

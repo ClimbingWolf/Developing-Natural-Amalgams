@@ -19,6 +19,7 @@ position = Vector2(-4, 1.5)
 shape = SubResource("RectangleShape2D_kxvlq")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=1256080325]
+z_index = 6
 offset_left = -32.0
 offset_top = -63.0
 offset_right = 32.0
