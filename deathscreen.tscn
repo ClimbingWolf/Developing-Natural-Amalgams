@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://c7vg2o76ecnb1"]
+
+[ext_resource type="Script" uid="uid://bx8pai8ln8agk" path="res://instructions.gd" id="1_7ls63"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1828574654]
+script = ExtResource("1_7ls63")
+
+[node name="Panel" type="Panel" parent="." unique_id=1524435436]
+modulate = Color(1, 0, 0, 1)
+offset_right = 1911.0
+offset_bottom = 1084.0
+
+[node name="Label" type="Label" parent="." unique_id=880138679]
+offset_left = 481.0
+offset_top = 25.0
+offset_right = 1491.0
+offset_bottom = 1044.0
+theme_override_font_sizes/font_size = 207
+text = "YOU DIED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=918771813]
+offset_left = 353.0
+offset_top = 553.0
+offset_right = 1169.0
+offset_bottom = 898.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 53
+text = "THE ZOMBIES ATE YOUR BRAINS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="." unique_id=516151814]
+offset_left = 1173.0
+offset_top = 553.0
+offset_right = 1617.0
+offset_bottom = 898.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 53
+text = "OR SOMETHING"
+horizontal_alignment = 1
+vertical_alignment = 1
