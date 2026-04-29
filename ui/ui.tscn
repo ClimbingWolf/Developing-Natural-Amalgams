@@ -7,8 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://b6frtd2xtx7bu" path="res://ui/factory bar/factory_hotbar.tscn" id="4_tf0e0"]
 [ext_resource type="PackedScene" uid="uid://djtc2hmd7r4pc" path="res://ui/Scores/Scores.tscn" id="5_obcwv"]
 [ext_resource type="PackedScene" uid="uid://dfvvmn17junvx" path="res://ui/Crafting Menu/crafting_menu.tscn" id="6_bo1jx"]
-[ext_resource type="Script" uid="uid://c1w7ygeniv15" path="res://ui/start_button.gd" id="7_gycre"]
-[ext_resource type="Script" uid="uid://c8vtv7iw88bos" path="res://ui/next_wave_indicator.gd" id="8_pa1oa"]
+[ext_resource type="Script" path="res://ui/start_button.gd" id="7_gycre"]
+[ext_resource type="Script" path="res://ui/next_wave_indicator.gd" id="8_pa1oa"]
 
 [sub_resource type="Gradient" id="Gradient_vkava"]
 

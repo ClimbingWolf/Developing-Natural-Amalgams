@@ -17,6 +17,8 @@ var baseHp = 10;
 var baseSpeed = 20;
 var baseAttack =2;
 var enemiesSpawnedThisWave = 0
+##Controls if the spawners are active (only turn off if game over)
+var active: bool = true
 
 func _ready() -> void:
 	file = FileAccess.open(wave_data_path, FileAccess.READ);
@@ -31,23 +33,24 @@ func _ready() -> void:
 	$Timer.start()
 		
 func _process(delta: float) -> void:
-	time_left = int($Timer.time_left)
-	time +=delta;
-	if skip:
-		$Timer.stop()
-		startWave()
-		skip = false
-	if(wave > 0 and wave <= waves_data.size()):
-		var maxEnemiesThisWave = waves_data[wave - 1].size()
-		if(time > targetTime and enemiesSpawnedThisWave < maxEnemiesThisWave):
-			var generater = get_children()[int(randf() * 5)]
-			targetTime = int(waves_time[wave-1])/len(waves_data[wave-1]) + (randf()-0.5) * variance
-			enemiesSpawnedThisWave += 1
-			var item = waves_data[wave-1]
-			var level =  int(item[randf() * len(item)])
-			generater.generate_enemy(baseHp * level, baseSpeed* (1 + (0.2 *level)), baseAttack* level)
-			time = 0;
-		
+	if (active):
+		time_left = int($Timer.time_left)
+		time +=delta;
+		if skip:
+			$Timer.stop()
+			startWave()
+			skip = false
+		if(wave > 0 and wave <= waves_data.size()):
+			var maxEnemiesThisWave = waves_data[wave - 1].size()
+			if(time > targetTime and enemiesSpawnedThisWave < maxEnemiesThisWave):
+				var generater = get_children()[int(randf() * 5)]
+				targetTime = int(waves_time[wave-1])/len(waves_data[wave-1]) + (randf()-0.5) * variance
+				enemiesSpawnedThisWave += 1
+				var item = waves_data[wave-1]
+				var level =  int(item[randf() * len(item)])
+				generater.generate_enemy(baseHp * level, baseSpeed* (1 + (0.2 *level)), baseAttack* level)
+				time = 0;
+			
 		
 
 func startWave():

@@ -4,15 +4,21 @@
 [ext_resource type="PackedScene" uid="uid://xgqs7k88huo6" path="res://fighting-ground/fighting-board.tscn" id="2_1bvp3"]
 [ext_resource type="Script" uid="uid://j6lgytc8578h" path="res://camera/cam_dupe.gd" id="3_272bh"]
 [ext_resource type="Script" uid="uid://dje7wsh6xsyje" path="res://camera/pvz_cam.gd" id="3_lquwl"]
-[ext_resource type="PackedScene" uid="uid://bjp4xxangm48e" path="res://spawn_controller.tscn" id="5_kek77"]
+[ext_resource type="PackedScene" uid="uid://da0bem6tkd6f8" path="res://spawn_controller.tscn" id="5_kek77"]
 [ext_resource type="Script" uid="uid://c1vypjmejhyuy" path="res://camera/factory_cam.gd" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://ch3vb3hv75og2" path="res://map/map.tscn" id="8_5vw27"]
-[ext_resource type="PackedScene" uid="uid://c7vg2o76ecnb1" path="res://deathscreen.tscn" id="9_kek77"]
+[ext_resource type="PackedScene" uid="uid://dfkh325dkumf" path="res://deathscreen.tscn" id="9_4c57u"]
+[ext_resource type="PackedScene" uid="uid://bdvyje5v727r4" path="res://instructions.tscn" id="9_kek77"]
+[ext_resource type="Script" uid="uid://c5w1lddthcfd4" path="res://deathscreen.gd" id="10_efxa6"]
 
 [node name="Node2D" type="Node2D" unique_id=785255799]
 
 [node name="FightingBoard" parent="." unique_id=2002171744 instance=ExtResource("2_1bvp3")]
 position = Vector2(-86, -2)
+
+[node name="DeathZone" parent="FightingBoard" index="0" unique_id=1080807209 node_paths=PackedStringArray("deathScreen", "enemySpawner")]
+deathScreen = NodePath("../../DeathScreen")
+enemySpawner = NodePath("../../SpawnController")
 
 [node name="Ui" parent="." unique_id=408283547 node_paths=PackedStringArray("cameraViewport") instance=ExtResource("1_h2yge")]
 physics_interpolation_mode = 1
@@ -45,4 +51,10 @@ fighting_board = NodePath("../../FightingBoard")
 z_index = -50
 position = Vector2(10, 10)
 
-[node name="DeathScreen" parent="." unique_id=935617816 instance=ExtResource("9_kek77")]
+[node name="Instructions" parent="." unique_id=1828574654 instance=ExtResource("9_kek77")]
+
+[node name="DeathScreen" parent="." unique_id=935617816 instance=ExtResource("9_4c57u")]
+visible = false
+script = ExtResource("10_efxa6")
+
+[editable path="FightingBoard"]

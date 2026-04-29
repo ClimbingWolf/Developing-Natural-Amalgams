@@ -1,13 +1,13 @@
-[gd_scene format=3 uid="uid://c7vg2o76ecnb1"]
+[gd_scene format=3 uid="uid://dfkh325dkumf"]
 
 [ext_resource type="Script" uid="uid://bx8pai8ln8agk" path="res://instructions.gd" id="1_7ls63"]
 
-[node name="CanvasLayer" type="CanvasLayer" unique_id=1828574654]
+[node name="CanvasLayer2" type="CanvasLayer" unique_id=1828574654]
 script = ExtResource("1_7ls63")
 
 [node name="Panel" type="Panel" parent="." unique_id=1524435436]
 modulate = Color(1, 0, 0, 1)
-offset_right = 1911.0
+offset_right = 1938.0
 offset_bottom = 1084.0
 
 [node name="Label" type="Label" parent="." unique_id=880138679]

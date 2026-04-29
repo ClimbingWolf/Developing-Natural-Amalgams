@@ -12,18 +12,18 @@ size = Vector2(73, 1447)
 script = ExtResource("1_cnegx")
 tile_sprite_prefab = ExtResource("2_r8cwp")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1080807209]
+[node name="DeathZone" type="Area2D" parent="." unique_id=1080807209]
 position = Vector2(-45, 0)
 script = ExtResource("3_m0o7i")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=814807579]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone" unique_id=814807579]
 position = Vector2(-164, 136.5)
 shape = SubResource("RectangleShape2D_r8cwp")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1518762083]
+[node name="Sprite2D" type="Sprite2D" parent="DeathZone" unique_id=1518762083]
 visible = false
 position = Vector2(-35.000008, 95.00001)
 scale = Vector2(0.546875, 2.2187502)
 texture = ExtResource("3_8lehm")
 
-[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
+[connection signal="area_entered" from="DeathZone" to="DeathZone" method="_on_area_entered"]

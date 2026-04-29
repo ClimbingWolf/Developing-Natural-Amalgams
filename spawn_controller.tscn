@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bjp4xxangm48e"]
+[gd_scene format=3 uid="uid://da0bem6tkd6f8"]
 
 [ext_resource type="Script" uid="uid://cqn37u3hqi2jo" path="res://spawn_controller.gd" id="1_wxdhw"]
 [ext_resource type="PackedScene" uid="uid://dslq8yloxcpbh" path="res://enemies/enemy_generator.tscn" id="2_te3ox"]
